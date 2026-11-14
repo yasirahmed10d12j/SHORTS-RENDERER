@@ -84,17 +84,17 @@ enum AppleTTS {
         let dataSize = UInt32(size * 2)
         
         var header = Data()
-        header.append([UInt8](b"RIFF"))
+        header.append([UInt8]("RIFF".utf8))
         header.append(chunkSize.bytes)
-        header.append([UInt8](b"WAVE"))
-        header.append([UInt8](b"fmt "))
+        header.append([UInt8]("WAVE".utf8))
+        header.append([UInt8]("fmt ".utf8))
         header.append(UInt32(16).bytes)
         header.append(UInt16(1).bytes)
         header.append(UInt16(1).bytes)
         header.append(byteRate.bytes)
         header.append(UInt16(2).bytes)
         header.append(UInt16(16).bytes)
-        header.append([UInt8](b"data"))
+        header.append([UInt8]("data".utf8))
         header.append(dataSize.bytes)
         return header
     }
