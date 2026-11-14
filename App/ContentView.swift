@@ -81,7 +81,7 @@ struct ContentView: View {
             status = "Photos me save ho raha hai…"
             try await saveToPhotos(url)
             done = true
-            status = String(format: "Done — %d frames in %.0fs.", total_, Date().timeIntervalSince(start))
+            status = "Done — \(total_) frames in \(Int(Date().timeIntervalSince(start)))s."
             running = false
         } catch {
             status = "Error: \(error.localizedDescription)"

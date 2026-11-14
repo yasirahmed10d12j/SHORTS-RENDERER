@@ -48,11 +48,9 @@ final class Engine: NSObject, WKScriptMessageHandler {
         guard let html = Bundle.main.url(forResource: page, withExtension: "html", subdirectory: "engine") else {
             throw RenderError.engineMissing
         }
-        root = html.deletingLastPathComponent()
 
         let cfg = WKWebViewConfiguration()
         let ucc = cfg.userContentController
-        ucc.add(self, name: "console")
         // Forward console output + uncaught JS errors to the app, so an engine
         // failure surfaces as a readable message instead of a bare timeout.
         ucc.addUserScript(WKUserScript(source: """
@@ -75,7 +73,11 @@ final class Engine: NSObject, WKScriptMessageHandler {
         });
         """, injectionTime: .atDocumentStart, forMainFrameOnly: true))
 
+        root = html.deletingLastPathComponent()
         web = WKWebView(frame: CGRect(x: 0, y: 0, width: 1080, height: 1920), configuration: cfg)
+        // NSObject requires super.init() before `self` may be used.
+        super.init()
+        ucc.add(self, name: "console")
     }
 
     deinit {
