@@ -58,7 +58,7 @@ struct ScriptMakerView: View {
                         ForEach(LLMProvider.allCases) { p in Text(p.label).tag(p) }
                     }
                     .pickerStyle(.menu)
-                    .onChange(of: provider) { _, p in llmModel = p.defaultModel }
+                    .onChange(of: provider) { p in llmModel = p.defaultModel } // iOS 16 signature
                     TextField("model", text: $llmModel)
                         .textFieldStyle(.roundedBorder)
                         .autocorrectionDisabled()
