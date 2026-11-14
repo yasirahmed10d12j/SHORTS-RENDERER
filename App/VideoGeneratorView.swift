@@ -24,7 +24,7 @@ struct VideoGeneratorView: View {
     @State private var allVoicesReady = false
 
     // --- render state ---
-    @State private var rendered = 0
+    @State private var renderStartTime: Date? = nil
     @State private var total = 0
     @State private var fps: Double = 0
     @State private var eta: Double = 0
@@ -195,7 +195,7 @@ struct VideoGeneratorView: View {
                     Text(String(format: "%.0f%%", progress * 100))
                         .font(.title3).foregroundStyle(.secondary)
                     if fps > 0.5 {
-                        let el = Int(Date().timeIntervalSince(start))
+                        let el = Int(Date().timeIntervalSince(renderStartTime ?? Date()))
                         Text("\(String(format: "%.1f", fps)) fps · ~\(Int(eta.rounded()))s baki · \(el)s elapsed")
                             .font(.footnote.monospacedDigit()).foregroundStyle(.secondary)
                     }
@@ -301,15 +301,17 @@ struct VideoGeneratorView: View {
 
     private func runRender() async {
         defer { running = false }
+        renderStartTime = nil
+        elapsedSecs = 0
         do {
             rendered = 0; total = 0; progress = 0; fps = 0; eta = 0; done = false
+            renderStartTime = Date()
             status = "Engine load…"
             let engine = try Engine()
             try await engine.load()
             let docs = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
             var plan: AudioPlan?
             if let p = AudioMux.detect(docs: docs) { plan = p }
-            let start = Date()
             if let plan {
                 try await engine.setVoiceDuration(plan.totalDuration)
                 status = String(format: "Voice detect — %.1fs ke hisaab se render hogi.", plan.totalDuration)
@@ -323,7 +325,7 @@ struct VideoGeneratorView: View {
                 try await writer.append(jpeg, frame: f)
                 rendered = f + 1
                 progress = Double(rendered) / Double(total_)
-                let dt = Date().timeIntervalSince(start)
+                let dt = Date().timeIntervalSince(renderStartTime ?? Date())
                 fps = dt > 0 ? Double(rendered) / dt : 0
                 eta = fps > 0 ? Double(total_ - rendered) / fps : 0
             }
@@ -341,7 +343,7 @@ struct VideoGeneratorView: View {
             }
             try await saveToPhotos(outURL)
             done = true
-            status = "Done — \(total_) frames in \(Int(Date().timeIntervalSince(start)))s."
+            status = "Done — \(total_) frames in \(Int(Date().timeIntervalSince(renderStartTime ?? Date())))s."
                 + (plan != nil ? " Voice included." : "")
         } catch {
             status = "Render error: \(error.localizedDescription)"
