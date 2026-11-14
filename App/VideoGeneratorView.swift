@@ -5,29 +5,25 @@ import Photos
 /// End-to-end Video Generator: idea -> LLM script -> per-scene ElevenLabs voice ->
 /// render engine syncs to voice timeline -> final MP4 with audio muxed in.
 struct VideoGeneratorView: View {
-    // --- writer ---
+    // --- script, voice, render state ---
     @State private var provider: LLMProvider = .gemini
     @State private var llmKey = ""
     @State private var llmModel = ""
     @State private var llmKeySaved = false
     @State private var idea = ""
-
-    // --- script ---
-    @State private var script: StoryScript?
-    @State private var scriptBusy = false
-
-    // --- paste ---
     @State private var pasteText = ""
 
-    // --- voice ---
+    @State private var script: StoryScript?
+    @State private var scriptBusy = false
+    @State private var sceneStatus: [Int: String] = [:]
+    @State private var players: [Int: AVAudioPlayer] = [:]
+
     @State private var voices: [ElevenVoice] = []
     @State private var voiceID = ""
     @State private var voiceBusy = false
-    @State private var sceneStatus: [Int: String] = [:]
-    @State private var players: [Int: AVAudioPlayer] = [:]
     @State private var allVoicesReady = false
 
-    // --- render ---
+    // --- render state ---
     @State private var rendered = 0
     @State private var total = 0
     @State private var fps: Double = 0
@@ -36,7 +32,6 @@ struct VideoGeneratorView: View {
     @State private var running = false
     @State private var done = false
 
-    // --- status ---
     @State private var status = ""
     @State private var elapsedSecs = 0
 
@@ -55,20 +50,15 @@ struct VideoGeneratorView: View {
                 // ── 2. Script ──────────────────────────────────────
                 if let s = script { scriptCards(s) }
 
-                // ── 3. Voice ├──
+                // ── 3. Voice ────────────────────────────────────────
                 if script != nil { voiceControls }
 
-                // ── 4. Render ──────────────────────────────────────
                 Divider()
+
+                // ── 4. Render ──────────────────────────────────────
                 renderSection
 
-                // ── status line ─────────────────────────────────────
-                if !status.isEmpty {
-                    Text(status)
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                        .multilineTextAlignment(.center)
-                }
+                if !status.isEmpty { Text(status).font(.caption).foregroundStyle(.secondary) }
             }
             .padding(20)
         }
@@ -110,7 +100,7 @@ struct VideoGeneratorView: View {
                             .frame(maxWidth: .infinity)
                     }
                     .buttonStyle(.borderedProminent)
-                    .disabled(scriptBusy || !llmKeySaved || idea.trimmed.isEmpty)
+                    .disabled(scriptBusy || !llmKeySaved || idea.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
                 }
                 .padding(6)
 
@@ -120,14 +110,14 @@ struct VideoGeneratorView: View {
                     Text("Option B: bahar se bani script paste karo").font(.subheadline.bold())
                     TextEditor(text: $pasteText)
                         .frame(height: 80)
-                        .overlay(RoundedRectangle(cornerRadius: 8).stroke(.quaternary))
+                        .overlay(RoundedRectangle(cornerRadius: 8).stroke(.quivable))
                     Button { parsePasted() } label: {
                         Label("Parse karo", systemImage: "doc.text")
                             .frame(maxWidth: .infinity)
                     }
                     .buttonStyle(.borderedProminent)
-                    .disabled(pasteText.trimmed.isEmpty || scriptBusy)
-                    Text("Samajh: Scene 1:, #1, 1., VISUAL lines. Na mile → paragraph = scene.")
+                    .disabled(pasteText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || scriptBusy)
+                    Text("Samajh: Scene 1:, #1, 1., VISUAL lines. Markers na mile to paragraphs.")
                         .font(.caption2).foregroundStyle(.tertiary)
                 }
                 .padding(6)
@@ -145,26 +135,26 @@ struct VideoGeneratorView: View {
                 if let log = s.logline, !log.isEmpty {
                     Text(log).font(.caption).foregroundStyle(.secondary)
                 }
-                ForEach(s.scenes) { sc in
+                ForEach(s.scenes) { scene in
                     VStack(alignment: .leading, spacing: 2) {
                         HStack {
-                            Text("Scene \(sc.n)").font(.caption.bold())
+                            Text("Scene \(scene.n)").font(.caption.bold())
                             Spacer()
-                            if let st = sceneStatus[sc.n], !st.isEmpty {
+                            if let st = sceneStatus[scene.n], !st.isEmpty {
                                 Text(st).font(.caption2).foregroundStyle(.secondary)
                             }
-                            if let _ = players[sc.n] {
-                                Button { togglePlay(sc.n) } label: { Image(systemName: "play.fill") }
+                            if players[scene.n] != nil {
+                                Button { togglePlay(scene.n) } label: { Image(systemName: "play.fill") }
                                     .buttonStyle(.bordered).controlSize(.mini)
                             }
                         }
-                        Text(sc.narration).font(.subheadline)
-                        if let v = sc.visual, !v.isEmpty {
+                        Text(scene.narration).font(.subheadline)
+                        if let v = scene.visual, !v.isEmpty {
                             Text("🎬 " + v).font(.caption).foregroundStyle(.tertiary)
                         }
                     }
                     .padding(8)
-                    .background(.quaternary.opacity(0.4), in: RoundedRectangle(cornerRadius: 8))
+                    .background(.quaternary.opacity(ContentView.backgroundAlpha), in: RoundedRectangle(cornerRadius: 8))
                 }
             }
             .padding(4)
@@ -175,10 +165,10 @@ struct VideoGeneratorView: View {
     // ── voice controls ──────────────────────────────────────────────────────
 
     private var voiceControls: some View {
-        GroupBox("Step 3 — har scene ki voice") {
+        GroupBox("Step 3 — voice generation") {
             VStack(spacing: 10) {
                 Picker("Voice", selection: $voiceID) {
-                    if voices.isEmpty { Text("ElevenLabs key save karo →").tag("") }
+                    if voices.isEmpty { Text("Key save karo →").tag("") }
                     ForEach(voices) { v in Text(v.name).tag(v.voiceId) }
                 }
                 Button { Task { await genAllVoices() } } label: {
@@ -248,7 +238,7 @@ struct VideoGeneratorView: View {
     private func makeScript() async {
         scriptBusy = true
         startTimer()
-        status = "\(provider.label) se script ban rahi hai…"
+        status = "Script ban rahi hai… 0s"
         do {
             guard let key = Keychain.get("llm_key") else { throw LLMError.empty }
             let model = llmModel.trimmingCharacters(in: .whitespaces).isEmpty ? provider.defaultModel : llmModel
@@ -322,6 +312,7 @@ struct VideoGeneratorView: View {
             let docs = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
             var plan: AudioPlan?
             if let p = AudioMux.detect(docs: docs) { plan = p }
+            let start = Date()
             if let plan {
                 try await engine.setVoiceDuration(plan.totalDuration)
                 status = String(format: "Voice detect — %.1fs ke hisaab se render hogi.", plan.totalDuration)
@@ -330,7 +321,6 @@ struct VideoGeneratorView: View {
             let total_ = try await engine.totalFrames(); total = total_; status = "Render shuru…"
             let rawURL = FileManager.default.temporaryDirectory.appendingPathComponent("short.mp4")
             let writer = try VideoWriter(url: rawURL)
-            let start = Date()
             for f in 0..<total_ {
                 let jpeg = try await engine.jpegFrame(f)
                 try await writer.append(jpeg, frame: f)
@@ -370,17 +360,23 @@ struct VideoGeneratorView: View {
         }
     }
 
-    // ── timer ───────────────────────────────────────────────────────────────
+    // ── timer helpers ─────────────────────────────────────────────────────────
 
-    private var timerTask: Task<Int, Never>?
     private func startTimer() {
         elapsedSecs = 0
-        timerTask = Task { [self] in
-            while !Task.isCancelled {
+        timerTask = Task { [weak self] in
+            while let me = self, !Task.isCancelled {
                 try? await Task.sleep(nanoseconds: 1_000_000_000)
-                elapsedSecs += 1
+                me.elapsedSecs += 1
             }
         }
     }
+
     private func stopTimer() { timerTask?.cancel(); timerTask = nil }
+
+    private var timerTask: Task<(), Never>?
+}
+
+private extension String {
+    var trimmed: String { trimmingCharacters(in: .whitespacesAndNewlines) }
 }
