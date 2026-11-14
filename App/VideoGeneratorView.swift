@@ -24,6 +24,7 @@ struct VideoGeneratorView: View {
     @State private var allVoicesReady = false
 
     // --- render state ---
+    @State private var rendered = 0
     @State private var renderStartTime: Date? = nil
     @State private var total = 0
     @State private var fps: Double = 0
@@ -302,7 +303,6 @@ struct VideoGeneratorView: View {
     private func runRender() async {
         defer { running = false }
         renderStartTime = nil
-        elapsedSecs = 0
         do {
             rendered = 0; total = 0; progress = 0; fps = 0; eta = 0; done = false
             renderStartTime = Date()
