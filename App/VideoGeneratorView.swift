@@ -110,7 +110,7 @@ struct VideoGeneratorView: View {
                     Text("Option B: bahar se bani script paste karo").font(.subheadline.bold())
                     TextEditor(text: $pasteText)
                         .frame(height: 80)
-                        .overlay(RoundedRectangle(cornerRadius: 8).stroke(.quivable))
+                        .overlay(RoundedRectangle(cornerRadius: 8).stroke(.quaternary))
                     Button { parsePasted() } label: {
                         Label("Parse karo", systemImage: "doc.text")
                             .frame(maxWidth: .infinity)
@@ -154,7 +154,7 @@ struct VideoGeneratorView: View {
                         }
                     }
                     .padding(8)
-                    .background(.quaternary.opacity(ContentView.backgroundAlpha), in: RoundedRectangle(cornerRadius: 8))
+                    .background(.quaternary.opacity(0.4), in: RoundedRectangle(cornerRadius: 8))
                 }
             }
             .padding(4)
