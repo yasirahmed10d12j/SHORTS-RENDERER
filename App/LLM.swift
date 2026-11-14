@@ -182,6 +182,29 @@ enum LLM {
             return line.hasPrefix("(") && line.hasSuffix(")")
         }
 
+        /// Strips common timestamp markers so ElevenLabs doesn't read them aloud:
+        /// [00:05], (5s), [5:02], 00:05:, #00:05, etc.
+        static let tsPattern = try? NSRegularExpression(
+            pattern: """
+            \\[\\d+[:\\.]?\\d*(?:\\.\\d+)?(?:\\s*s?)?\\]\\b|
+            \\(\\d+[smh]\\)\\b|
+            #\\d{1,2}:\\d{2}(?::\\d{2})?\\b|
+            \\d{1,2}:\\d{2}(?::\\d{2})?\\b:
+            """,
+            options: [.caseInsensitive, .dotMatchesLineSeparators]
+        )
+
+        static func stripTimestamps(_ s: String) -> String {
+            guard let pat = tsPattern else { return s }
+            let range = NSRange(s.startIndex..., in: s)
+            let stripped = pat.stringByReplacingMatches(in: s, options: [], range: range, withTemplate: "")
+            // collapse duplicate whitespace left by removals
+            var collapsed = stripped.replacingOccurrences(of: "\\s+", with: " ", options: .regularExpression)
+            // trim any trailing colon left after a timestamp label
+            collapsed = collapsed.trimmingCharacters(in: .whitespaces)
+            return collapsed
+        }
+
         func stripLabel(_ line: String) -> String {
             if let ci = line.firstIndex(of: ":") {
                 let rest = line[line.index(after: ci)...].trimmingCharacters(in: .whitespaces)
@@ -206,15 +229,15 @@ enum LLM {
             if markerNumber(t) != nil {
                 blocks.append(Block())
                 let rest = stripLabel(t)
-                if !rest.isEmpty { blocks[blocks.count - 1].narration = rest }
+                if !rest.isEmpty { blocks[blocks.count - 1].narration = LLM.stripTimestamps(rest) }
                 continue
             }
             if blocks.isEmpty { blocks.append(Block()) }
             if isVisual(t) {
-                blocks[blocks.count - 1].visual = stripLabel(t)
+                blocks[blocks.count - 1].visual = LLM.stripTimestamps(stripLabel(t))
             } else {
                 let i = blocks.count - 1
-                blocks[i].narration += blocks[i].narration.isEmpty ? t : " " + t
+                blocks[i].narration += blocks[i].narration.isEmpty ? LLM.stripTimestamps(t) : " " + LLM.stripTimestamps(t)
             }
         }
         if blocks.isEmpty {
@@ -224,7 +247,7 @@ enum LLM {
                 if t.isEmpty {
                     if !cur.narration.isEmpty { blocks.append(cur); cur = Block() }
                 } else {
-                    cur.narration += cur.narration.isEmpty ? t : " " + t
+                    cur.narration += cur.narration.isEmpty ? LLM.stripTimestamps(t) : " " + LLM.stripTimestamps(t)
                 }
             }
             if !cur.narration.isEmpty { blocks.append(cur) }
