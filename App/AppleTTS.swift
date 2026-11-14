@@ -10,7 +10,7 @@ enum AppleTTS {
         scenes: [StoryScene],
         folder: URL,
         onProgress: @escaping (Int, String) -> Void
-    ) async throws -> ([String: Any], Bool) {
+    ) async throws -> ([[String: Any]], Bool) {
         var metas: [[String: Any]] = []
         var ok = true
         
@@ -69,7 +69,7 @@ enum AppleTTS {
             // Convert floats to PCM Int16
             var pcmData = Data()
             for sample in capturedBuffer {
-                let intSample = Int16(min(max(Int(sample * 32767), -32768), 32767))
+                var intSample = Int16(min(max(Int(sample * 32767), -32768), 32767))
                 pcmData.append(Data(bytes: &intSample, count: MemoryLayout<Int16>.size))
             }
             
@@ -84,18 +84,18 @@ enum AppleTTS {
         let dataSize = UInt32(size * 2)
         
         var header = Data()
-        header.append([UInt8]("RIFF".utf8))
-        header.append(chunkSize.bytes)
-        header.append([UInt8]("WAVE".utf8))
-        header.append([UInt8]("fmt ".utf8))
-        header.append(UInt32(16).bytes)
-        header.append(UInt16(1).bytes)
-        header.append(UInt16(1).bytes)
-        header.append(byteRate.bytes)
-        header.append(UInt16(2).bytes)
-        header.append(UInt16(16).bytes)
-        header.append([UInt8]("data".utf8))
-        header.append(dataSize.bytes)
+        header.append(contentsOf: [UInt8]("RIFF".utf8))
+        header.append(contentsOf: chunkSize.bytes)
+        header.append(contentsOf: [UInt8]("WAVE".utf8))
+        header.append(contentsOf: [UInt8]("fmt ".utf8))
+        header.append(contentsOf: UInt32(16).bytes)
+        header.append(contentsOf: UInt16(1).bytes)
+        header.append(contentsOf: UInt16(1).bytes)
+        header.append(contentsOf: byteRate.bytes)
+        header.append(contentsOf: UInt16(2).bytes)
+        header.append(contentsOf: UInt16(16).bytes)
+        header.append(contentsOf: [UInt8]("data".utf8))
+        header.append(contentsOf: dataSize.bytes)
         return header
     }
 }

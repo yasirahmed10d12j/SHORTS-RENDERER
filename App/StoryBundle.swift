@@ -2,7 +2,7 @@ import Foundation
 
 // MARK: - Types
 
-struct StoryScene: Codable, Identifiable {
+struct StoryScene: Codable, Identifiable, Equatable {
     let n: Int
     let narration: String
     let visual: String?
@@ -10,7 +10,7 @@ struct StoryScene: Codable, Identifiable {
 }
 
 /// One built-in story from the app's 100-story collection.
-struct BuiltInStory: Codable, Identifiable, Comparable {
+struct BuiltInStory: Codable, Identifiable, Comparable, Equatable {
     let id: String
     let title: String
     let logline: String?
