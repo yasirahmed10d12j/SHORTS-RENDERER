@@ -239,6 +239,7 @@ struct VideoGeneratorView: View {
     private func makeScript() async {
         scriptBusy = true
         status = "Script ban rahi hai…"
+        clearOldScriptFiles()  // remove stale voice from previous story
         do {
             guard let key = Keychain.get("llm_key") else { throw LLMError.empty }
             let model = llmModel.trimmingCharacters(in: .whitespaces).isEmpty ? provider.defaultModel : llmModel
@@ -252,6 +253,7 @@ struct VideoGeneratorView: View {
     }
 
     private func parsePasted() {
+        clearOldScriptFiles()  // remove stale voice from previous story
         let s = LLM.parseScriptText(pasteText)
         script = s
         sceneStatus = [:]
@@ -362,6 +364,10 @@ struct VideoGeneratorView: View {
     // ── timer helpers ─────────────────────────────────────────────────────────
     // (elapsedSecs shown during render computed directly from start Date below)
 
+    private func clearOldScriptFiles() {
+        let docs = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        try? FileManager.default.removeItem(at: docs.appendingPathComponent("script", isDirectory: true))
+    }
 }
 
 private extension String {
