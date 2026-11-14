@@ -1,0 +1,2862 @@
+[
+  {
+    "id": "the-honest-woodcutter",
+    "title": "The Honest Woodcutter",
+    "logline": "A woodcutter loses his axe in a river—but honesty pays off.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "Once upon a time, there was a kind woodcutter who lived near a deep forest river."
+      },
+      {
+        "n": 2,
+        "narration": "One day his iron axe slipped from his hands and sank to the muddy bottom."
+      },
+      {
+        "n": 3,
+        "narration": "He sat by the bank and wept, not knowing how he would feed his family."
+      },
+      {
+        "n": 4,
+        "narration": "A gentle fairy rose from the water carrying a brilliant golden axe."
+      },
+      {
+        "n": 5,
+        "narration": "Is this yours she asked. No, replied the woodcutter, that is not mine."
+      },
+      {
+        "n": 6,
+        "narration": "She returned with a silver axe. Still he shook his head."
+      },
+      {
+        "n": 7,
+        "narration": "Then finally she returned his own iron one. Pleased with his honesty, the fairy gave him all three axes as a reward."
+      }
+    ]
+  },
+  {
+    "id": "the-cunning-hare",
+    "title": "The Cunning Hare",
+    "logline": "A clever hare outsmarts a lion using only his wits.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A tyrant lion ruled the jungle and demanded tribute from every animal daily."
+      },
+      {
+        "n": 2,
+        "narration": "A quick little hare decided enough was enough and hatched a bold plan."
+      },
+      {
+        "n": 3,
+        "narration": "He arrived before the lion an hour late, bowing low with apologies."
+      },
+      {
+        "n": 4,
+        "narration": "Another lion said he intercepted! He claimed a rival dared challenge the king."
+      },
+      {
+        "n": 5,
+        "narration": "Furious, the lion demanded to see this impostor immediately."
+      },
+      {
+        "n": 6,
+        "narration": "The hare led him to a deep well. Look down sire—and the lion saw only his own reflection."
+      },
+      {
+        "n": 7,
+        "narration": "With a roar of rage the lion leapt in and drowned. The hare saved the entire jungle."
+      }
+    ]
+  },
+  {
+    "id": "the-boy-who-cried-wolf",
+    "title": "The Boy Who Cried Wolf",
+    "logline": "A shepherd boy learns the cost of lying.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A young boy watched over his familys flock of sheep on a lonely hillside."
+      },
+      {
+        "n": 2,
+        "narration": "Bored stiff, he ran toward the village screaming wolf wolf!"
+      },
+      {
+        "n": 3,
+        "narration": "The villagers grabbed tools and ran up—finding only the boy giggling."
+      },
+      {
+        "n": 4,
+        "narration": "He did it twice more. By the third time the villagers were furious and stayed home."
+      },
+      {
+        "n": 5,
+        "narration": "That afternoon a real gray wolf padded through the pasture toward the lambs."
+      },
+      {
+        "n": 6,
+        "narration": "The boy screamed with genuine terror—but no one came this time."
+      },
+      {
+        "n": 7,
+        "narration": "A liar will not be believed even when he tells the truth."
+      }
+    ]
+  },
+  {
+    "id": "the-tortoise-and-the-hare",
+    "title": "The Tortoise and the Hare",
+    "logline": "Slow and steady wins the race.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "The Hare boasted constantly about how fast he was and mocked the slow Tortoise."
+      },
+      {
+        "n": 2,
+        "narration": "Enough said the Tortoise calmly. Let us race to the old oak hill and find out."
+      },
+      {
+        "n": 3,
+        "narration": "The Hare shot forward like an arrow, leaving everyone behind in a cloud of dust."
+      },
+      {
+        "n": 4,
+        "narration": "Halfway there he spotted soft grass, glanced back, and decided to take a nap."
+      },
+      {
+        "n": 5,
+        "narration": "Meanwhile the Tortoise plodded steadily forward—one tiny step after another."
+      },
+      {
+        "n": 6,
+        "narration": "When the Hare woke and sprinted to the finish, the Tortoise was already crossing the line!"
+      },
+      {
+        "n": 7,
+        "narration": "Overconfidence loses to consistency every single time."
+      }
+    ]
+  },
+  {
+    "id": "the-thirsty-crow",
+    "title": "The Thirsty Crow",
+    "logline": "A clever crow finds water using simple physics.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "On a blistering hot afternoon a thirsty crow flew desperately across the dry plains."
+      },
+      {
+        "n": 2,
+        "narration": "At last he spied a clay pitcher sitting in the shade of a rocky ledge."
+      },
+      {
+        "n": 3,
+        "narration": "He peered inside—water! But it sat far too low for his slender beak to reach."
+      },
+      {
+        "n": 4,
+        "narration": "Then an idea struck. He picked up small pebbles from the ground one by one."
+      },
+      {
+        "n": 5,
+        "narration": "Drop. Drop. Drop went each stone into the narrow neck of the jug."
+      },
+      {
+        "n": 6,
+        "narration": "Gradually the water level rose until at last he could drink deeply and fly away refreshed."
+      },
+      {
+        "n": 7,
+        "narration": "Necessity is the mother of invention—and patience is its sister."
+      }
+    ]
+  },
+  {
+    "id": "the-goose-that-laid-golden-eggs",
+    "title": "The Goose That Laid Golden Eggs",
+    "logline": "Greed destroys what could have lasted forever.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A hardworking farmer discovered his ordinary brown goose had laid one perfect golden egg."
+      },
+      {
+        "n": 2,
+        "narration": "Each morning brought another treasure. Soon he built a mansion and hired servants."
+      },
+      {
+        "n": 3,
+        "narration": "But greed grew inside him. Why wait daily when I could take it all at once?"
+      },
+      {
+        "n": 4,
+        "narration": "He seized the goose, ran to the kitchen, and sliced her open carefully."
+      },
+      {
+        "n": 5,
+        "narration": "Inside he found nothing special—just flesh and bone like any other bird."
+      },
+      {
+        "n": 6,
+        "narration": "The goose lay dead on the floor and no more golden eggs ever appeared."
+      },
+      {
+        "n": 7,
+        "narration": "Greedy hands often destroy the very blessing they seek to multiply."
+      }
+    ]
+  },
+  {
+    "id": "the-ant-and-the-grasshopper",
+    "title": "The Ant and the Grasshopper",
+    "logline": "Work today so you are safe tomorrow.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "All through the golden summer the industrious ants labored in their colony."
+      },
+      {
+        "n": 2,
+        "narration": "They gathered seeds and stored grain while the warm sun still shone brightly."
+      },
+      {
+        "n": 3,
+        "narration": "A lazy grasshopper sat on a blade of grass fiddling melodiously all afternoon."
+      },
+      {
+        "n": 4,
+        "narration": "Why work so hard he called down. Enjoy life while you can!"
+      },
+      {
+        "n": 5,
+        "narration": "But the ants kept moving. Winter is coming, they said. Prepare while you can."
+      },
+      {
+        "n": 6,
+        "narration": "Soon snow covered the field and the grasshopper shivered at the ants door begging."
+      },
+      {
+        "n": 7,
+        "narration": "While you played through summer, why should we share our winter store?"
+      }
+    ]
+  },
+  {
+    "id": "puss-in-boots",
+    "title": "Puss in Boots",
+    "logline": "A quick-witted cat uses trickery to make his master wealthy.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A miller left his three sons nothing but a mill, a donkey, and a ragged cat."
+      },
+      {
+        "n": 2,
+        "narration": "The youngest son received only Puss who wore a pair of cleverly stitched boots."
+      },
+      {
+        "n": 3,
+        "narration": "Dont despise me Master, said the cat. With these boots I will make you rich."
+      },
+      {
+        "n": 4,
+        "narration": "He caught a nobles prized rabbit and presented it as a gift from his master."
+      },
+      {
+        "n": 5,
+        "narration": "Next he threatened road travelers into claiming the land belonged to the Marquis!"
+      },
+      {
+        "n": 6,
+        "narration": "When the kings carriage passed he told the cat to shout help and threw himself in the mud."
+      },
+      {
+        "n": 7,
+        "narration": "The king was charmed by the false modesty. He made the cats master a noble lord."
+      }
+    ]
+  },
+  {
+    "id": "rumpelstiltskin",
+    "title": "Rumpelstiltskin",
+    "logline": "A spinster makes a bargain with a mysterious stranger.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A boastful miller convinced the king his daughter could spin straw into pure gold!"
+      },
+      {
+        "n": 2,
+        "narration": "Locked in a tower room with nothing but straw, the terrified girl wept nightly."
+      },
+      {
+        "n": 3,
+        "narration": "On the third night a tiny green man appeared and offered to spin the straw for her."
+      },
+      {
+        "n": 4,
+        "narration": "In exchange he asked for something precious. First her necklace, then her ring."
+      },
+      {
+        "n": 5,
+        "narration": "On the final night he demanded her firstborn child—a cruel price indeed."
+      },
+      {
+        "n": 6,
+        "narration": "Years later when the baby came he returned to claim what was owed sadly."
+      },
+      {
+        "n": 7,
+        "narration": "Guess my name and I will leave you free! She cried: Rumpelstiltskin! The little man stamped his foot and vanished forever."
+      }
+    ]
+  },
+  {
+    "id": "jack-and-the-beanstalk",
+    "title": "Jack and the Beanstalk",
+    "logline": "A brave boy climbs a magical beanstalk to face a fearsome giant.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "Poor Jack traded his familys last cow for five strange magic beans. His mother threw them out the window in anger."
+      },
+      {
+        "n": 2,
+        "narration": "Overnight enormous green stalks spiraled upward piercing the clouds above their cottage."
+      },
+      {
+        "n": 3,
+        "narration": "Jack climbed through mist and wind until he reached solid ground among towering castle walls."
+      },
+      {
+        "n": 4,
+        "narration": "A giantess hid him and warned: my husband comes—he can sniff a man like a hound!"
+      },
+      {
+        "n": 5,
+        "narration": "Jack stole a sack of gold coins and slid back down the stalk safely."
+      },
+      {
+        "n": 6,
+        "narration": "He returned later for a harp that sang by itself and a hen that laid golden eggs every dawn!"
+      },
+      {
+        "n": 7,
+        "narration": "When the giant thundered down after him the last time, Jack took an axe and felled the mighty stalk. The giant fell—and Jack lived happily ever after."
+      }
+    ]
+  },
+  {
+    "id": "sleeping-beauty",
+    "title": "Sleeping Beauty",
+    "logline": "A princess pricks her finger and sleeps for a hundred years.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A king and queen celebrated the birth of their beautiful daughter with a grand feast."
+      },
+      {
+        "n": 2,
+        "narration": "Ten fairies gifted the princess with beauty, virtue, and wisdom."
+      },
+      {
+        "n": 3,
+        "narration": "An evil fairy not invited cursed the princess to prick her finger and die!"
+      },
+      {
+        "n": 4,
+        "narration": "A good fairy softened the curse: she would sleep instead, waking only when true love s kiss freed her."
+      },
+      {
+        "n": 5,
+        "narration": "On her fifteenth birthday, the princess found the spinning wheel and pricked her finger."
+      },
+      {
+        "n": 6,
+        "narration": "The entire kingdom fell asleep too, surrounded by thorns that grew impenetrable."
+      },
+      {
+        "n": 7,
+        "narration": "A century later, a brave prince cut through the thorns, kissed the sleeping beauty, and awakened them all."
+      }
+    ]
+  },
+  {
+    "id": "cinderella",
+    "title": "Cinderella",
+    "logline": "A kind heart triumphs over cruelty with a little magic.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "After her father died, Cinderella was forced to serve as a servant in her own home."
+      },
+      {
+        "n": 2,
+        "narration": "Her cruel stepmother and stepsisters treated her cruelly, calling her cinders."
+      },
+      {
+        "n": 3,
+        "narration": "When the royal ball invitation arrived, they left her behind to sort lentils from the ashes."
+      },
+      {
+        "n": 4,
+        "narration": "A fairy godmother appeared, turning a pumpkin into a carriage and mice into horses."
+      },
+      {
+        "n": 5,
+        "narration": "Cinderella danced with the prince all evening, fleeing at midnight when the spell broke."
+      },
+      {
+        "n": 6,
+        "narration": "The prince searched the kingdom for the girl whose foot fit the glass slipper."
+      },
+      {
+        "n": 7,
+        "narration": "When it fit perfectly, Cinderella was lifted from darkness into a life of happiness and love."
+      }
+    ]
+  },
+  {
+    "id": "snow-white",
+    "title": "Snow White",
+    "logline": "Beauty and kindness survive despite jealousy and betrayal.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A queen wished for a child with skin white as snow, lips red as blood, and hair black as ebony."
+      },
+      {
+        "n": 2,
+        "narration": "When the child grew up, a magic mirror told the jealous queen Snow White was now fairest of all."
+      },
+      {
+        "n": 3,
+        "narration": "The queen sent a huntsman to take Snow White into the forest—but he spared her life."
+      },
+      {
+        "n": 4,
+        "narration": "Snow White found a cottage belonging to seven kind dwarf miners and lived with them peacefully."
+      },
+      {
+        "n": 5,
+        "narration": "The queen discovered Snow White alive and disguised herself to offer a poisoned apple."
+      },
+      {
+        "n": 6,
+        "narration": "Snow White bit the apple and fell into a deathlike slumber in the forest clearing."
+      },
+      {
+        "n": 7,
+        "narration": "A passing prince saw her, carried her away, and a dislodged piece of apple revived her. They married and lived happily."
+      }
+    ]
+  },
+  {
+    "id": "little-red-riding-hood",
+    "title": "Little Red Riding Hood",
+    "logline": "Obey your parents and stay on the path.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A sweet girl wore a red hooded cloak and was known everywhere as Little Red Riding Hood."
+      },
+      {
+        "n": 2,
+        "narration": "One day her mother asked her to carry cake and wine to her grandmother who lived deep in the forest."
+      },
+      {
+        "n": 3,
+        "narration": "A cunning wolf persuaded her to pick flowers and stray from the path."
+      },
+      {
+        "n": 4,
+        "narration": "The wolf rushed to the grandmothers cottage, swallowed her whole, and dressed in her clothes."
+      },
+      {
+        "n": 5,
+        "narration": "When Little Red arrived, she noticed how large the wolf looked under the covers."
+      },
+      {
+        "n": 6,
+        "narration": "Big eyes, big ears, big teeth—and then the wolf pounced!"
+      },
+      {
+        "n": 7,
+        "narration": "A huntsman heard her cries, burst in, slit open the sleeping wolf, and rescued both grandmother and granddaughter safely."
+      }
+    ]
+  },
+  {
+    "id": "the-sleepy-lion",
+    "title": "The Sleepy Lion",
+    "logline": "Tiny mice teach a mighty lion a lesson in kindness.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A lion slept peacefully beneath an acacia tree in the African savannah."
+      },
+      {
+        "n": 2,
+        "narration": "A fearless little mouse accidentally ran right across the lion s nose."
+      },
+      {
+        "n": 3,
+        "narration": "The lion grabbed the tiny creature and opened his enormous jaws!"
+      },
+      {
+        "n": 4,
+        "narration": "Please spare me! I may one day help you! squeaked the trembling mouse."
+      },
+      {
+        "n": 5,
+        "narration": "The lion laughed but let the mouse go—a gentle act of mercy."
+      },
+      {
+        "n": 6,
+        "narration": "Weeks later the same lion was trapped in a hunter s thick rope net!"
+      },
+      {
+        "n": 7,
+        "narration": "The mouse chewed through every cord. Friends help friends, big or small."
+      }
+    ]
+  },
+  {
+    "id": "the-two-dogs",
+    "title": "The Two Dogs",
+    "logline": "A greedy dog learns that contentment beats ambition.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "Two dogs lived in neighboring houses—one wealthy, one poor but happy."
+      },
+      {
+        "n": 2,
+        "narration": "The poor dog visited the rich house and feasted on fine food all day."
+      },
+      {
+        "n": 3,
+        "narration": "Now I must live like that! he decided—and started begging at doors."
+      },
+      {
+        "n": 4,
+        "narration": "One day a mean dog chased him away and he ran home in tears."
+      },
+      {
+        "n": 5,
+        "narration": "His own bowl was modest, but it was his without danger or fear."
+      },
+      {
+        "n": 6,
+        "narration": "Better a little peace than a lot of trouble wrapped in luxury."
+      }
+    ]
+  },
+  {
+    "id": "the-fox-and-the-grapes",
+    "title": "The Fox and the Grapes",
+    "logline": "A fox learns to disguise failure as indifference.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A hungry fox spotted a cluster of purple grapes hanging high above."
+      },
+      {
+        "n": 2,
+        "narration": "He jumped and missed. He jumped again and bounced off the vine."
+      },
+      {
+        "n": 3,
+        "narration": "After dozens of attempts his legs grew tired and his hope faded."
+      },
+      {
+        "n": 4,
+        "narration": "These grapes are sour anyway, he declared and walked away proudly."
+      },
+      {
+        "n": 5,
+        "narration": "Some people pretend not to want what they cannot have—that is human."
+      }
+    ]
+  },
+  {
+    "id": "the-bell-on-the-cat",
+    "title": "The Bell on the Cat",
+    "logline": "An easy idea that proves terribly hard to carry out.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A council of mice met to solve the problem of their deadly cat foe."
+      },
+      {
+        "n": 2,
+        "narration": "If we tie a bell around her neck, we will hear her coming! cheered a young mouse."
+      },
+      {
+        "n": 3,
+        "narration": "The room erupted in applause. What brilliant thinking! What wisdom!"
+      },
+      {
+        "n": 4,
+        "narration": "Then an old gray mouse stood slowly and asked simply—who will bell the cat?"
+      },
+      {
+        "n": 5,
+        "narration": "Silence fell over the hall. The easiest ideas are often the hardest to do."
+      }
+    ]
+  },
+  {
+    "id": "the-birds-in-winter",
+    "title": "The Birds in Winter",
+    "logline": "Preparation and community keep a flock alive through cold.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A clever bird warned his flock to store grain before winter arrived."
+      },
+      {
+        "n": 2,
+        "narration": "Most birds laughed. Summer was endless! Why worry about snow?"
+      },
+      {
+        "n": 3,
+        "narration": "But the wise ones gathered seeds and lined their nests with dry leaves."
+      },
+      {
+        "n": 4,
+        "narration": "When storms hit, the prepared birds huddled together for warmth."
+      },
+      {
+        "n": 5,
+        "narration": "Those who played all summer shivered alone under the freezing rain."
+      },
+      {
+        "n": 6,
+        "narration": "Community helps, but preparation saves lives."
+      }
+    ]
+  },
+  {
+    "id": "the-north-and-the-sun",
+    "title": "The North Wind and the Sun",
+    "logline": "Kindness works better than force.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "The North Wind and the Sun argued about who was stronger."
+      },
+      {
+        "n": 2,
+        "narration": "They saw a traveler walking down the road wrapped in a warm cloak."
+      },
+      {
+        "n": 3,
+        "narration": "Whoever can make him remove his cloak wins the contest, said the Sun."
+      },
+      {
+        "n": 4,
+        "narration": "The Wind blew with all his might, but the traveler wrapped tighter."
+      },
+      {
+        "n": 5,
+        "narration": "Then the Sun shone gently and warmly. The traveler unbuttoned his cloak."
+      },
+      {
+        "n": 6,
+        "narration": "The Sun won—not by force, but by kindness and gentleness."
+      }
+    ]
+  },
+  {
+    "id": "the-dog-and-his-reflection",
+    "title": "The Dog and His Reflection",
+    "logline": "Greed costs a loyal friend everything.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A loyal dog carried a tasty piece of meat across a wooden bridge."
+      },
+      {
+        "n": 2,
+        "narration": "He looked down and saw another dog with an even bigger bone!"
+      },
+      {
+        "n": 3,
+        "narration": "I want that one too! he growled and snapped at the reflection."
+      },
+      {
+        "n": 4,
+        "narration": "His own meat fell into the river and washed away forever."
+      },
+      {
+        "n": 5,
+        "narration": "Greed blinded him to the treasure he already held in his mouth."
+      }
+    ]
+  },
+  {
+    "id": "the-old-hound",
+    "title": "The Old Hound",
+    "logline": "Loyalty deserves respect even in decline.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A hunting hound had chased game for many years beside his master."
+      },
+      {
+        "n": 2,
+        "narration": "Now old and slow, he stumbled over roots and could barely keep up."
+      },
+      {
+        "n": 3,
+        "narration": "His master sighed. You are useless now. Go find your own food."
+      },
+      {
+        "n": 4,
+        "narration": "Heartbroken, the hound wandered into the woods alone."
+      },
+      {
+        "n": 5,
+        "narration": "There he encountered a fierce boar charging toward his master s cabin!"
+      },
+      {
+        "n": 6,
+        "narration": "With his last strength he bit the boar s leg and saved the family."
+      },
+      {
+        "n": 7,
+        "narration": "The master carried the old hound home. Loyalty never grows old."
+      }
+    ]
+  },
+  {
+    "id": "the-mountain-that-shook-itself",
+    "title": "The Mountain That Shook Itself",
+    "logline": "Not all promises deliver what they seem.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A woman with a headache went to the mountain to seek relief."
+      },
+      {
+        "n": 2,
+        "narration": "The mountain shook violently, rocks tumbling everywhere!"
+      },
+      {
+        "n": 3,
+        "narration": "When the shaking stopped, she asked: Is that all you came for?"
+      },
+      {
+        "n": 4,
+        "narration": "The mountain had produced only a tiny thimble of medicine."
+      },
+      {
+        "n": 5,
+        "narration": "Much ado about nothing—some efforts produce disappointingly small results."
+      }
+    ]
+  },
+  {
+    "id": "the-frog-and-the-ox",
+    "title": "The Frog and the Ox",
+    "logline": "Trying to be someone else leads only to bursting pride.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A curious frog watched a huge ox grazing by the pond."
+      },
+      {
+        "n": 2,
+        "narration": "How big you are! he gasped. I wish I could grow that large!"
+      },
+      {
+        "n": 3,
+        "narration": "He puffed and puffed his belly, asking if he was bigger yet."
+      },
+      {
+        "n": 4,
+        "narration": "Still larger? he yelled. Still not big enough! Keep puffing!"
+      },
+      {
+        "n": 5,
+        "narration": "With a loud pop his belly burst. Pride before the fall ruins everything."
+      }
+    ]
+  },
+  {
+    "id": "the-string-quivers",
+    "title": "The String That Quivers",
+    "logline": "Small tensions can create loud problems.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A carpenter stretched a string between two nails and plucked it."
+      },
+      {
+        "n": 2,
+        "narration": "It sang a clear note. Tighten it more! his apprentice suggested."
+      },
+      {
+        "n": 3,
+        "narration": "The string tightened until it snapped with a sharp crack!"
+      },
+      {
+        "n": 4,
+        "narration": "The carpenter nodded. Even the strongest things break under too much tension."
+      }
+    ]
+  },
+  {
+    "id": "the-old-man-and-death",
+    "title": "The Old Man and Death",
+    "logline": "Sometimes relief comes when we least expect it.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "An old woodcutter dragged heavy bundles of sticks up the mountain every day."
+      },
+      {
+        "n": 2,
+        "narration": "Exhausted one evening, he sat down and cried out: Oh, I wish Death would come!"
+      },
+      {
+        "n": 3,
+        "narration": "Immediately Death appeared before him with menacing claws reaching out."
+      },
+      {
+        "n": 4,
+        "narration": "The old man scrambled up and shouted: Just help me lift these sticks, Death!"
+      },
+      {
+        "n": 5,
+        "narration": "We do not always mean what we say when we speak in desperation."
+      }
+    ]
+  },
+  {
+    "id": "the-wolf-in-sheep-clothing",
+    "title": "The Wolf in Sheep's Clothing",
+    "logline": "Deceit may fool eyes but not actions.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A cunning wolf found a discarded sheepskin in the farmer s yard."
+      },
+      {
+        "n": 2,
+        "narration": "He draped it over his furry body and trotted into the flock quietly."
+      },
+      {
+        "n": 3,
+        "narration": "He fooled the sheep completely and devoured several before dinner."
+      },
+      {
+        "n": 4,
+        "narration": "At nightfall he returned to the skin and planned to repeat the trick."
+      },
+      {
+        "n": 5,
+        "narration": "But the farmer heard the familiar growl and recognized the true wolf beneath."
+      },
+      {
+        "n": 6,
+        "narration": "Appearances deceive, but nature eventually reveals itself."
+      }
+    ]
+  },
+  {
+    "id": "the-elder-tree",
+    "title": "The Elder Tree",
+    "logline": "True worth hides beneath humble exterior.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "An elder tree stood at the edge of a meadow looking utterly plain."
+      },
+      {
+        "n": 2,
+        "narration": "Passersby ignored it. Its wood was crooked and useless for building."
+      },
+      {
+        "n": 3,
+        "narration": "But in spring it bloomed with fragrant white flowers bees loved."
+      },
+      {
+        "n": 4,
+        "narration": "In autumn its berries cured illnesses and its branches made fine flutes."
+      },
+      {
+        "n": 5,
+        "narration": "Nothing in nature is truly worthless—everything serves some purpose."
+      }
+    ]
+  },
+  {
+    "id": "the-lark-and-her-young",
+    "title": "The Lark and Her Young",
+    "logline": "Rely on yourself, not on others for safety.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A lark nested in a wheat field awaiting harvest."
+      },
+      {
+        "n": 2,
+        "narration": "When the farmer said I will ask my neighbors to help reap, the young lark grew anxious."
+      },
+      {
+        "n": 3,
+        "narration": "That night! said Mother. They will not come."
+      },
+      {
+        "n": 4,
+        "narration": "Next day the farmer said I will ask my relations. Still no urgency."
+      },
+      {
+        "n": 5,
+        "narration": "Tomorrow I will hire reapers, declared the farmer. This time the mother moved the nest."
+      },
+      {
+        "n": 6,
+        "narration": "Self-reliance matters most—others promises shift like sand."
+      }
+    ]
+  },
+  {
+    "id": "the-mule-and-his-pride",
+    "title": "The Mule and His Pride",
+    "logline": "Pride before a fall is a timeless lesson.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A mule born to nobility pranced through the stables like a royal horse."
+      },
+      {
+        "n": 2,
+        "narration": "He kicked the hay and tossed his mane, refusing to pull the cart."
+      },
+      {
+        "n": 3,
+        "narration": "The owner sighed. If you will not serve, you have no place here."
+      },
+      {
+        "n": 4,
+        "narration": "They sold the proud mule to a tanner who needed leather."
+      },
+      {
+        "n": 5,
+        "narration": "Refusing honest work can lead to far worse fates."
+      }
+    ]
+  },
+  {
+    "id": "the-swallow-and-the-spring",
+    "title": "The Swallow and the Spring",
+    "logline": "One good sign does not guarantee lasting change.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A swallow flew over a frozen marsh and chirped joyfully."
+      },
+      {
+        "n": 2,
+        "narration": "Spring has come! she announced to the shivering creatures below."
+      },
+      {
+        "n": 3,
+        "narration": "Stay warm, friends warned. One bird does not make a season."
+      },
+      {
+        "n": 4,
+        "narration": "Hours later a bitter wind swept across the ice and the swallow perished."
+      },
+      {
+        "n": 5,
+        "narration": "A single favorable omen means nothing against entrenched conditions."
+      }
+    ]
+  },
+  {
+    "id": "the-man-and-the-serpent",
+    "title": "The Man and the Serpent",
+    "logline": "Kindness to the wicked brings only harm.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A kind man found a frozen serpent beside his path one winter morning."
+      },
+      {
+        "n": 2,
+        "narration": "Take pity on me, pleaded the snake. Warm me and I will never forget your kindness."
+      },
+      {
+        "n": 3,
+        "narration": "The man placed the serpent in his bosom. Slowly it revived."
+      },
+      {
+        "n": 4,
+        "narration": "Almost at once it gave its master a deadly bite and whispered: Know your nature."
+      },
+      {
+        "n": 5,
+        "narration": "Evil cannot be warmed into goodness—it remains evil to the core."
+      }
+    ]
+  },
+  {
+    "id": "the-two-pots",
+    "title": "The Two Pots",
+    "logline": "Different natures should not try to mix recklessly.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A pottery pot and a bronze pot traveled together down a muddy road."
+      },
+      {
+        "n": 2,
+        "narration": "Stay close! called the bronze pot. I will protect you from danger."
+      },
+      {
+        "n": 3,
+        "narration": "Better keep your distance, answered the earthenware wisely."
+      },
+      {
+        "n": 4,
+        "narration": "If you bump me even slightly, I will shatter—and I cannot bear to hurt you either."
+      },
+      {
+        "n": 5,
+        "narration": "Some friendships require careful distance to survive."
+      }
+    ]
+  },
+  {
+    "id": "the-trail-of-branches",
+    "title": "The Trail of Branches",
+    "logline": "Follow the evidence where it leads.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A hunter followed fresh deer tracks through the dense forest."
+      },
+      {
+        "n": 2,
+        "narration": "The trail led uphill, crossed a stream, and disappeared into a hollow log."
+      },
+      {
+        "n": 3,
+        "narration": "Cautiously he peered inside—and found not a deer but a sleeping bear!"
+      },
+      {
+        "n": 4,
+        "narration": "He backed away slowly. The trail had led him into terrible danger."
+      },
+      {
+        "n": 5,
+        "narration": "Curiosity without caution often leads to trouble."
+      }
+    ]
+  },
+  {
+    "id": "the-ship-of-line",
+    "title": "The Ship of Line",
+    "logline": "Honest labor earns honest rewards.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A poor fisherman mended his nets by the harbor every day."
+      },
+      {
+        "n": 2,
+        "narration": "A merchant ship pulled in and offered him gold to sail with them."
+      },
+      {
+        "n": 3,
+        "narration": "What would I do aboard such a vessel? asked the fisherman."
+      },
+      {
+        "n": 4,
+        "narration": "You would cast lines, haul nets, and catch fish—just like here, replied the captain."
+      },
+      {
+        "n": 5,
+        "narration": "Then I shall stay right where I am, for I already know how to fish."
+      }
+    ]
+  },
+  {
+    "id": "the-lion-and-the-mouse",
+    "title": "The Lion and the Mouse",
+    "logline": "Even the smallest can help the greatest.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A mighty lion slept in the sunshine when a brave mouse ran across his paw."
+      },
+      {
+        "n": 2,
+        "narration": "Awakening furious, he grabbed the tiny creature and opened his great jaws."
+      },
+      {
+        "n": 3,
+        "narration": "Please spare me! I promise I will repay this kindness someday!"
+      },
+      {
+        "n": 4,
+        "narration": "The lion laughed but released the mouse, amused by such a tiny promise."
+      },
+      {
+        "n": 5,
+        "narration": "Days later the lion became trapped in a hunter s strong net ropes."
+      },
+      {
+        "n": 6,
+        "narration": "The little mouse chewed through every cord and set the giant free."
+      }
+    ]
+  },
+  {
+    "id": "the-starlings",
+    "title": "The Starlings",
+    "logline": "Unity makes strength.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A farmer tied a branch to the legs of captured starlings so they could not fly."
+      },
+      {
+        "n": 2,
+        "narration": "One by one he collected them in a cage, satisfied with his prize."
+      },
+      {
+        "n": 3,
+        "narration": "But the starlings waited until nightfall, then lifted the cage together."
+      },
+      {
+        "n": 4,
+        "narration": "United they rose into the dark sky and vanished into the forest."
+      },
+      {
+        "n": 5,
+        "narration": "Alone they were captives—but together they were free."
+      }
+    ]
+  },
+  {
+    "id": "the-camper-and-the-bear",
+    "title": "The Camper and the Bear",
+    "logline": "Luck favors those who prepare.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "Two campers pitched their tent in the wilderness one summer evening."
+      },
+      {
+        "n": 2,
+        "narration": "A massive black bear appeared at dusk and began approaching their food supplies."
+      },
+      {
+        "n": 3,
+        "narration": "Run! whispered one camper, already scrambling up a pine tree."
+      },
+      {
+        "n": 4,
+        "narration": "The other lay flat on the ground and held his breath, playing dead."
+      },
+      {
+        "n": 5,
+        "narration": "The bear sniffed his face, lost interest, and wandered off into the pines."
+      },
+      {
+        "n": 6,
+        "narration": "Calm preparation saves lives when panic would only worsen things."
+      }
+    ]
+  },
+  {
+    "id": "the-itching-post",
+    "title": "The Itching Post",
+    "logline": "Some problems have simple solutions nearby.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A restless horse could not stop itching against the stable wall."
+      },
+      {
+        "n": 2,
+        "narration": "He rubbed harder and harder but the itch remained unsatisfied."
+      },
+      {
+        "n": 3,
+        "narration": "A smart farmhand noticed a rough oak tree just beyond the fence."
+      },
+      {
+        "n": 4,
+        "narration": "Move him there, he said. The horse scratched himself thoroughly within moments."
+      },
+      {
+        "n": 5,
+        "narration": "Sometimes the solution lies just outside what you are currently trying."
+      }
+    ]
+  },
+  {
+    "id": "the-wolf-and-the-herdsman",
+    "title": "The Wolf and the Herdsman",
+    "logline": "Justice needs evidence, not assumptions.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A sheepdog chased a wolf away from the flock one evening."
+      },
+      {
+        "n": 2,
+        "narration": "The next morning a lamb was found dead in the pasture."
+      },
+      {
+        "n": 3,
+        "narration": "The shepherd blamed the wolf without checking and raised a mob."
+      },
+      {
+        "n": 4,
+        "narration": "But examination showed bite marks inconsistent with any wild predator."
+      },
+      {
+        "n": 5,
+        "narration": "A jealous dog had killed the lamb and framed an innocent neighbor."
+      },
+      {
+        "n": 6,
+        "narration": "Haste makes wasteful judgments that punish the wrong person."
+      }
+    ]
+  },
+  {
+    "id": "the-horse-and-the-deer",
+    "title": "The Horse and the Deer",
+    "logline": "Trading freedom for comfort is a dangerous bargain.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A wild deer fled desperately from hunters into a friendly farmer s meadow."
+      },
+      {
+        "n": 2,
+        "narration": "A captive horse warned: Run while you still can! These humans trap visitors."
+      },
+      {
+        "n": 3,
+        "narration": "But the deer, exhausted and grateful for the safety, refused to leave."
+      },
+      {
+        "n": 4,
+        "narration": "Days later the farmer branded him alongside his livestock."
+      },
+      {
+        "n": 5,
+        "narration": "The deer learned too late that refuge can become a prison."
+      }
+    ]
+  },
+  {
+    "id": "the-miser",
+    "title": "The Miser",
+    "logline": "Hoarding wealth without using it is pointless.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A miser buried his gold coins in a hidden spot beneath his old oak tree."
+      },
+      {
+        "n": 2,
+        "narration": "Every day he dug it up and counted every gleaming piece with delight."
+      },
+      {
+        "n": 3,
+        "narration": "A passerby noticed and stole the entire treasure overnight."
+      },
+      {
+        "n": 4,
+        "narration": "When the miser returned he tore his hair and wept bitterly."
+      },
+      {
+        "n": 5,
+        "narration": "A wise friend said: Bring a rock and bury it. You never used the gold anyway."
+      }
+    ]
+  },
+  {
+    "id": "the-wolf-and-the-lamb",
+    "title": "The Wolf and the Lamb",
+    "logline": "Tyrants always find excuses for cruelty.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A lamb drank from a mountain stream when a ravenous wolf approached."
+      },
+      {
+        "n": 2,
+        "narration": "How dare you muddy my drinking water! roared the wolf indignantly."
+      },
+      {
+        "n": 3,
+        "narration": "But sir, I stand below you—the water flows from you to me, protested the lamb."
+      },
+      {
+        "n": 4,
+        "narration": "Then it was your father who insulted me last year! snarled the wolf."
+      },
+      {
+        "n": 5,
+        "narration": "I have not even been born yet! bleated the terrified lamb."
+      },
+      {
+        "n": 6,
+        "narration": "Well then, I will eat you anyway, and that settles the matter."
+      }
+    ]
+  },
+  {
+    "id": "the-crane-and-the-crab",
+    "title": "The Crane and the Crab",
+    "logline": "Deception rarely survives scrutiny.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A cunning crane invited crabs to dinner along the seashore."
+      },
+      {
+        "n": 2,
+        "narration": "As each guest arrived, he carried them over rocky terrain—and dropped them onto sharp stones."
+      },
+      {
+        "n": 3,
+        "narration": "A quick-eyed crab clamped onto the crane s neck and demanded an explanation."
+      },
+      {
+        "n": 4,
+        "narration": "Just treating my friends kindly, lied the crane nervously."
+      },
+      {
+        "n": 5,
+        "narration": "Tell the truth, said the crab. I know exactly what you are doing—and I will not fall for it again."
+      }
+    ]
+  },
+  {
+    "id": "the-ass-and-the-chameleon",
+    "title": "The Ass and the Chameleon",
+    "logline": "Adaptability beats stubborn resistance.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A stubborn ass refused to change his grazing habits despite seasonal drought."
+      },
+      {
+        "n": 2,
+        "narration": "A wise chameleon changed color with every leaf and survived beautifully."
+      },
+      {
+        "n": 3,
+        "narration": "Why do you twist yourself into such ridiculous shapes? scoffed the ass."
+      },
+      {
+        "n": 4,
+        "narration": "To match my surroundings, explained the chameleon patiently."
+      },
+      {
+        "n": 5,
+        "narration": "When the drought worsened, the rigid ass starved while the adaptable one thrived."
+      }
+    ]
+  },
+  {
+    "id": "the-eagle-and-the-bee",
+    "title": "The Eagle and the Bee",
+    "logline": "Respect all creatures regardless of size.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "An arrogant eagle mocked a tiny bee buzzing near her nesting cliff."
+      },
+      {
+        "n": 2,
+        "narration": "You are so small and weak. What purpose do you serve? she laughed."
+      },
+      {
+        "n": 3,
+        "narration": "I pollinate flowers that feed the forest, replied the bee calmly."
+      },
+      {
+        "n": 4,
+        "narration": "Without me there would be no blossoms, no fruit, and nowhere for your chicks to nest."
+      },
+      {
+        "n": 5,
+        "narration": "The eagle felt shame. Even the smallest creature holds value in the web of life."
+      }
+    ]
+  },
+  {
+    "id": "the-geese-and-the-goose",
+    "title": "The Geese and the Goose",
+    "logline": "Leadership requires sacrifice.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A flock of geese migrated south for winter in perfect V formation."
+      },
+      {
+        "n": 2,
+        "narration": "Their leader broke the wind each day, tiring before the weaker birds."
+      },
+      {
+        "n": 3,
+        "narration": "One night a young goose asked: Why do you push yourself so hard?"
+      },
+      {
+        "n": 4,
+        "narration": "Someone must guide us home, replied the elder simply. That is what leadership means."
+      },
+      {
+        "n": 5,
+        "narration": "True leaders serve others before themselves—always."
+      }
+    ]
+  },
+  {
+    "id": "the-shepherd-and-the-wolf",
+    "title": "The Shepherd and the Wolf",
+    "logline": "Experience teaches what books cannot.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A young shepherd studied every book about wolves he could find."
+      },
+      {
+        "n": 2,
+        "narration": "He knew their habits, teeth, and running speed by heart."
+      },
+      {
+        "n": 3,
+        "narration": "One evening a real wolf appeared at the edge of the pasture—and froze."
+      },
+      {
+        "n": 4,
+        "narration": "The book-smart shepherd fainted. An older shepherd drove it away with a simple stick."
+      },
+      {
+        "n": 5,
+        "narration": "Knowledge without practice is useless when action is required."
+      }
+    ]
+  },
+  {
+    "id": "the-burning-tree",
+    "title": "The Burning Tree",
+    "logline": "Some situations require decisive action, not hesitation.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A lightning strike set fire to a dry forest one August afternoon."
+      },
+      {
+        "n": 2,
+        "narration": "Animals scattered in panic—but a family of squirrels remained trapped on a dying branch."
+      },
+      {
+        "n": 3,
+        "narration": "A firefighter aimed his hose but hesitated—the branch seemed too fragile."
+      },
+      {
+        "n": 4,
+        "narration": "Someone shot him gently: Hesitation kills. Act now!"
+      },
+      {
+        "n": 5,
+        "narration": "The water arc hit just right. The squirrels survived because someone acted decisively."
+      }
+    ]
+  },
+  {
+    "id": "the-judge-and-the-pardoner",
+    "title": "The Judge and the Pardoner",
+    "logline": "Mercy balances justice beautifully.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A strict judge sentenced a thief to ten years for stealing bread."
+      },
+      {
+        "n": 2,
+        "narration": "A traveling pardoner approached him afterward. Should you not show mercy?"
+      },
+      {
+        "n": 3,
+        "narration": "Justice demands punishment, replied the judge firmly."
+      },
+      {
+        "n": 4,
+        "narration": "But the pardoner whispered: What if I pardon him? The judge paused thoughtfully."
+      },
+      {
+        "n": 5,
+        "narration": "Very well—if he swears never to steal again. Justice with mercy serves both society and the soul."
+      }
+    ]
+  },
+  {
+    "id": "the-river-and-the-sea",
+    "title": "The River and the Sea",
+    "logline": "Humility opens the path to greatness.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A proud river rushed toward the ocean boasting of its power."
+      },
+      {
+        "n": 2,
+        "narration": "I am vast and magnificent! it declared. Why should I join you?"
+      },
+      {
+        "n": 3,
+        "narration": "Because you are incomplete without me, answered the ancient sea gently."
+      },
+      {
+        "n": 4,
+        "narration": "The river hesitated, then flowed forward—becoming part of something greater than itself."
+      },
+      {
+        "n": 5,
+        "narration": "True greatness lies in connection, not isolation."
+      }
+    ]
+  },
+  {
+    "id": "the-weaver-and-the-spider",
+    "title": "The Weaver and the Spider",
+    "logline": "Every craft has its own beauty.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A master weaver compared his silk tapestries to a spider s delicate web."
+      },
+      {
+        "n": 2,
+        "narration": "Mine are grander, he boasted. Yours catches nothing but dust!"
+      },
+      {
+        "n": 3,
+        "narration": "My web holds flies that feed my children, replied the spider quietly."
+      },
+      {
+        "n": 4,
+        "narration": "Both crafts serve different purposes—and both deserve respect."
+      },
+      {
+        "n": 5,
+        "narration": "Pride blinds us to the value in others work."
+      }
+    ]
+  },
+  {
+    "id": "the-clown-and-the-child",
+    "title": "The Clown and the Child",
+    "logline": "Joy is shared, not owned.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A traveling clown performed magic tricks for a crowded town square."
+      },
+      {
+        "n": 2,
+        "narration": "A small child tugged his sleeve. Can you make me laugh, please?"
+      },
+      {
+        "n": 3,
+        "narration": "The clown knelt and told silly jokes until the child giggled uncontrollably."
+      },
+      {
+        "n": 4,
+        "narration": "That was the best show, whispered the parent. You gave freely of your talent."
+      },
+      {
+        "n": 5,
+        "narration": "True joy multiplies when shared, not divided."
+      }
+    ]
+  },
+  {
+    "id": "the-map-and-the-territory",
+    "title": "The Map and the Territory",
+    "logline": "Reality exceeds any representation.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "An explorer carried a perfect map through unfamiliar mountains."
+      },
+      {
+        "n": 2,
+        "narration": "The map showed smooth trails, but the reality was jagged cliffs and sudden ravines."
+      },
+      {
+        "n": 3,
+        "narration": "Trust the map, urged his companion. But the explorer adjusted constantly."
+      },
+      {
+        "n": 4,
+        "narration": "He observed weather, wildlife signs, and terrain shifts minute by minute."
+      },
+      {
+        "n": 5,
+        "narration": "Maps guide—but attention to reality navigates successfully."
+      }
+    ]
+  },
+  {
+    "id": "the-star-and-the-moon",
+    "title": "The Star and the Moon",
+    "logline": "Companions shine brightest together.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A bright star envied the moon s glowing halo in the night sky."
+      },
+      {
+        "n": 2,
+        "narration": "Why do they look at you instead of me? complained the star bitterly."
+      },
+      {
+        "n": 3,
+        "narration": "We are all light reflected from the same source, replied the moon gently."
+      },
+      {
+        "n": 4,
+        "narration": "Without my glow you would be invisible—and without your spark the darkness would be complete."
+      },
+      {
+        "n": 5,
+        "narration": "We are better together than apart—in friendship and in light."
+      }
+    ]
+  },
+  {
+    "id": "the-craftsman-and-the-apprentice",
+    "title": "The Craftsman and the Apprentice",
+    "logline": "Patience breeds mastery.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A young apprentice wanted to build a beautiful chair in one day."
+      },
+      {
+        "n": 2,
+        "narration": "The master craftsman smiled. Try again next week, then next month, then next year."
+      },
+      {
+        "n": 3,
+        "narration": "Impatient, the boy attempted a rush job—and it collapsed immediately."
+      },
+      {
+        "n": 4,
+        "narration": "Craftsmanship requires time, care, and attention to every detail."
+      },
+      {
+        "n": 5,
+        "narration": "Rush creates regret—but patience builds something lasting."
+      }
+    ]
+  },
+  {
+    "id": "the-cloud-and-the-rain",
+    "title": "The Cloud and the Rain",
+    "logline": "Giving creates fulfillment.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A fluffy cloud hovered over a parched valley feeling quite important."
+      },
+      {
+        "n": 2,
+        "narration": "I am powerful and full of moisture, it declared proudly."
+      },
+      {
+        "n": 3,
+        "narration": "But empty yourself into the soil below, whispered the earth gently."
+      },
+      {
+        "n": 4,
+        "narration": "Reluctantly the cloud rained—and the flowers bloomed in grateful celebration."
+      },
+      {
+        "n": 5,
+        "narration": "Purpose arrives not from holding on, but from giving freely."
+      }
+    ]
+  },
+  {
+    "id": "the-kite-and-the-wind",
+    "title": "The Kite and the Wind",
+    "logline": "Constraints enable flight.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A beautiful kite resented the string that tethered it to the ground."
+      },
+      {
+        "n": 2,
+        "narration": "Cut me loose and I will soar higher than ever! it begged the wind."
+      },
+      {
+        "n": 3,
+        "narration": "The wind complied—and the kite tumbled harmlessly into the bushes below."
+      },
+      {
+        "n": 4,
+        "narration": "The string was not a limitation; it was what allowed the kite to dance on air."
+      },
+      {
+        "n": 5,
+        "narration": "Sometimes discipline gives us the freedom to reach new heights."
+      }
+    ]
+  },
+  {
+    "id": "the-compass-and-the-north-star",
+    "title": "The Compass and the North Star",
+    "logline": "Different guides serve different journeys.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A compass mocked the distant North Star. You are too far to be useful!"
+      },
+      {
+        "n": 2,
+        "narration": "I point the way eternally, replied the star calmly."
+      },
+      {
+        "n": 3,
+        "narration": "I adjust continuously to magnetic shifts, said the compass defensively."
+      },
+      {
+        "n": 4,
+        "narration": "Both are needed, reasoned a sailor. Stars for open ocean, instruments for stormy nights."
+      },
+      {
+        "n": 5,
+        "narration": "Diverse guidance systems complement each other brilliantly."
+      }
+    ]
+  },
+  {
+    "id": "the-wind-and-the-sail",
+    "title": "The Wind and the Sail",
+    "logline": "Opposing forces create motion.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A billowing sail resented the wind pushing against it relentlessly."
+      },
+      {
+        "n": 2,
+        "narration": "Why must you shove me so roughly? complained the linen dramatically."
+      },
+      {
+        "n": 3,
+        "narration": "Without my push you would hang limp and useless, answered the wind patiently."
+      },
+      {
+        "n": 4,
+        "narration": "Together we move ships across oceans—to trade, to explore, to discover."
+      },
+      {
+        "n": 5,
+        "narration": "Resistance often provides the very force needed for progress."
+      }
+    ]
+  },
+  {
+    "id": "the-hill-and-the-valley",
+    "title": "The Hill and the Valley",
+    "logline": "Balance defines the landscape of life.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A proud hill sneered at the lowly valley below. How dull you must feel!"
+      },
+      {
+        "n": 2,
+        "narration": "Streams flow here, flowers bloom, and birds rest in my shelter, replied the valley contentedly."
+      },
+      {
+        "n": 3,
+        "narration": "You provide nothing but exposure to harsh elements, mocked the hill."
+      },
+      {
+        "n": 4,
+        "narration": "Without valleys there would be rivers, without rivers the sea, without seas the rain that feeds you."
+      },
+      {
+        "n": 5,
+        "narration": "Every elevation needs its depression to complete the cycle of life."
+      }
+    ]
+  },
+  {
+    "id": "the-dawn-and-the-dusk",
+    "title": "The Dawn and the Dusk",
+    "logline": "Beginning and ending belong together.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "Dawn painted the eastern sky in brilliant colors each morning."
+      },
+      {
+        "n": 2,
+        "narration": "Dusk softened the western horizon with gentle purples each evening."
+      },
+      {
+        "n": 3,
+        "narration": "I am more vibrant and energetic! boasted Dawn repeatedly."
+      },
+      {
+        "n": 4,
+        "narration": "But without my peaceful ending, your beginning would have no meaning, countered Dusk softly."
+      },
+      {
+        "n": 5,
+        "narration": "Life needs both sunrise and sunset—to begin and to rest beautifully."
+      }
+    ]
+  },
+  {
+    "id": "the-root-and-the-branch",
+    "title": "The Root and the Branch",
+    "logline": "Hidden foundations support visible glory.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A flourishing branch enjoyed sunlight and admiration from passersby."
+      },
+      {
+        "n": 2,
+        "narration": "Below, the ancient root system worked silently in darkness gathering nourishment."
+      },
+      {
+        "n": 3,
+        "narration": "Look how magnificent I am! exclaimed the branch disdainfully."
+      },
+      {
+        "n": 4,
+        "narration": "Without me you wither and die, replied the root simply."
+      },
+      {
+        "n": 5,
+        "narration": "Visible success depends entirely on invisible foundations."
+      }
+    ]
+  },
+  {
+    "id": "the-echo-and-the-canyon",
+    "title": "The Echo and the Canyon",
+    "logline": "What you give returns to you multiplied.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A traveler shouted insults into a deep canyon and heard them echoed back angrily."
+      },
+      {
+        "n": 2,
+        "narration": "Confused and frightened, he whispered kind words—and kindness returned instantly."
+      },
+      {
+        "n": 3,
+        "narration": "Everything comes back, said the canyon mysteriously."
+      },
+      {
+        "n": 4,
+        "narration": "What you project outward shapes what returns inward."
+      },
+      {
+        "n": 5,
+        "narration": "Speak kindly into the world—and watch it echo back to you."
+      }
+    ]
+  },
+  {
+    "id": "the-bridge-and-the-river",
+    "title": "The Bridge and the River",
+    "logline": "Support enables connection.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A sturdy bridge spanned a rushing river connecting two villages."
+      },
+      {
+        "n": 2,
+        "narration": "The river below grumbled constantly about being overshadowed."
+      },
+      {
+        "n": 3,
+        "narration": "Without my current you would have no foundation, reminded the bridge gently."
+      },
+      {
+        "n": 4,
+        "narration": "And without my strength your waters would flood unchecked, agreed the bridge."
+      },
+      {
+        "n": 5,
+        "narration": "True partnership recognizes interdependence beautifully."
+      }
+    ]
+  },
+  {
+    "id": "the-salt-and-the-water",
+    "title": "The Salt and the Water",
+    "logline": "Essence often hides invisibly.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "Ocean waves crashed against salty shores endlessly."
+      },
+      {
+        "n": 2,
+        "narration": "Where does all this salt come from? wondered a curious shellfish."
+      },
+      {
+        "n": 3,
+        "narration": "Rivers carry tiny amounts dissolved from mountains, explained an ancient coral."
+      },
+      {
+        "n": 4,
+        "narration": "Eventually everything returns to the sea—dissolved, invisible, but essential."
+      },
+      {
+        "n": 5,
+        "narration": "The unseen elements shape the visible world profoundly."
+      }
+    ]
+  },
+  {
+    "id": "the-fire-and-the-kindling",
+    "title": "The Fire and the Kindling",
+    "logline": "Great transformation begins with small cooperation.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A spark landed on dry twigs and leaves piled near a campsite."
+      },
+      {
+        "n": 2,
+        "narration": "We are too small to matter! cried the kindling in panic."
+      },
+      {
+        "n": 3,
+        "narration": "Together we become something extraordinary, whispered the flame encouragingly."
+      },
+      {
+        "n": 4,
+        "narration": "The twigs joined the blaze—and soon a roaring fire warmed the entire forest."
+      },
+      {
+        "n": 5,
+        "narration": "Small pieces unite to create magnificent transformations."
+      }
+    ]
+  },
+  {
+    "id": "the-shadow-and-the-light",
+    "title": "The Shadow and the Light",
+    "logline": "Contrast defines existence.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A shadow complained bitterly about being chased everywhere by annoying light."
+      },
+      {
+        "n": 2,
+        "narration": "I cannot exist without you, admitted the shadow honestly."
+      },
+      {
+        "n": 3,
+        "narration": "Then appreciate my presence, smiled the light warmly."
+      },
+      {
+        "n": 4,
+        "narration": "Without contrast there would be no definition, no depth, no shape to anything."
+      },
+      {
+        "n": 5,
+        "narration": "Opposites complete each other beautifully."
+      }
+    ]
+  },
+  {
+    "id": "the-sentence-and-the-dialogue",
+    "title": "The Sentence and the Dialogue",
+    "logline": "Stories need both structure and spontaneity.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A well-crafted sentence stood proudly in a library."
+      },
+      {
+        "n": 2,
+        "narration": "I am precise and complete, it declared loftily."
+      },
+      {
+        "n": 3,
+        "narration": "But dialogue breathes life into stories, countered a lively conversation."
+      },
+      {
+        "n": 4,
+        "narration": "Together we create narratives that move readers deeply."
+      },
+      {
+        "n": 5,
+        "narration": "Structure and spontaneity combine to tell unforgettable tales."
+      }
+    ]
+  },
+  {
+    "id": "the-map-maker",
+    "title": "The Map Maker",
+    "logline": "Every journey begins with a single marked point.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "An aspiring cartographer drew maps of imaginary lands by candlelight."
+      },
+      {
+        "n": 2,
+        "narration": "Your drawings are fantasy! laughed seasoned explorers dismissively."
+      },
+      {
+        "n": 3,
+        "narration": "Perhaps—but every real discovery began as someone s imagined possibility."
+      },
+      {
+        "n": 4,
+        "narration": "Years later his fantastical maps guided actual expeditions to newly discovered continents."
+      },
+      {
+        "n": 5,
+        "narration": "Visionaries draw maps others cannot yet see."
+      }
+    ]
+  },
+  {
+    "id": "the-lighthouse-keeper",
+    "title": "The Lighthouse Keeper",
+    "logline": "Quiet dedication saves countless lives.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "An elderly keeper maintained a coastal lighthouse through relentless storms."
+      },
+      {
+        "n": 2,
+        "narration": "Nobody ever thanks me, he murmured sadly each morning."
+      },
+      {
+        "n": 3,
+        "narration": "Ships passed safely past his beacon every single night without fanfare."
+      },
+      {
+        "n": 4,
+        "narration": "One evening a captain wrote a letter thanking the unknown guardian angel of the coast."
+      },
+      {
+        "n": 5,
+        "narration": "Anonymous service touches more lives than famous achievement ever could."
+      }
+    ]
+  },
+  {
+    "id": "the-clockmaker",
+    "title": "The Clockmaker",
+    "logline": "Precision requires patience and care.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A clockmaker assembled tiny gears and springs in his dim workshop."
+      },
+      {
+        "n": 2,
+        "narration": "Each component mattered enormously—even the smallest pin affected accuracy."
+      },
+      {
+        "n": 3,
+        "narration": "Hurry does not improve craftsmanship, he told his impatient apprentice."
+      },
+      {
+        "n": 4,
+        "narration": "Watch closely and learn: precision is patience practiced consistently."
+      },
+      {
+        "n": 5,
+        "narration": "Great achievements demand meticulous attention to minor details."
+      }
+    ]
+  },
+  {
+    "id": "the-well-digger",
+    "title": "The Well Digger",
+    "logline": "Persistent effort reaches hidden resources.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A thirsty man began digging a well in his barren backyard."
+      },
+      {
+        "n": 2,
+        "narration": "Neighbors laughed. This dirt is too hard! Nobody succeeds here!"
+      },
+      {
+        "n": 3,
+        "narration": "He dug deeper each day despite complaints and mockery."
+      },
+      {
+        "n": 4,
+        "narration": "On the forty-second day water bubbled up—clear and cool and refreshing."
+      },
+      {
+        "n": 5,
+        "narration": "Persistence reaches treasures others believe impossible to access."
+      }
+    ]
+  },
+  {
+    "id": "the-mirror",
+    "title": "The Mirror",
+    "logline": "Truth reflects without judgment.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A magic mirror showed everyone exactly what they deserved to see."
+      },
+      {
+        "n": 2,
+        "narration": "Kings viewed their failures, queens beheld their hidden virtues."
+      },
+      {
+        "n": 3,
+        "narration": "The mirror never flattered or criticized—only reflected honestly."
+      },
+      {
+        "n": 4,
+        "narration": "People learned self-awareness through its truthful gaze."
+      },
+      {
+        "n": 5,
+        "narration": "Honest reflection, however uncomfortable, leads to genuine growth."
+      }
+    ]
+  },
+  {
+    "id": "the-garden-of-seasons",
+    "title": "The Garden of Seasons",
+    "logline": "Change brings renewal.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A magical garden cycled rapidly through all four seasons hourly."
+      },
+      {
+        "n": 2,
+        "narration": "Flowers bloomed and wilted in minutes, teaching impermanence vividly."
+      },
+      {
+        "n": 3,
+        "narration": "Visitors watched buds form, open, scatter petals, then reform endlessly."
+      },
+      {
+        "n": 4,
+        "narration": "Nothing permanent except transformation itself."
+      },
+      {
+        "n": 5,
+        "narration": "Accepting change brings peace amid life perpetual flux."
+      }
+    ]
+  },
+  {
+    "id": "the-bridge-builder",
+    "title": "The Bridge Builder",
+    "logline": "Connection heals division.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "Two villages separated by a raging river hated each other fiercely."
+      },
+      {
+        "n": 2,
+        "narration": "A compassionate builder constructed a sturdy bridge across the turbulent waters."
+      },
+      {
+        "n": 3,
+        "narration": "At first neither side crossed—but gradually curiosity overcame hostility."
+      },
+      {
+        "n": 4,
+        "narration": "Traders exchanged goods, children played together, elders shared stories."
+      },
+      {
+        "n": 5,
+        "narration": "Bridges physical and metaphorical transform enemies into neighbors."
+      }
+    ]
+  },
+  {
+    "id": "the-book-of-whispers",
+    "title": "The Book of Whispers",
+    "logline": "Ancient wisdom speaks to present needs.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A forgotten book rested on a dusty shelf in an abandoned library."
+      },
+      {
+        "n": 2,
+        "narration": "Its pages whispered instructions to anyone patient enough to listen carefully."
+      },
+      {
+        "n": 3,
+        "narration": "A curious child traced the faded letters and heard ancient counsel clearly."
+      },
+      {
+        "n": 4,
+        "narration": "Timeless truths remain available—we need only seek and discover them."
+      },
+      {
+        "n": 5,
+        "narration": "Wisdom outlasts every era, waiting patiently for attentive seekers."
+      }
+    ]
+  },
+  {
+    "id": "the-compost-heap",
+    "title": "The Compost Heap",
+    "logline": "Waste transforms into nourishment.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "Kitchen scraps and fallen leaves piled into a dark compost heap."
+      },
+      {
+        "n": 2,
+        "narration": "Everything seemed rotten and useless, declared the pile gloomily."
+      },
+      {
+        "n": 3,
+        "narration": "Wait, rumbled the earthworms below. We transform decay into fertile soil."
+      },
+      {
+        "n": 4,
+        "narration": "Seasons later vegetable gardens thrived thanks to yesterday refuse."
+      },
+      {
+        "n": 5,
+        "narration": "Endings become beginnings. Waste becomes sustenance. Cycle continues endlessly."
+      }
+    ]
+  },
+  {
+    "id": "the-kite-maker",
+    "title": "The Kite Maker",
+    "logline": "Freedom requires the right constraints.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "An artisan crafted elaborate kites from bamboo and silk for children."
+      },
+      {
+        "n": 2,
+        "narration": "This one needs a longer tail, he muttered adjusting designs carefully."
+      },
+      {
+        "n": 3,
+        "narration": "Too much length drags; too little spins uncontrollably. Balance is everything."
+      },
+      {
+        "n": 4,
+        "narration": "Perfectly balanced kites danced highest on autumn winds above the meadow."
+      },
+      {
+        "n": 5,
+        "narration": "Freedom requires structure—not absence of limits, but presence of the right ones."
+      }
+    ]
+  },
+  {
+    "id": "the-storm-chaser",
+    "title": "The Storm Chaser",
+    "logline": "Courage meets understanding.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A meteorologist chased hurricane clouds across open plains with scientific equipment."
+      },
+      {
+        "n": 2,
+        "narration": "Others fled storms in terror—but she approached with respectful curiosity."
+      },
+      {
+        "n": 3,
+        "narration": "By studying patterns she predicted paths saving thousands from disaster."
+      },
+      {
+        "n": 4,
+        "narration": "Fear shrinks understanding; courage expands it."
+      },
+      {
+        "n": 5,
+        "narration": "Brave inquiry transforms terrifying forces into predictable natural phenomena."
+      }
+    ]
+  },
+  {
+    "id": "the-compassion-caravan",
+    "title": "The Compassion Caravan",
+    "logline": "Traveling kindness changes communities.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A wandering caravan delivered medical aid to remote villages annually."
+      },
+      {
+        "n": 2,
+        "narration": "Each journey healed sick children and educated midwives along the way."
+      },
+      {
+        "n": 3,
+        "narration": "No grand speeches—only practical compassion expressed through action."
+      },
+      {
+        "n": 4,
+        "narration": "Communities thrived because strangers cared enough to travel far."
+      },
+      {
+        "n": 5,
+        "narration": "Kindness travels furthest when it moves actively rather than remaining static."
+      }
+    ]
+  },
+  {
+    "id": "the-forgotten-village",
+    "title": "The Forgotten Village",
+    "logline": "Lost places hold undiscovered beauty.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "Hikers discovered an abandoned village hidden deep within ancient forest."
+      },
+      {
+        "n": 2,
+        "narration": "Stone houses stood empty but moss-covered gardens still flourished vibrantly."
+      },
+      {
+        "n": 3,
+        "narration": "Nature had reclaimed civilization beautifully without destroying history."
+      },
+      {
+        "n": 4,
+        "narration": "The village existed paradoxically—dead structurally but alive ecologically."
+      },
+      {
+        "n": 5,
+        "narration": "Beauty persists even when human inhabitants depart permanently."
+      }
+    ]
+  },
+  {
+    "id": "the-last-tree",
+    "title": "The Last Tree",
+    "logline": "Individuals matter in collective loss.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "Deforestation consumed forests continent-wide leaving only one ancient oak standing."
+      },
+      {
+        "n": 2,
+        "narration": "Birds nested in its branches desperately clinging to survival."
+      },
+      {
+        "n": 3,
+        "narration": "A child planted seeds beneath its protective canopy every single day."
+      },
+      {
+        "n": 4,
+        "narration": "Generations later descendants honored the original guardian as ancestor tree."
+      },
+      {
+        "n": 5,
+        "narration": "Single acts of hope sustain ecosystems through catastrophic loss."
+      }
+    ]
+  },
+  {
+    "id": "the-language-of-birds",
+    "title": "The Language of Birds",
+    "logline": "Communication transcends species boundaries.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "An ornithologist spent decades learning each bird species distinct dialects."
+      },
+      {
+        "n": 2,
+        "narration": "Migrations followed complex conversations about weather and territory boundaries."
+      },
+      {
+        "n": 3,
+        "narration": "Human interference disrupted patterns—but restoration returned communication networks."
+      },
+      {
+        "n": 4,
+        "narration": "Birdsong carried information precisely structured like human language."
+      },
+      {
+        "n": 5,
+        "narration": "Understanding animals enriches conservation efforts immeasurably."
+      }
+    ]
+  },
+  {
+    "id": "the-sandcastle-city",
+    "title": "The Sandcastle City",
+    "logline": "Creativity exists momentarily but impact endures.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "Children built elaborate sandcastles along tidal beaches all afternoon."
+      },
+      {
+        "n": 2,
+        "narration": "Turrets, moats, bridges—all meticulously crafted with seashells and sticks."
+      },
+      {
+        "n": 3,
+        "narration": "High tide arrived inevitably washing everything gracefully back to ocean."
+      },
+      {
+        "n": 4,
+        "narration": "Next day they rebuilt differently remembering successes and failures."
+      },
+      {
+        "n": 5,
+        "narration": "Impermanent creations teach resilience through iterative improvement cycles."
+      }
+    ]
+  },
+  {
+    "id": "the-mountain-garden",
+    "title": "The Mountain Garden",
+    "logline": "Perseverance cultivates unexpected beauty.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "Elderly gardener transformed steep hillside into terraced botanical paradise."
+      },
+      {
+        "n": 2,
+        "narration": "Neighbors called her foolish. Nothing grows on that rock-hard slope!"
+      },
+      {
+        "n": 3,
+        "narration": "She carried soil bucket by bucket, planted seeds, and watered faithfully."
+      },
+      {
+        "n": 4,
+        "narration": "Ten years later the mountain blazed with color and butterflies danced everywhere."
+      },
+      {
+        "n": 5,
+        "narration": "Patient devotion transforms impossibility into wonder."
+      }
+    ]
+  },
+  {
+    "id": "the-wandering-musician",
+    "title": "The Wandering Musician",
+    "logline": "Music heals wounds words cannot reach.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A traveling musician played violin through war-torn villages across the countryside."
+      },
+      {
+        "n": 2,
+        "narration": "Some wept listening. Others forgot their pain even briefly."
+      },
+      {
+        "n": 3,
+        "narration": "Soldiers lowered their weapons when the melody floated through camp."
+      },
+      {
+        "n": 4,
+        "narration": "The musician never charged money—only accepted gratitude in return."
+      },
+      {
+        "n": 5,
+        "narration": "Art restores humanity where politics fails completely."
+      }
+    ]
+  },
+  {
+    "id": "the-old-cartographer",
+    "title": "The Old Cartographer",
+    "logline": "Maps reveal as much about mapper as mapped.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "An aging cartographer drew maps obsessively, filling blank spaces with dragons and warnings."
+      },
+      {
+        "n": 2,
+        "narration": "Young scholars mocked his imagination. Where is the truth? they demanded."
+      },
+      {
+        "n": 3,
+        "narration": "Truth lies not only in coordinates, he replied. It lies in what we fear and dream."
+      },
+      {
+        "n": 4,
+        "narration": "His fantastical maps inspired actual explorers to venture beyond known worlds."
+      },
+      {
+        "n": 5,
+        "narration": "Imagination charts courses that pure facts never could."
+      }
+    ]
+  },
+  {
+    "id": "the-silent-library",
+    "title": "The Silent Library",
+    "logline": "Books hold voices waiting to be heard.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A tiny town possessed one ancient library containing ten thousand volumes."
+      },
+      {
+        "n": 2,
+        "narration": "Most townsfolk never entered, assuming books were silent and irrelevant."
+      },
+      {
+        "n": 3,
+        "narration": "A curious teenager opened one—and heard voices from centuries past speak directly to him."
+      },
+      {
+        "n": 4,
+        "narration": "He returned daily, discovering adventures, wisdom, and companions across time."
+      },
+      {
+        "n": 5,
+        "narration": "Reading transforms silence into conversation across generations."
+      }
+    ]
+  },
+  {
+    "id": "the-second-chance-cafe",
+    "title": "The Second Chance Cafe",
+    "logline": "Everyone deserves redemption.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A former convict opened a small cafe employing others given second chances."
+      },
+      {
+        "n": 2,
+        "narration": "Neighbors doubted him. Can broken people really rebuild? they whispered."
+      },
+      {
+        "n": 3,
+        "narration": "The cafe became neighborhood cornerstone—warm, welcoming, thriving."
+      },
+      {
+        "n": 4,
+        "narration": "Former offenders proved loyalty and gratitude fueled exceptional work."
+      },
+      {
+        "n": 5,
+        "narration": "Second chances are investments that yield extraordinary returns."
+      }
+    ]
+  },
+  {
+    "id": "the-village-without-clock",
+    "title": "The Village Without Clock",
+    "logline": "Time belongs to everyone equally.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A remote village operated without clocks or watches, following sun and seasons only."
+      },
+      {
+        "n": 2,
+        "narration": "Visitors complained about inefficiency and schedule confusion constantly."
+      },
+      {
+        "n": 3,
+        "narration": "But villagers laughed gently—they were never late because they never rushed."
+      },
+      {
+        "n": 4,
+        "narration": "Meals happened when hunger arrived. Work stopped when energy faded."
+      },
+      {
+        "n": 5,
+        "narration": "Living outside mechanical time revealed richer rhythms underneath."
+      }
+    ]
+  },
+  {
+    "id": "the-weather-painter",
+    "title": "The Weather Painter",
+    "logline": "Nature paints masterpieces daily.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "An artist tried to capture sunset colors on canvas but failed repeatedly."
+      },
+      {
+        "n": 2,
+        "narration": "Frustrated, she abandoned painting and simply watched the sky every evening."
+      },
+      {
+        "n": 3,
+        "narration": "One evening lightning struck nearby, revealing colors unseen before."
+      },
+      {
+        "n": 4,
+        "narration": "She realized nature was the true artist—she was merely witness."
+      },
+      {
+        "n": 5,
+        "narration": "Appreciation surpasses creation when marvel exists independently."
+      }
+    ]
+  },
+  {
+    "id": "the-hidden-waterfall",
+    "title": "The Hidden Waterfall",
+    "logline": "Discovery rewards patient seekers.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "Locals spoke of a magnificent waterfall deep within unmapped canyon."
+      },
+      {
+        "n": 2,
+        "narration": "Many tried finding it—some gave up after hours, others after days."
+      },
+      {
+        "n": 3,
+        "narration": "A young girl climbed slowly, observing clues others dismissed entirely."
+      },
+      {
+        "n": 4,
+        "narration": "She discovered the falls concealed behind curtain of vines—more beautiful than legends described."
+      },
+      {
+        "n": 5,
+        "narration": "Patience notices details that haste overlooks completely."
+      }
+    ]
+  },
+  {
+    "id": "the-remembered-song",
+    "title": "The Remembered Song",
+    "logline": "Music preserves memory forever.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "An elderly woman hummed a tune her mother used to sing decades ago."
+      },
+      {
+        "n": 2,
+        "narration": "Grandchildren asked where she learned it. It comes from somewhere older than me, she replied."
+      },
+      {
+        "n": 3,
+        "narration": "She taught them the melody—and they taught it to their children."
+      },
+      {
+        "n": 4,
+        "narration": "Centuries later the song still circulated through families who never knew its origin."
+      },
+      {
+        "n": 5,
+        "narration": "Art connects generations across time, space, and experience inseparably."
+      }
+    ]
+  },
+  {
+    "id": "the-kindness-chain",
+    "title": "The Kindness Chain",
+    "logline": "Small gestures ripple outward infinitely.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A businessman paid for the coffee of the person behind him in line."
+      },
+      {
+        "n": 2,
+        "narration": "That stranger, touched, helped an elderly neighbor carry groceries home."
+      },
+      {
+        "n": 3,
+        "narration": "The neighbor later donated anonymously to fund scholarships for struggling students."
+      },
+      {
+        "n": 4,
+        "narration": "Years later recipients of those scholarships performed similar anonymous kindnesses."
+      },
+      {
+        "n": 5,
+        "narration": "One small gesture spawned chain reactions spanning decades and thousands of lives."
+      }
+    ]
+  },
+  {
+    "id": "the-lonely-lighthouse",
+    "title": "The Lonely Lighthouse",
+    "logline": "Solitude serves purposes we often ignore.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A lighthouse stood alone on rocky island, guiding ships through treacherous waters nightly."
+      },
+      {
+        "n": 2,
+        "narration": "The keeper wrote letters describing breathtaking storms and solitary beauty."
+      },
+      {
+        "n": 3,
+        "narration": "Society called his job lonely—but he knew millions owed him their lives silently."
+      },
+      {
+        "n": 4,
+        "narration": "His dedication prevented disasters unnoticed, uncelebrated, uncompensated beyond duty."
+      },
+      {
+        "n": 5,
+        "narration": "Meaningful work often goes unrecognized—and that is precisely why it matters."
+      }
+    ]
+  },
+  {
+    "id": "the-growing-robin",
+    "title": "The Growing Robin",
+    "logline": "Transformation requires trusting process.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A robin built nest high in tree, laying three speckled eggs carefully."
+      },
+      {
+        "n": 2,
+        "narration": "Days passed. Eggs cracked. Baby birds emerged blind and helpless."
+      },
+      {
+        "n": 3,
+        "narration": "Parent robins worked tirelessly feeding worms and protecting vulnerable chicks."
+      },
+      {
+        "n": 4,
+        "narration": "Finally feathered wings tested wind—and all three fledglings soared successfully."
+      },
+      {
+        "n": 5,
+        "narration": "Growth demands patience, trust, and unconditional parental love."
+      }
+    ]
+  },
+  {
+    "id": "the-ordinary-hero",
+    "title": "The Ordinary Hero",
+    "logline": "Heroism lives in everyday choices.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A schoolteacher noticed one student consistently eating nothing for lunch."
+      },
+      {
+        "n": 2,
+        "narration": "Instead of reporting bureaucracy, she simply began packing extra sandwiches daily."
+      },
+      {
+        "n": 3,
+        "narration": "She never made announcement or sought recognition—just kept providing quietly."
+      },
+      {
+        "n": 4,
+        "narration": "Twenty years later that student, now successful professional, thanked her publicly."
+      },
+      {
+        "n": 5,
+        "narration": "Real heroes act without audience—from compassion, not ambition."
+      }
+    ]
+  },
+  {
+    "id": "the-last-word",
+    "title": "The Last Word",
+    "logline": "Words carry weight beyond intention.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "Two friends argued fiercely, exchanging harsh words neither could take back."
+      },
+      {
+        "n": 2,
+        "narration": "Years passed without contact. Both carried regret silently."
+      },
+      {
+        "n": 3,
+        "narration": "Finally one reached out apologetically. I meant neither those words nor anger behind them."
+      },
+      {
+        "n": 4,
+        "narration": "The other responded gently: Words hurt, but forgiveness heals deeper wounds."
+      },
+      {
+        "n": 5,
+        "narration": "Choose kindness first—because spoken words outlive momentary frustration forever."
+      }
+    ]
+  },
+  {
+    "id": "the-endless-story",
+    "title": "The Endless Story",
+    "logline": "Every ending becomes new beginning.",
+    "scenes": [
+      {
+        "n": 1,
+        "narration": "A storyteller finished her final tale to appreciative listeners gathered around fire."
+      },
+      {
+        "n": 2,
+        "narration": "Someone asked: Will you ever stop telling stories? She smiled warmly."
+      },
+      {
+        "n": 3,
+        "narration": "Stories never end—they only pass into new mouths, new ears, new imaginations."
+      },
+      {
+        "n": 4,
+        "narration": "Each listener becomes storyteller eventually, adding their voice eternal chorus."
+      },
+      {
+        "n": 5,
+        "narration": "Narrative connects humanity across time, space, and experience inseparably."
+      }
+    ]
+  }
+]

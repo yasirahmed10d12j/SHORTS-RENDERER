@@ -13,6 +13,11 @@ struct VideoGeneratorView: View {
     @State private var idea = ""
     @State private var pasteText = ""
 
+    // --- built-in stories ---
+    @State private var builtInStories: [BuiltInStory] = []
+    @State private var selectedStory: BuiltInStory?
+    @State private var useBuiltIn = false
+
     @State private var script: StoryScript?
     @State private var scriptBusy = false
     @State private var sceneStatus: [Int: String] = [:]
@@ -42,6 +47,11 @@ struct VideoGeneratorView: View {
                     .font(.title2.bold())
                     .frame(maxWidth: .infinity, alignment: .leading)
 
+                // ── 0. Story Picker (built-in) ───────────────────
+                if !builtInStories.isEmpty { storyPickerSection }
+
+                Divider()
+
                 // ── 1. Idea / Paste ────────────────────────────────
                 ideSection
 
@@ -66,6 +76,7 @@ struct VideoGeneratorView: View {
             if llmModel.isEmpty { llmModel = provider.defaultModel }
             if Keychain.get("llm_key") != nil { llmKeySaved = true }
             if Keychain.get("elevenlabs_key") != nil { Task { await loadVoices() } }
+            Task { await loadBuiltInStories() }
         }
     }
 
@@ -122,6 +133,64 @@ struct VideoGeneratorView: View {
                 }
                 .padding(6)
             }
+        }
+        .font(.subheadline)
+    }
+
+    // ── story picker ────────────────────────────────────────────────────────
+
+    private var storyPickerSection: some View {
+        GroupBox("📚 Built-In Stories — select one to render instantly") {
+            VStack(alignment: .leading, spacing: 10) {
+                Text("Choose from \(builtInStories.count) ready-made stories with iOS voiceover:")
+                    .font(.caption).foregroundStyle(.secondary)
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 12) {
+                        ForEach(builtInStories) { story in
+                            Button {
+                                selectedStory = story
+                                script = story.storyScript
+                                sceneStatus = [:]
+                                players = [:]
+                                allVoicesReady = false
+                                status = "✅ '\(story.title)' selected — ab Voice generate karo."
+                            } label: {
+                                VStack(alignment: .leading, spacing: 4) {
+                                    Text(story.title)
+                                        .font(.subheadline.bold())
+                                        .lineLimit(2)
+                                    if let log = story.logline {
+                                        Text(log)
+                                            .font(.caption2)
+                                            .foregroundStyle(.secondary)
+                                            .lineLimit(2)
+                                    }
+                                }
+                                .frame(width: 160, alignment: .leading)
+                                .padding(12)
+                                .background(selectedStory?.id == story.id ? Color.blue.opacity(0.2) : Color.quaternary.opacity(0.3), in: RoundedRectangle(cornerRadius: 12))
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 12)
+                                        .stroke(selectedStory?.id == story.id ? Color.blue : Color.clear, lineWidth: 2)
+                                )
+                            }
+                        }
+                    }
+                }
+                
+                if let selected = selectedStory {
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text("Selected: \(selected.title)").font(.headline)
+                        Text(selected.logline ?? "").font(.caption).foregroundStyle(.secondary)
+                        Text("\(selected.scenes.count) scenes · ~\(Int(selected.totalNarrationDurationEstimate))s voice")
+                            .font(.caption2).foregroundStyle(.tertiary)
+                    }
+                    .padding(8)
+                    .background(Color.blue.opacity(0.1), in: RoundedRectangle(cornerRadius: 8))
+                }
+            }
+            .padding(4)
         }
         .font(.subheadline)
     }
@@ -269,10 +338,27 @@ struct VideoGeneratorView: View {
         catch { status = "Voice load fail: \(error.localizedDescription)" }
     }
 
+    private func loadBuiltInStories() async {
+        do {
+            builtInStories = try StoryBundle.load()
+            status = "✅ \(builtInStories.count) stories loaded!"
+        } catch {
+            status = "Story bundle load failed: \(error.localizedDescription)"
+        }
+    }
+
     private func genAllVoices() async {
         guard let s = script else { return }
+        
+        // Check if this is a built-in story
+        if let _ = selectedStory {
+            await genBuiltInStoryVoices(script: s)
+            return
+        }
+        
+        // Use ElevenLabs for custom scripts
         guard let key = Keychain.get("elevenlabs_key") else {
-            status = "Pehle 'Voice & Render' tab me ElevenLabs key save karo."; return
+            status = "Pehle ElevenLabs key save karo."; return
         }
         voiceBusy = true; allVoicesReady = false
         let folder = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
@@ -298,6 +384,39 @@ struct VideoGeneratorView: View {
             status = "✅ Sab voices ready — ab Render dabao."
         } else if !metas.isEmpty {
             status = "\(metas.count)/\(s.scenes.count) ready"
+        }
+        voiceBusy = false
+    }
+
+    /// Generate voices for built-in stories using iOS TTS (no API key needed).
+    private func genBuiltInStoryVoices(script: StoryScript) async {
+        voiceBusy = true; allVoicesReady = false
+        let docs = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let folder = docs.appendingPathComponent("script", isDirectory: true)
+        try? FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
+        var metas: [[String: Any]] = []; var ok = true
+        
+        for sc in script.scenes {
+            sceneStatus[sc.n] = "synthesizing..."
+            do {
+                let audioData = try await AppleTTS.synthesize(text: sc.narration)
+                let file = folder.appendingPathComponent("scene-\(String(format: "%02d", sc.n)).wav")
+                try audioData.write(to: file)
+                let duration = Double(audioData.count) / 88200.0 // rough WAV estimate
+                metas.append(["n": sc.n, "audio": file.lastPathComponent, "duration": duration])
+                sceneStatus[sc.n] = "✅ \(String(format: "%.1f", duration))s"
+                players[sc.n] = try? AVAudioPlayer(contentsOf: file)
+            } catch {
+                sceneStatus[sc.n] = "❌ \(error.localizedDescription)"; ok = false
+            }
+        }
+        
+        if ok, let json = try? JSONSerialization.data(withJSONObject: ["title": script.title, "scenes": metas]) {
+            try? json.write(to: folder.appendingPathComponent("scenes.json"))
+            allVoicesReady = true
+            status = "✅ Built-in story voice ready — ab Render dabao!"
+        } else if !metas.isEmpty {
+            status = "\(metas.count)/\(script.scenes.count) ready"
         }
         voiceBusy = false
     }
