@@ -162,6 +162,7 @@ struct ContentView: View {
         voiceStatus = "ElevenLabs se voice generate ho rahi hai…"
         do {
             guard let key = Keychain.get("elevenlabs_key") else { throw ElevenError.noAudio }
+            Keychain.set(voiceID, for: "elevenlabs_voice") // Script Maker bhi yahi voice use karega
             let result = try await ElevenLabs.speech(text: script, key: key, voiceId: voiceID)
             let docs = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
             try result.audio.write(to: docs.appendingPathComponent("voice.mp3"))
