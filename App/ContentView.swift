@@ -129,7 +129,7 @@ struct ContentView: View {
         }
         .padding(24)
         .onAppear {
-            if let k = Keychain.get("elevenlabs_key") {
+            if Keychain.get("elevenlabs_key") != nil {
                 apiKey = ""
                 keySaved = true
                 Task { await loadVoices() }

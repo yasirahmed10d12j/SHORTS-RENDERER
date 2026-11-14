@@ -79,10 +79,12 @@ enum AudioMux {
         ex.outputFileType = AVFileType.mp4
         try await withCheckedThrowingContinuation { (cont: CheckedContinuation<Void, Error>) in
             ex.exportAsynchronously {
-                if ex.status == .completed {
+                let s = ex.status
+                let e = ex.error
+                if s == .completed {
                     cont.resume()
                 } else {
-                    cont.resume(throwing: ex.error ?? RenderError.writeFailed)
+                    cont.resume(throwing: e ?? RenderError.writeFailed)
                 }
             }
         }
@@ -105,10 +107,12 @@ enum AudioMux {
         ex.outputFileType = AVFileType.m4a
         try await withCheckedThrowingContinuation { (cont: CheckedContinuation<Void, Error>) in
             ex.exportAsynchronously {
-                if ex.status == .completed {
+                let s = ex.status
+                let e = ex.error
+                if s == .completed {
                     cont.resume()
                 } else {
-                    cont.resume(throwing: ex.error ?? RenderError.writeFailed)
+                    cont.resume(throwing: e ?? RenderError.writeFailed)
                 }
             }
         }

@@ -54,10 +54,10 @@ final class VideoWriter {
     func finish() async throws {
         input.markAsFinished()
         try await withCheckedThrowingContinuation { (cont: CheckedContinuation<Void, Error>) in
-            writer.finishWriting { [self] in
-                self.writer.status == .completed
+            writer.finishWriting { [writerStatus = writer.status, writerError = writer.error] in
+                writerStatus == .completed
                     ? cont.resume()
-                    : cont.resume(throwing: self.writer.error ?? RenderError.writeFailed)
+                    : cont.resume(throwing: writerError ?? RenderError.writeFailed)
             }
         }
     }

@@ -81,7 +81,9 @@ final class Engine: NSObject, WKScriptMessageHandler {
     }
 
     deinit {
-        web.configuration.userContentController.removeScriptMessageHandler(forName: "console")
+        Task.detached { @MainActor [controller = web.configuration.userContentController] in
+            controller.removeScriptMessageHandler(forName: "console")
+        }
     }
 
     func load() async throws {
@@ -119,9 +121,9 @@ final class Engine: NSObject, WKScriptMessageHandler {
 
     // MARK: - JS bridge
 
-    nonisolated func userContentController(_ ucc: WKUserContentController, didReceive message: WKScriptMessage) {
+    func userContentController(_ ucc: WKUserContentController, didReceive message: WKScriptMessage) {
         guard message.name == "console", let s = message.body as? String else { return }
-        MainActor.assumeIsolated { EngineConsole.shared.last = s }
+        EngineConsole.shared.last = s
     }
 
     private func evalBool(_ js: String) async throws -> Bool { (try await eval(js)) as? Bool ?? false }
