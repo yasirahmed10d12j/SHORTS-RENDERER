@@ -16,7 +16,7 @@ enum LLMProvider: String, CaseIterable, Identifiable {
 
     var defaultModel: String {
         switch self {
-        case .gemini: return "gemini-2.0-flash"
+        case .gemini: return "gemini-3.8-flash"
         case .openai: return "gpt-4o-mini"
         case .openrouter: return "openai/gpt-4o-mini"
         }
