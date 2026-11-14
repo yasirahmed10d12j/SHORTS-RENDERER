@@ -133,7 +133,8 @@ enum LLM {
 
     // MARK: - tolerant JSON decode
 
-    static func decodeScript(_ raw: String) throws -> StoryScript {        guard let start = raw.firstIndex(of: "{"), let end = raw.lastIndex(of: "}"), start < end else {
+    static func decodeScript(_ raw: String) throws -> StoryScript {
+        guard let start = raw.firstIndex(of: "{"), let end = raw.lastIndex(of: "}"), start < end else {
             throw LLMError.badJSON("jawab me JSON nahi mila")
         }
         let json = String(raw[start...end])
