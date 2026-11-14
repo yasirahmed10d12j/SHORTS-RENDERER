@@ -42,8 +42,10 @@ final class Engine: NSObject, WKScriptMessageHandler {
     private let web: WKWebView
     private let root: URL
 
-    init() throws {
-        guard let html = Bundle.main.url(forResource: "engine", withExtension: "html", subdirectory: "engine") else {
+    /// Note: a default parameter keeps this from matching NSObject's `init()`,
+    /// which would require an `override` and can't throw.
+    init(page: String = "engine") throws {
+        guard let html = Bundle.main.url(forResource: page, withExtension: "html", subdirectory: "engine") else {
             throw RenderError.engineMissing
         }
         root = html.deletingLastPathComponent()
