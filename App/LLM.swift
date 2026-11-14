@@ -81,7 +81,7 @@ enum LLM {
         var req = URLRequest(url: url)
         req.httpMethod = "POST"
         req.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        req.timeoutInterval = 120
+        req.timeoutInterval = 240
         let body: [String: Any] = [
             "contents": [["parts": [["text": prompt]]]],
             "generationConfig": ["responseMimeType": "application/json", "temperature": 0.9],
@@ -110,7 +110,7 @@ enum LLM {
         req.httpMethod = "POST"
         req.setValue("Bearer \(key)", forHTTPHeaderField: "Authorization")
         req.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        req.timeoutInterval = 120
+        req.timeoutInterval = 240
         let body: [String: Any] = [
             "model": model,
             "messages": [["role": "user", "content": prompt]],

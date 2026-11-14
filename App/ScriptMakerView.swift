@@ -159,7 +159,17 @@ struct ScriptMakerView: View {
 
     private func makeScript() async {
         scriptBusy = true
-        status = "\(provider.label) se script ban rahi hai…"
+        status = "Script ban rahi hai… 0s"
+        // live elapsed counter so it's obvious the request is alive
+        let timer = Task {
+            var elapsed = 0
+            while !Task.isCancelled {
+                try? await Task.sleep(nanoseconds: 1_000_000_000)
+                elapsed += 1
+                status = "Script ban rahi hai… \(elapsed)s"
+            }
+        }
+        defer { timer.cancel() }
         do {
             guard let key = Keychain.get("llm_key") else { throw LLMError.empty }
             let model = llmModel.trimmingCharacters(in: .whitespaces).isEmpty ? provider.defaultModel : llmModel
