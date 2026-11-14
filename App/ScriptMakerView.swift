@@ -27,104 +27,9 @@ struct ScriptMakerView: View {
                 Text("Script Maker")
                     .font(.title2.bold())
                     .frame(maxWidth: .infinity, alignment: .leading)
-
-                GroupBox("1. Story idea — apne words me likho") {
-                    VStack(alignment: .leading, spacing: 10) {
-                        TextEditor(text: $idea)
-                            .frame(height: 100)
-                            .overlay(RoundedRectangle(cornerRadius: 8).stroke(.quaternary))
-                        HStack {
-                            Picker("", selection: $provider) {
-                                ForEach(LLMProvider.allCases) { p in Text(p.label).tag(p) }
-                            }
-                            .pickerStyle(.menu)
-                            .onChange(of: provider) { _, p in llmModel = p.defaultModel }
-                            TextField("model", text: $llmModel)
-                                .textFieldStyle(.roundedBorder)
-                                .autocorrectionDisabled()
-                        }
-                        HStack {
-                            SecureField(llmKeySaved ? "LLM API key saved ✓" : "LLM API key", text: $llmKey)
-                                .textFieldStyle(.roundedBorder)
-                            Button(llmKeySaved ? "✓" : "Save") { saveLLMKey() }
-                                .buttonStyle(.bordered)
-                        }
-                        Button {
-                            Task { await makeScript() }
-                        } label: {
-                            Label("Script banao", systemImage: "wand.and.stars")
-                                .frame(maxWidth: .infinity)
-                        }
-                        .buttonStyle(.borderedProminent)
-                        .disabled(scriptBusy || !llmKeySaved || idea.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
-                    }
-                    .padding(4)
-                }
-                .font(.subheadline)
-
+                writerSection
                 if scriptBusy { ProgressView() }
-
-                if let script {
-                    Text(script.title)
-                        .font(.headline)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    if let log = script.logline, !log.isEmpty {
-                        Text(log).font(.caption).foregroundStyle(.secondary)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                    }
-
-                    GroupBox("2. Scenes — voice generate karo") {
-                        VStack(alignment: .leading, spacing: 12) {
-                            HStack {
-                                Picker("Voice", selection: $voiceID) {
-                                    if voices.isEmpty { Text("Key save karo →").tag("") }
-                                    ForEach(voices) { v in Text(v.name).tag(v.voiceId) }
-                                }
-                            }
-                            Button {
-                                Task { await generateVoices() }
-                            } label: {
-                                Label("Voice generate (sab scenes)", systemImage: "waveform")
-                                    .frame(maxWidth: .infinity)
-                            }
-                            .buttonStyle(.borderedProminent)
-                            .disabled(voiceBusy || voiceID.isEmpty)
-
-                            ForEach(script.scenes) { scene in
-                                VStack(alignment: .leading, spacing: 4) {
-                                    HStack {
-                                        Text("Scene \(scene.n)").font(.caption.bold())
-                                        Spacer()
-                                        if sceneStatus[scene.n] != nil {
-                                            Text(sceneStatus[scene.n]!).font(.caption2).foregroundStyle(.secondary)
-                                        }
-                                        if players[scene.n] != nil {
-                                            Button {
-                                                let p = players[scene.n]!
-                                                p.isPlaying ? p.pause() : p.play()
-                                            } label: { Image(systemName: "play.fill") }
-                                                .buttonStyle(.bordered)
-                                                .controlSize(.mini)
-                                        }
-                                    }
-                                    Text(scene.narration).font(.subheadline)
-                                    if let v = scene.visual, !v.isEmpty {
-                                        Text("🎬 " + v).font(.caption).foregroundStyle(.tertiary)
-                                    }
-                                }
-                                .padding(8)
-                                .background(.quaternary.opacity(0.4), in: RoundedRectangle(cornerRadius: 8))
-                            }
-                        }
-                        .padding(4)
-                    }
-                    .font(.subheadline)
-
-                    Text("scenes.json + scene MP3s Documents/script/ me save hote hain — render engine inhi timings se sync hoga.")
-                        .font(.caption2)
-                        .foregroundStyle(.tertiary)
-                }
-
+                if script != nil { scriptSection }
                 if !status.isEmpty {
                     Text(status).font(.caption).foregroundStyle(.secondary)
                 }
@@ -137,6 +42,107 @@ struct ScriptMakerView: View {
             if Keychain.get("elevenlabs_key") != nil {
                 Task { await loadVoices() }
             }
+        }
+    }
+
+    // MARK: - writer section
+
+    private var writerSection: some View {
+        GroupBox("1. Story idea — apne words me likho") {
+            VStack(alignment: .leading, spacing: 10) {
+                TextEditor(text: $idea)
+                    .frame(height: 100)
+                    .overlay(RoundedRectangle(cornerRadius: 8).stroke(.quaternary))
+                HStack {
+                    Picker("", selection: $provider) {
+                        ForEach(LLMProvider.allCases) { p in Text(p.label).tag(p) }
+                    }
+                    .pickerStyle(.menu)
+                    .onChange(of: provider) { _, p in llmModel = p.defaultModel }
+                    TextField("model", text: $llmModel)
+                        .textFieldStyle(.roundedBorder)
+                        .autocorrectionDisabled()
+                }
+                HStack {
+                    SecureField(llmKeySaved ? "LLM API key saved ✓" : "LLM API key", text: $llmKey)
+                        .textFieldStyle(.roundedBorder)
+                    Button(llmKeySaved ? "✓" : "Save") { saveLLMKey() }
+                        .buttonStyle(.bordered)
+                }
+                makeScriptButton
+            }
+            .padding(4)
+        }
+        .font(.subheadline)
+    }
+
+    private var makeScriptButton: some View {
+        Button {
+            Task { await makeScript() }
+        } label: {
+            Label("Script banao", systemImage: "wand.and.stars")
+                .frame(maxWidth: .infinity)
+        }
+        .buttonStyle(.borderedProminent)
+        .disabled(scriptBusy || !llmKeySaved || idea.trimmed.isEmpty)
+    }
+
+    // MARK: - script + scenes section
+
+    private var scriptSection: some View {
+        GroupBox("2. Scenes — voice generate karo") {
+            VStack(alignment: .leading, spacing: 12) {
+                if let s = script {
+                    Text(s.title).font(.headline)
+                    if let log = s.logline, !log.isEmpty {
+                        Text(log).font(.caption).foregroundStyle(.secondary)
+                    }
+                    voiceControls
+                    ForEach(s.scenes) { scene in
+                        SceneCard(
+                            scene: scene,
+                            status: sceneStatus[scene.n] ?? "",
+                            hasAudio: players[scene.n] != nil,
+                            onPlay: { togglePlay(scene.n) }
+                        )
+                    }
+                    saveHint
+                }
+            }
+            .padding(4)
+        }
+        .font(.subheadline)
+    }
+
+    private var voiceControls: some View {
+        VStack(spacing: 10) {
+            Picker("Voice", selection: $voiceID) {
+                if voices.isEmpty { Text("Key save karo →").tag("") }
+                ForEach(voices) { v in Text(v.name).tag(v.voiceId) }
+            }
+            Button {
+                Task { await generateVoices() }
+            } label: {
+                Label("Voice generate (sab scenes)", systemImage: "waveform")
+                    .frame(maxWidth: .infinity)
+            }
+            .buttonStyle(.borderedProminent)
+            .disabled(voiceBusy || voiceID.isEmpty)
+        }
+    }
+
+    private var saveHint: some View {
+        Text("scenes.json + scene MP3s Documents/script/ me save hote hain — render engine inhi timings se sync hoga.")
+            .font(.caption2)
+            .foregroundStyle(.tertiary)
+    }
+
+    private func togglePlay(_ n: Int) {
+        guard let p = players[n] else { return }
+        if p.isPlaying {
+            p.pause()
+        } else {
+            _ = p.play()
         }
     }
 
@@ -156,8 +162,9 @@ struct ScriptMakerView: View {
         status = "\(provider.label) se script ban rahi hai…"
         do {
             guard let key = Keychain.get("llm_key") else { throw LLMError.empty }
-            script = try await LLM.makeScript(idea: idea, provider: provider, key: key, model: llmModel.trimmingCharacters(in: .whitespaces).isEmpty ? provider.defaultModel : llmModel)
-            status = "✅ \(script!.scenes.count) scenes bane — ab voice generate karo."
+            let model = llmModel.trimmingCharacters(in: .whitespaces).isEmpty ? provider.defaultModel : llmModel
+            script = try await LLM.makeScript(idea: idea, provider: provider, key: key, model: model)
+            status = "✅ \(script?.scenes.count ?? 0) scenes bane — ab voice generate karo."
         } catch {
             status = "Error: \(error.localizedDescription)"
         }
@@ -217,4 +224,41 @@ struct ScriptMakerView: View {
         }
         voiceBusy = false
     }
+}
+
+/// One scene card (extracted so the big body expression stays type-checkable).
+private struct SceneCard: View {
+    let scene: StoryScript.Scene
+    let status: String
+    let hasAudio: Bool
+    let onPlay: () -> Void
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            HStack {
+                Text("Scene \(scene.n)").font(.caption.bold())
+                Spacer()
+                if !status.isEmpty {
+                    Text(status).font(.caption2).foregroundStyle(.secondary)
+                }
+                if hasAudio {
+                    Button(action: onPlay) {
+                        Image(systemName: "play.fill")
+                    }
+                    .buttonStyle(.bordered)
+                    .controlSize(.mini)
+                }
+            }
+            Text(scene.narration).font(.subheadline)
+            if let v = scene.visual, !v.isEmpty {
+                Text("🎬 " + v).font(.caption).foregroundStyle(.tertiary)
+            }
+        }
+        .padding(8)
+        .background(.quaternary.opacity(0.4), in: RoundedRectangle(cornerRadius: 8))
+    }
+}
+
+private extension String {
+    var trimmed: String { trimmingCharacters(in: .whitespacesAndNewlines) }
 }

@@ -67,7 +67,11 @@ struct ContentView: View {
                         if voiceReady {
                             Button {
                                 if let player {
-                                    player.isPlaying ? player.pause() : player.play()
+                                    if player.isPlaying {
+                                        player.pause()
+                                    } else {
+                                        _ = player.play()
+                                    }
                                 } else {
                                     try? playPreview()
                                 }
@@ -95,7 +99,7 @@ struct ContentView: View {
                     .font(.title3)
                     .foregroundStyle(.secondary)
                 if fps > 0.5 {
-                    Text(String(format: "%.1f frames/s  ·  ~%ds baki", fps, Int(eta.rounded())))
+                    Text("\(String(format: "%.1f", fps)) frames/s · ~\(Int(eta.rounded()))s baki")
                         .font(.footnote.monospacedDigit())
                         .foregroundStyle(.secondary)
                 }
