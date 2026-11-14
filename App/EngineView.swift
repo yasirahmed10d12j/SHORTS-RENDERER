@@ -2,7 +2,7 @@ import WebKit
 
 enum RenderError: Error, LocalizedError {
     case engineMissing, engineNotReady, noTimeline
-    case frameFailed(Int), bufferFailed, appendFailed, writeFailed, saveDenied
+    case frameFailed(Int), badFrame, bufferFailed, appendFailed, writeFailed, saveDenied
 
     var errorDescription: String? {
         switch self {
@@ -10,6 +10,7 @@ enum RenderError: Error, LocalizedError {
         case .engineNotReady: return "Engine ready nahi hua (timeout)."
         case .noTimeline: return "window.TOTAL missing — engine patch check karo."
         case .frameFailed(let f): return "Frame \(f) render fail."
+        case .badFrame: return "Frame JPEG decode fail."
         case .bufferFailed: return "Pixel buffer ban nahi paya."
         case .appendFailed: return "Frame video me append nahi hua."
         case .writeFailed: return "MP4 write fail."
@@ -38,7 +39,7 @@ final class Engine {
     }
 
     func load() async throws {
-        await web.loadFileURL(root.appendingPathComponent("engine.html"), allowingReadAccessTo: root)
+        web.loadFileURL(root.appendingPathComponent("engine.html"), allowingReadAccessTo: root)
         for _ in 0..<600 { // up to ~2.5 min warmup (WebGL compile + warmup frame)
             try await Task.sleep(nanoseconds: 250_000_000)
             if try await evalBool("window.ready === true") { return }

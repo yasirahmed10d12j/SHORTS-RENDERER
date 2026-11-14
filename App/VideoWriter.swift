@@ -27,8 +27,9 @@ final class VideoWriter {
                 kCVPixelBufferWidthKey as String: 1080,
                 kCVPixelBufferHeightKey as String: 1920,
             ])
+        // The adaptor binds itself to the input at creation; adding only the input is enough
+        // (and add(adaptor) has no overload on the newer SDKs).
         writer.add(input)
-        writer.add(adaptor)
         writer.startWriting()
         writer.startSession(atSourceTime: .zero)
     }
@@ -53,8 +54,10 @@ final class VideoWriter {
     func finish() async throws {
         input.markAsFinished()
         try await withCheckedThrowingContinuation { (cont: CheckedContinuation<Void, Error>) in
-            writer.finishWriting {
-                writer.status == .completed ? cont.resume() : cont.resume(throwing: writer.error ?? RenderError.writeFailed)
+            writer.finishWriting { [self] in
+                self.writer.status == .completed
+                    ? cont.resume()
+                    : cont.resume(throwing: self.writer.error ?? RenderError.writeFailed)
             }
         }
     }
