@@ -58,9 +58,11 @@ enum AudioMux {
             throw RenderError.writeFailed
         }
         let vcomp = try comp.addMutableTrack(withMediaType: .video, preferredTrackID: kCMPersistentTrackID_Invalid)
+        guard let vcomp else { throw RenderError.writeFailed }
         try vcomp.insertTimeRange(CMTimeRange(start: .zero, duration: vsrc.duration), of: vtrack, at: .zero)
 
-        let acomp = try comp.addMutableTrack(withMediaType: .audio, preferredTrackID: kCMPersistentTrackID_Invalid)
+        let acompTrack = try comp.addMutableTrack(withMediaType: .audio, preferredTrackID: kCMPersistentTrackID_Invalid)
+        guard let acomp = acompTrack else { throw RenderError.writeFailed }
         for clip in plan.clips {
             let m4a = try await toAAC(clip.url)
             let src = AVURLAsset(url: m4a)
@@ -74,7 +76,7 @@ enum AudioMux {
             throw RenderError.writeFailed
         }
         ex.outputURL = out
-        ex.outputType = .mp4
+        ex.outputFileType = AVFileType.mp4
         try await withCheckedThrowingContinuation { (cont: CheckedContinuation<Void, Error>) in
             ex.exportAsynchronously {
                 if ex.status == .completed {
@@ -89,12 +91,18 @@ enum AudioMux {
     /// MP3 is not allowed inside an .mp4 container — convert clips to AAC .m4a first.
     private static func toAAC(_ url: URL) async throws -> URL {
         let out = url.deletingPathExtension().appendingPathExtension("m4a")
-        if FileManager.default.fileExists(atPath: out.path) { return out }
+        if FileManager.default.fileExists(atPath: out.path) {
+            // re-export if the mp3 was regenerated after this m4a was made
+            let mp3Mod = ((try? FileManager.default.attributesOfItem(atPath: url.path))?[.modificationDate] as? Date) ?? .distantPast
+            let m4aMod = ((try? FileManager.default.attributesOfItem(atPath: out.path))?[.modificationDate] as? Date) ?? .distantPast
+            if m4aMod >= mp3Mod { return out }
+            try? FileManager.default.removeItem(at: out)
+        }
         guard let ex = AVAssetExportSession(asset: AVURLAsset(url: url), presetName: AVAssetExportPresetAppleM4A) else {
             throw RenderError.writeFailed
         }
         ex.outputURL = out
-        ex.outputType = .m4a
+        ex.outputFileType = AVFileType.m4a
         try await withCheckedThrowingContinuation { (cont: CheckedContinuation<Void, Error>) in
             ex.exportAsynchronously {
                 if ex.status == .completed {
