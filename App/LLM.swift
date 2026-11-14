@@ -133,6 +133,30 @@ enum LLM {
 
     // MARK: - tolerant JSON decode
 
+    /// Cached compiled regex for stripping timestamps from pasted scripts.
+    private static let tsPattern: NSRegularExpression? = {
+        try? NSRegularExpression(
+            pattern: """
+            \\[\\d+[:\\.]?\\d*(?:\\.\\d+)?(?:\\s*s?)?\\]\\b|
+            \\(\\d+[smh]\\)\\b|
+            #\\d{1,2}:\\d{2}(?::\\d{2})?\\b|
+            \\d{1,2}:\\d{2}(?::\\d{2})?\\b:
+            """,
+            options: [.caseInsensitive, .dotMatchesLineSeparators]
+        )
+    }()
+
+    /// Strips common timestamp markers so ElevenLabs doesn't read them aloud:
+    /// [00:05], (5s), [5:02], 00:05:, #00:05, etc.
+    static func stripTimestamps(_ s: String) -> String {
+        guard let pat = tsPattern else { return s }
+        let range = NSRange(s.startIndex..., in: s)
+        let stripped = pat.stringByReplacingMatches(in: s, options: [], range: range, withTemplate: "")
+        var collapsed = stripped.replacingOccurrences(of: "\\s+", with: " ", options: .regularExpression)
+        collapsed = collapsed.trimmingCharacters(in: .whitespaces)
+        return collapsed
+    }
+
     static func decodeScript(_ raw: String) throws -> StoryScript {
         guard let start = raw.firstIndex(of: "{"), let end = raw.lastIndex(of: "}"), start < end else {
             throw LLMError.badJSON("jawab me JSON nahi mila")
@@ -180,29 +204,6 @@ enum LLM {
             let keywords = ["visual", "camera", "on screen", "🎬", "दृश्य", "animation", "shot desc", "bg:", "background:"]
             if keywords.contains(where: { low.hasPrefix($0) }) { return true }
             return line.hasPrefix("(") && line.hasSuffix(")")
-        }
-
-        /// Strips common timestamp markers so ElevenLabs doesn't read them aloud:
-        /// [00:05], (5s), [5:02], 00:05:, #00:05, etc.
-        static let tsPattern = try? NSRegularExpression(
-            pattern: """
-            \\[\\d+[:\\.]?\\d*(?:\\.\\d+)?(?:\\s*s?)?\\]\\b|
-            \\(\\d+[smh]\\)\\b|
-            #\\d{1,2}:\\d{2}(?::\\d{2})?\\b|
-            \\d{1,2}:\\d{2}(?::\\d{2})?\\b:
-            """,
-            options: [.caseInsensitive, .dotMatchesLineSeparators]
-        )
-
-        static func stripTimestamps(_ s: String) -> String {
-            guard let pat = tsPattern else { return s }
-            let range = NSRange(s.startIndex..., in: s)
-            let stripped = pat.stringByReplacingMatches(in: s, options: [], range: range, withTemplate: "")
-            // collapse duplicate whitespace left by removals
-            var collapsed = stripped.replacingOccurrences(of: "\\s+", with: " ", options: .regularExpression)
-            // trim any trailing colon left after a timestamp label
-            collapsed = collapsed.trimmingCharacters(in: .whitespaces)
-            return collapsed
         }
 
         func stripLabel(_ line: String) -> String {
