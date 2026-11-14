@@ -33,7 +33,6 @@ struct VideoGeneratorView: View {
     @State private var done = false
 
     @State private var status = ""
-    @State private var elapsedSecs = 0
 
     var body: some View {
         ScrollView {
@@ -84,7 +83,7 @@ struct VideoGeneratorView: View {
                             ForEach(LLMProvider.allCases) { p in Text(p.label).tag(p) }
                         }
                         .pickerStyle(.menu)
-                        .onChange(of: provider) { _, p in llmModel = p.defaultModel }
+                        .onChange(of: provider) { p in llmModel = p.defaultModel }
                         TextField("model", text: $llmModel)
                             .textFieldStyle(.roundedBorder)
                             .autocorrectionDisabled()
@@ -196,7 +195,8 @@ struct VideoGeneratorView: View {
                     Text(String(format: "%.0f%%", progress * 100))
                         .font(.title3).foregroundStyle(.secondary)
                     if fps > 0.5 {
-                        Text("\(String(format: "%.1f", fps)) fps · ~\(Int(eta.rounded()))s baki · \(elapsedSecs)s elapsed")
+                        let el = Int(Date().timeIntervalSince(start))
+                        Text("\(String(format: "%.1f", fps)) fps · ~\(Int(eta.rounded()))s baki · \(el)s elapsed")
                             .font(.footnote.monospacedDigit()).foregroundStyle(.secondary)
                     }
                 }
@@ -237,8 +237,7 @@ struct VideoGeneratorView: View {
 
     private func makeScript() async {
         scriptBusy = true
-        startTimer()
-        status = "Script ban rahi hai… 0s"
+        status = "Script ban rahi hai…"
         do {
             guard let key = Keychain.get("llm_key") else { throw LLMError.empty }
             let model = llmModel.trimmingCharacters(in: .whitespaces).isEmpty ? provider.defaultModel : llmModel
@@ -249,7 +248,6 @@ struct VideoGeneratorView: View {
             scriptBusy = false
             status = "Script error: \(error.localizedDescription)"
         }
-        stopTimer()
     }
 
     private func parsePasted() {
@@ -303,7 +301,6 @@ struct VideoGeneratorView: View {
 
     private func runRender() async {
         defer { running = false }
-        startTimer()
         do {
             rendered = 0; total = 0; progress = 0; fps = 0; eta = 0; done = false
             status = "Engine load…"
@@ -349,7 +346,7 @@ struct VideoGeneratorView: View {
         } catch {
             status = "Render error: \(error.localizedDescription)"
         }
-        stopTimer()
+        
     }
 
     private func saveToPhotos(_ url: URL) async throws {
@@ -361,20 +358,8 @@ struct VideoGeneratorView: View {
     }
 
     // ── timer helpers ─────────────────────────────────────────────────────────
+    // (elapsedSecs shown during render computed directly from start Date below)
 
-    private func startTimer() {
-        elapsedSecs = 0
-        timerTask = Task { [weak self] in
-            while let me = self, !Task.isCancelled {
-                try? await Task.sleep(nanoseconds: 1_000_000_000)
-                me.elapsedSecs += 1
-            }
-        }
-    }
-
-    private func stopTimer() { timerTask?.cancel(); timerTask = nil }
-
-    private var timerTask: Task<(), Never>?
 }
 
 private extension String {
