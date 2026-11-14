@@ -24025,6 +24025,15 @@
     return JSON.stringify(out);
   };
   window.ready = true;
+  (() => {
+    const orig = window.renderFrame;
+    const storyTotal = window.TOTAL;
+    window.renderFrame = (f) => {
+      const vd = window.VOICE_DURATION;
+      const scale = vd && vd > 0 ? storyTotal / (vd * 30) : 1;
+      return orig(Math.min(Math.round(f * scale), storyTotal));
+    };
+  })();
 })();
 /*! Bundled license information:
 

@@ -570,3 +570,14 @@ window.renderFrame = (f) => {
 window.TOTAL = TOTAL;
 window.dbgND = () => { const out = []; const buf = new Float32Array(4); for (const [x, y] of [[540, 1700], [540, 1200], [540, 900], [540, 700], [300, 300], [800, 1500]]) { renderer.readRenderTargetPixels(rtND, x, y, 1, 1, buf); out.push([x, y, ...Array.from(buf).map((v) => +v.toFixed(3))]); } return JSON.stringify(out); };
 window.ready = true;
+
+// app bridge: optional voice-driven duration scaling (set window.VOICE_DURATION before rendering)
+(() => {
+  const orig = window.renderFrame;
+  const storyTotal = window.TOTAL;
+  window.renderFrame = (f) => {
+    const vd = window.VOICE_DURATION;
+    const scale = vd && vd > 0 ? storyTotal / (vd * 30) : 1;
+    return orig(Math.min(Math.round(f * scale), storyTotal));
+  };
+})();

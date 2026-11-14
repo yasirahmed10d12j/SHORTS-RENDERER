@@ -103,6 +103,12 @@ final class Engine: NSObject, WKScriptMessageHandler {
         return n
     }
 
+    /// Scales the engine's story timeline to the voiceover's duration and sets
+    /// the frame count accordingly (call before totalFrames, after load).
+    func setVoiceDuration(_ d: Double) async throws {
+        _ = try await eval("window.VOICE_DURATION = \(d); window.TOTAL = Math.round(\(d) * 30); window.TOTAL")
+    }
+
     func jpegFrame(_ f: Int) async throws -> Data {
         guard let s = try await eval("window.renderFrame(\(f))") as? String,
               let b64 = s.split(separator: ",", maxSplits: 1).last.map(String.init),

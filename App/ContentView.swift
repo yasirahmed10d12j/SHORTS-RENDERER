@@ -201,6 +201,12 @@ struct ContentView: View {
             status = "Engine load ho raha hai…"
             let engine = try Engine()
             try await engine.load()
+            let docs = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+            let plan = AudioMux.detect(docs: docs)
+            if let plan {
+                try await engine.setVoiceDuration(plan.totalDuration)
+                status = String(format: "Voice milegi — video %.1fs ke hisaab se render hogi.", plan.totalDuration)
+            }
             let total_ = try await engine.totalFrames()
             total = total_
             status = "Render shuru…"
@@ -217,10 +223,17 @@ struct ContentView: View {
                 eta = fps > 0 ? Double(total_ - rendered) / fps : 0
             }
             try await writer.finish()
+            var outURL = url
+            if let plan {
+                status = "Voice video me mix ho rahi hai…"
+                let muxed = FileManager.default.temporaryDirectory.appendingPathComponent("final.mp4")
+                try await AudioMux.mux(video: url, plan: plan, out: muxed)
+                outURL = muxed
+            }
             status = "Photos me save ho raha hai…"
-            try await saveToPhotos(url)
+            try await saveToPhotos(outURL)
             done = true
-            status = "Done — \(total_) frames in \(Int(Date().timeIntervalSince(start)))s."
+            status = "Done — \(total_) frames in \(Int(Date().timeIntervalSince(start)))s." + (plan != nil ? " Voice included." : "")
             running = false
         } catch {
             status = "Error: \(error.localizedDescription)"

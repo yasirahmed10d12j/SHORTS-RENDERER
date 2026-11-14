@@ -133,8 +133,7 @@ enum LLM {
 
     // MARK: - tolerant JSON decode
 
-    static func decodeScript(_ raw: String) throws -> StoryScript {
-        guard let start = raw.firstIndex(of: "{"), let end = raw.lastIndex(of: "}"), start < end else {
+    static func decodeScript(_ raw: String) throws -> StoryScript {        guard let start = raw.firstIndex(of: "{"), let end = raw.lastIndex(of: "}"), start < end else {
             throw LLMError.badJSON("jawab me JSON nahi mila")
         }
         let json = String(raw[start...end])
@@ -148,6 +147,92 @@ enum LLM {
         }
         guard !mapped.isEmpty else { throw LLMError.badJSON("scenes khaali") }
         return StoryScript(title: (obj["title"] as? String) ?? "Untitled", logline: obj["logline"] as? String, scenes: mapped)
+    }
+
+    /// Parses a pasted script (from ChatGPT/Gemini web/notes) into scenes.
+    /// Understands "Scene 1:", "1.", "#1", "shot 2" markers and VISUAL/CAMERA lines.
+    /// With no markers, blank-line-separated paragraphs become scenes.
+    static func parseScriptText(_ raw: String) -> StoryScript {
+        struct Block { var narration = ""; var visual = "" }
+        let lines = raw.components(separatedBy: "\n")
+        let markerWords = ["scene", "sean", "sene", "सीन", "shot", "clip", "दृश्य", "part"]
+
+        func markerNumber(_ line: String) -> Int? {
+            let low = line.lowercased()
+            for w in markerWords where low.hasPrefix(w) {
+                let digits = line.dropFirst(w.count).drop(while: { $0 == " " || $0 == ":" || $0 == "#" || $0 == "-" || $0 == "." || $0 == ")" }).prefix(while: { $0.isNumber })
+                return Int(digits) // nil = unnumbered marker, still starts a block
+            }
+            if let first = line.first, first.isNumber {
+                let digits = line.prefix(while: { $0.isNumber })
+                if digits.count <= 2, digits.count < line.count { return Int(digits) }
+            }
+            if line.hasPrefix("#") {
+                let digits = line.dropFirst().prefix(while: { $0.isNumber })
+                if let n = Int(digits) { return n }
+            }
+            return nil
+        }
+
+        func isVisual(_ line: String) -> Bool {
+            let low = line.lowercased()
+            let keywords = ["visual", "camera", "on screen", "🎬", "दृश्य", "animation", "shot desc", "bg:", "background:"]
+            if keywords.contains(where: { low.hasPrefix($0) }) { return true }
+            return line.hasPrefix("(") && line.hasSuffix(")")
+        }
+
+        func stripLabel(_ line: String) -> String {
+            if let ci = line.firstIndex(of: ":") {
+                let rest = line[line.index(after: ci)...].trimmingCharacters(in: .whitespaces)
+                if !rest.isEmpty { return rest }
+            }
+            if line.hasPrefix("(") && line.hasSuffix(")") {
+                return String(line.dropFirst().dropLast())
+            }
+            // "Scene 1 - text" / "Scene 1 text"
+            var s = Substring(line)
+            for w in markerWords where s.lowercased().hasPrefix(w) {
+                s = s.dropFirst(w.count).drop(while: { " :#-.0123456789)".contains($0) && !$0.isLetter })
+            }
+            s = s.drop(while: { $0 == "-" || $0 == " " })
+            return s.trimmingCharacters(in: .whitespaces)
+        }
+
+        var blocks: [Block] = []
+        for line in lines {
+            let t = line.trimmingCharacters(in: .whitespaces)
+            guard !t.isEmpty else { continue }
+            if markerNumber(t) != nil {
+                blocks.append(Block())
+                let rest = stripLabel(t)
+                if !rest.isEmpty { blocks[blocks.count - 1].narration = rest }
+                continue
+            }
+            if blocks.isEmpty { blocks.append(Block()) }
+            if isVisual(t) {
+                blocks[blocks.count - 1].visual = stripLabel(t)
+            } else {
+                let i = blocks.count - 1
+                blocks[i].narration += blocks[i].narration.isEmpty ? t : " " + t
+            }
+        }
+        if blocks.isEmpty {
+            var cur = Block()
+            for line in lines {
+                let t = line.trimmingCharacters(in: .whitespaces)
+                if t.isEmpty {
+                    if !cur.narration.isEmpty { blocks.append(cur); cur = Block() }
+                } else {
+                    cur.narration += cur.narration.isEmpty ? t : " " + t
+                }
+            }
+            if !cur.narration.isEmpty { blocks.append(cur) }
+        }
+        guard !blocks.isEmpty else { return StoryScript(title: "Pasted Script", logline: nil, scenes: []) }
+        let scenes = blocks.enumerated().map { i, b in
+            StoryScript.Scene(n: i + 1, narration: b.narration, visual: b.visual.isEmpty ? nil : b.visual)
+        }
+        return StoryScript(title: "Pasted Script", logline: nil, scenes: scenes)
     }
 
     private static func check(_ resp: URLResponse, _ data: Data) throws {

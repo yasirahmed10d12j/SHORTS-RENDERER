@@ -10,6 +10,20 @@ cd "$(dirname "$0")/engine_src/web"
 [ -f package.json ] || printf '{ "name": "short", "private": true, "type": "module" }\n' > package.json
 # the app bridge: total frame count on window
 grep -q "window.TOTAL" main.js || printf '\nwindow.TOTAL = TOTAL; // app bridge: total frame count\n' >> main.js
+# voice-driven duration scaling bridge (set window.VOICE_DURATION before rendering)
+grep -q "VOICE_DURATION" main.js || cat >> main.js <<'EOF'
+
+// app bridge: optional voice-driven duration scaling (set window.VOICE_DURATION before rendering)
+(() => {
+  const orig = window.renderFrame;
+  const storyTotal = window.TOTAL;
+  window.renderFrame = (f) => {
+    const vd = window.VOICE_DURATION;
+    const scale = vd && vd > 0 ? storyTotal / (vd * 30) : 1;
+    return orig(Math.min(Math.round(f * scale), storyTotal));
+  };
+})();
+EOF
 # the character library is toonbase.js + cast.js concatenated (see kit/tools/setup.sh)
 cat toonbase.js cast.js > toon.js
 npm install --no-audit --no-fund three@0.160.0 esbuild@0.24.0 >/dev/null

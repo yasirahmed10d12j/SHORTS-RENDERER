@@ -13,6 +13,7 @@ struct ScriptMakerView: View {
     @State private var script: StoryScript?
     @State private var scriptBusy = false
     @State private var status = ""
+    @State private var pasteText = ""
 
     // voice
     @State private var voices: [ElevenVoice] = []
@@ -28,6 +29,7 @@ struct ScriptMakerView: View {
                     .font(.title2.bold())
                     .frame(maxWidth: .infinity, alignment: .leading)
                 writerSection
+                pasteSection
                 if scriptBusy { ProgressView() }
                 if script != nil { scriptSection }
                 if !status.isEmpty {
@@ -144,6 +146,39 @@ struct ScriptMakerView: View {
         } else {
             _ = p.play()
         }
+    }
+
+    // MARK: - paste section (bring your own script)
+
+    private var pasteSection: some View {
+        GroupBox("Option B: bahar se bani script paste karo (ChatGPT, notes)") {
+            VStack(alignment: .leading, spacing: 10) {
+                TextEditor(text: $pasteText)
+                    .frame(height: 110)
+                    .overlay(RoundedRectangle(cornerRadius: 8).stroke(.quaternary))
+                Button {
+                    parsePasted()
+                } label: {
+                    Label("Script parse karo", systemImage: "doc.text")
+                        .frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.borderedProminent)
+                .disabled(pasteText.trimmed.isEmpty || scriptBusy)
+                Text("Samajh aata hai: 'Scene 1:', '1.', '#1', VISUAL/CAMERA lines. Markers na mile to har paragraph ek scene ban jayega.")
+                    .font(.caption2)
+                    .foregroundStyle(.tertiary)
+            }
+            .padding(4)
+        }
+        .font(.subheadline)
+    }
+
+    private func parsePasted() {
+        let s = LLM.parseScriptText(pasteText)
+        script = s
+        sceneStatus = [:]
+        players = [:]
+        status = "✅ \(s.scenes.count) scenes parse hue — ab voice generate karo."
     }
 
     // MARK: - script
