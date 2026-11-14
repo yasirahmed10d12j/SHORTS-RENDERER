@@ -36,6 +36,3 @@ workflows:
           (cd build && zip -qry CartoonShort-unsigned.ipa Payload)
     artifacts:
       - build/*.ipa
-    publishing:
-      emails:
-        - "*" # bhej do har case me, taaki failure ka log bhi mile
