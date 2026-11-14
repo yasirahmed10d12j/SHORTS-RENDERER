@@ -33,7 +33,7 @@ enum AppleTTS {
         return (metas, ok)
     }
     
-    private static func synthesize(text: String) async throws -> Data {
+    static func synthesize(text: String) async throws -> Data {
         guard !text.trimmingCharacters(in: .whitespaces).isEmpty else { return Data() }
         
         return try await withCheckedThrowingContinuation { continuation in
@@ -60,7 +60,7 @@ enum AppleTTS {
             
             let startTime = Date()
             while synthesizer.isSpeaking && Date().timeIntervalSince(startTime) < 60 {
-                try? Task.sleep(nanoseconds: 100_000_000)
+                Thread.sleep(forTimeInterval: 0.1)
             }
             
             engine.stop()

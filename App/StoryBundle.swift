@@ -123,6 +123,6 @@ extension BuiltInStory {
 // Helper extension
 extension Array where Element == String {
     func any(where predicate: (String) -> Bool) -> Bool {
-        contains(predicate)
+        contains(where: predicate)
     }
 }

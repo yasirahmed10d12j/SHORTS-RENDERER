@@ -156,6 +156,7 @@ struct VideoGeneratorView: View {
                                 allVoicesReady = false
                                 status = "✅ '\(story.title)' selected — ab Voice generate karo."
                             } label: {
+                                let isSelected = selectedStory?.id == story.id
                                 VStack(alignment: .leading, spacing: 4) {
                                     Text(story.title)
                                         .font(.subheadline.bold())
@@ -169,10 +170,10 @@ struct VideoGeneratorView: View {
                                 }
                                 .frame(width: 160, alignment: .leading)
                                 .padding(12)
-                                .background(selectedStory?.id == story.id ? Color.blue.opacity(0.2) : Color.quaternary.opacity(0.3), in: RoundedRectangle(cornerRadius: 12))
+                                .background(isSelected ? Color.blue.opacity(0.2) : Color.quaternary.opacity(0.3), in: RoundedRectangle(cornerRadius: 12))
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 12)
-                                        .stroke(selectedStory?.id == story.id ? Color.blue : Color.clear, lineWidth: 2)
+                                        .stroke(isSelected ? Color.blue : Color.clear, lineWidth: 2)
                                 )
                             }
                         }
