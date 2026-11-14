@@ -1,0 +1,41 @@
+# Codemagic workflow: builds an UNSIGNED IPA (no Apple Developer account needed).
+# Sign it afterwards on Windows with 3uTools / Sideloadly using a free Apple ID.
+workflows:
+  unsigned-ipa:
+    name: Unsigned IPA
+    instance_type: mac_mini_m1
+    max_build_duration: 60
+    environment:
+      xcode: latest
+    scripts:
+      - name: Install XcodeGen
+        script: |
+          set -e
+          command -v xcodegen >/dev/null 2>&1 || brew install xcodegen
+      - name: Generate Xcode project
+        script: |
+          set -e
+          xcodegen generate
+      - name: Archive (unsigned)
+        script: |
+          set -e
+          xcodebuild archive \
+            -project CartoonShort.xcodeproj \
+            -scheme CartoonShort \
+            -configuration Release \
+            -destination "generic/platform=iOS" \
+            -archivePath build/CartoonShort.xcarchive \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY=""
+      - name: Package unsigned IPA
+        script: |
+          set -e
+          mkdir -p build/Payload
+          cp -R "build/CartoonShort.xcarchive/Products/Applications/CartoonShort.app" build/Payload/
+          (cd build && zip -qry CartoonShort-unsigned.ipa Payload)
+    artifacts:
+      - build/*.ipa
+    publishing:
+      emails:
+        - "*" # bhej do har case me, taaki failure ka log bhi mile

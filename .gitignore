@@ -1,0 +1,11 @@
+# generated artifacts
+build/
+engine_src/web/node_modules/
+engine_src/web/app.js
+engine_src/web/package-lock.json
+engine_src/web/package.json
+
+# macOS / tools
+.DS_Store
+*.xcodeproj
+CartoonShort.xcodeproj

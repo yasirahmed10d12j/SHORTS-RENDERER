@@ -1,0 +1,37 @@
+name: CartoonShort
+options:
+  bundleIdPrefix: com.yasir
+  deploymentTarget:
+    iOS: "16.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    CODE_SIGNING_ALLOWED: "NO"
+    CODE_SIGNING_REQUIRED: "NO"
+    CODE_SIGN_IDENTITY: ""
+targets:
+  CartoonShort:
+    type: application
+    platform: iOS
+    sources:
+      - path: App
+        excludes:
+          - "engine/app.js"
+          - "engine/engine.html"
+      - path: App/engine
+        type: folder
+        buildPhase: resources
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleDisplayName: Cartoon Short
+        UILaunchScreen: {}
+        UIRequiresFullScreen: true
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        NSPhotoLibraryAddUsageDescription: "Rendered video ko aapke photo library me save karne ke liye."
+    settings:
+      base:
+        TARGETED_DEVICE_FAMILY: "1"
+        SUPPORTS_MACCATALYST: "NO"
+        ENABLE_PREVIEWS: "NO"
