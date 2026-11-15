@@ -817,24 +817,50 @@
     ctx.restore();
   };
 
+  // ── GLTF model props (real .glb assets from App/engine/models/) ─────────
+  var MODEL_CACHE = {};
+  var loadModel = (url) => {
+    if (MODEL_CACHE[url]) return Promise.resolve(MODEL_CACHE[url]);
+    return new Promise((resolve, reject) => {
+      try { new GLTFLoader(); } catch (e) { reject(e); return; }
+      const loader = new GLTFLoader();
+      loader.load(url, (gltf) => { MODEL_CACHE[url] = gltf.scene; resolve(gltf.scene); },
+        undefined, (e) => reject(e));
+    });
+  };
+  var buildModel = (p) => {
+    const src = MODEL_CACHE[p.url];
+    if (!src) return;
+    const clone = src.clone(true);
+    clone.position.set(p.x ?? 0, p.y ?? 0, p.z ?? 0);
+    clone.rotation.y = p.ry ?? 0;
+    clone.scale.setScalar(p.s ?? 1);
+    clone.traverse((o) => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; } });
+    addS(clone, true, true);
+  };
+
   // ── build story ───────────────────────────────────────────────────────────
-  var buildStory = (spec) => {
+  var buildStory = async (spec) => {
     clearStory();
     STORY.flatGround = spec.flatGround !== false;
     STORY.beam = null;
     const set = spec.set || { type: "outdoor", style: "forest" };
 
-    // core ground policy: outdoor sets keep the grass plane + distant hills;
-    // sea/lake/cave/interior bring their own ground, so core terrain (ridge,
-    // boulders, baked trees) and the grass plane are hidden entirely.
     const outdoor = set.type === "outdoor";
     if (typeof coreGround !== "undefined" && coreGround) coreGround.visible = outdoor;
     if (typeof ridge !== "undefined" && ridge) ridge.visible = false;
     for (const m of (typeof CORE_HILLS !== "undefined" ? CORE_HILLS : [])) if (m) m.visible = outdoor;
 
+    // preload any real .glb models used by props
+    const urls = new Set();
+    for (const p of spec.props || []) if (p.kind === "model" && p.url) urls.add(p.url);
+    await Promise.all(Array.from(urls).map((u) => loadModel(u).catch(() => null)));
+
     const builder = SETS[set.type];
     if (builder) builder(set);
-    for (const p of spec.props || []) buildProp(p);
+    for (const p of spec.props || []) {
+      if (p.kind === "model") buildModel(p); else buildProp(p);
+    }
 
     const scenes = spec.scenes || [];
     let acc = 0;

@@ -64,6 +64,7 @@ def main():
         # (24016 is the closing }; of renderFrame — must be included)
         rng(src, 23908, 24016),
     ]
+
     text = "\n".join(main_chunks)
 
     # capture the big grass ground plane as coreGround so the spec layer can
@@ -96,7 +97,8 @@ def main():
     assert old_ret in text, "toDataURL return not found in extracted main"
     text = text.replace(old_ret, new_ret)
 
-    parts = [text]
+    gltf = (Path(__file__).resolve().parent / "engine2" / "GLTFLoader.js").read_text(encoding="utf-8")
+    parts = [text, gltf]
 
     # C) spec layer
     parts.append("\n" + SPEC.read_text(encoding="utf-8"))
@@ -112,10 +114,10 @@ def main():
   window.STORY = null;
   window.ready = false;
   window.TOTAL = 1;
-  window.loadStory = (spec) => {
+  window.loadStory = async (spec) => {
     try {
       window.STORY = spec;
-      buildStory(spec);
+      await buildStory(spec);
       window.TOTAL = Math.max(1, spec.total || window.TOTAL);
       window.ready = true;
       return "ok:" + window.TOTAL;
