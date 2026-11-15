@@ -1,1 +1,1804 @@
-{"the-unread-letter": {"id": "the-unread-letter", "flatGround": true, "set": {"type": "interior", "style": "room"}, "scenes": [{"n": 1, "dur": 2.4, "light": "night", "cam": {"type": "pushIn", "from": [3.7299999999999995, 2.1, 6.37], "to": [2.8, 1.7, 4.2], "look": [-1, 1.3, 1], "fov": 44}, "actors": [{"outfit": "man", "kind": "front", "pos": [-1.0, 1.0], "expr": "calm", "seed": 3}], "fx": [{"kind": "glow", "pos": [3.2, 1.3, -3.2], "size": 2.6, "at": [0, 1], "cycle": true, "alpha": 0.7}], "caption": "She could not read. Could not write. Had spent sixty-eight years in a village where girls were told books were for boys.", "capStyle": "hook"}, {"n": 2, "dur": 2.4, "light": "night", "cam": {"type": "pan", "pos": [4.04, 1.7, 4.2], "lookFrom": [-0.008000000000000007, 1.3, 1], "lookTo": [-1.992, 1.3, -0.24], "fov": 46}, "actors": [{"outfit": "man", "kind": "front", "pos": [-1.0, 1.0], "expr": "calm", "seed": 3, "mode": "stand"}], "fx": [{"kind": "glow", "pos": [3.2, 1.3, -3.2], "size": 2.6, "at": [0, 1], "cycle": true, "alpha": 0.7}], "caption": "When her husband died, she found his old notebooks in a tin box. Dozens of them. Filled with words she could never decipher.", "capStyle": "normal"}, {"n": 3, "dur": 2.4, "light": "night", "cam": {"type": "orbit", "center": [-1, 0, 1], "r": 3.41, "h": 1.9, "a0": -9, "a1": 50, "look": [-1, 1.3, 1], "fov": 44}, "actors": [{"outfit": "man", "kind": "front", "pos": [-1.0, 1.0], "expr": "calm", "seed": 3}], "fx": [{"kind": "glow", "pos": [3.2, 1.3, -3.2], "size": 2.6, "at": [0, 1], "cycle": true, "alpha": 0.7}], "caption": "So she started writing her own letters to him. Every evening. Every single day. Sitting at the kitchen table, scratching words onto paper she saved from ration boxes.", "capStyle": "normal"}, {"n": 4, "dur": 2.4, "light": "night", "cam": {"type": "static", "pos": [2.8, 1.7, 4.2], "look": [-1, 1.3, 1], "fov": 45, "jitter": true}, "actors": [{"outfit": "man", "kind": "front", "pos": [-1.0, 1.0], "expr": "calm", "seed": 3}], "fx": [{"kind": "glow", "pos": [3.2, 1.3, -3.2], "size": 2.6, "at": [0, 1], "cycle": true, "alpha": 0.7}], "caption": "The village headman told her to stop. A widow writing to the dead was bad luck. She kept writing.", "capStyle": "normal"}, {"n": 5, "dur": 2.4, "light": "night", "cam": {"type": "pullOut", "from": [2.304, 1.7, 3.4560000000000004], "to": [3.916, 2.3, 6.99], "look": [-1, 1.3, 1], "fov": 42}, "actors": [{"outfit": "man", "kind": "front", "pos": [-1.0, 1.0], "expr": "calm", "seed": 3, "mode": "stand"}], "fx": [{"kind": "glow", "pos": [3.2, 1.3, -3.2], "size": 2.6, "at": [0, 1], "cycle": true, "alpha": 0.7}], "caption": "Years passed. The letters filled three jars. She could still barely form the letters, but she did it anyway. Slowly. Carefully.", "capStyle": "normal"}, {"n": 6, "dur": 2.4, "light": "night", "cam": {"type": "track", "from": [2.8, 1.7, 5.75], "to": [2.8, 1.7, 3.2700000000000005], "look": [-1, 1.3, 1], "fov": 40}, "actors": [{"outfit": "man", "kind": "front", "pos": [-1.0, 1.0], "expr": "calm", "seed": 3}], "fx": [{"kind": "glow", "pos": [3.2, 1.3, -3.2], "size": 2.6, "at": [0, 1], "cycle": true, "alpha": 0.7}], "caption": "On her last day, a letter arrived. Postmarked fifty years ago. Delivered wrong. Addressed to her street. Inside it was her husband handwriting.", "capStyle": "normal"}, {"n": 7, "dur": 2.4, "light": "night", "cam": {"type": "rise", "from": [2.8, 1.2, 4.2], "to": [2.8, 3.808, 5.13], "lookFrom": [-1, 1.3, 1], "lookTo": [-1, 2.5, 0], "fov": 44}, "actors": [{"outfit": "man", "kind": "front", "pos": [-1.0, 1.0], "expr": "calm", "seed": 3}], "fx": [{"kind": "glow", "pos": [3.2, 1.3, -3.2], "size": 2.6, "at": [0, 1], "cycle": true, "alpha": 0.7}], "caption": "I know you cannot read, it said. But I will learn your letters too, one by one, until you can read my reply. And below it, his script matched hers letter for letter.", "capStyle": "normal"}, {"n": 8, "dur": 2.4, "light": "night", "cam": {"type": "pan", "pos": [4.04, 1.7, 4.2], "lookFrom": [-0.008000000000000007, 1.3, 1], "lookTo": [-1.992, 1.3, -0.24], "fov": 46}, "actors": [{"outfit": "man", "kind": "front", "pos": [-1.0, 1.0], "expr": "calm", "seed": 3}], "fx": [{"kind": "glow", "pos": [3.2, 1.3, -3.2], "size": 2.6, "at": [0, 1], "cycle": true, "alpha": 0.7}], "caption": "She had been writing to herself all along. He had been learning, in secret, just so he could answer.", "capStyle": "normal"}, {"n": 9, "dur": 2.4, "light": "night", "cam": {"type": "static", "pos": [2.8, 1.7, 4.2], "look": [-1, 1.3, 1], "fov": 45, "jitter": true}, "actors": [{"outfit": "man", "kind": "front", "pos": [-1.0, 1.0], "expr": "calm", "seed": 3}], "fx": [{"kind": "glow", "pos": [3.2, 1.3, -3.2], "size": 2.6, "at": [0, 1], "cycle": true, "alpha": 0.7}], "caption": "She never married again. She opened a school for girls in that village. Would you have kept writing? Comment LETTER if this made you cry.", "capStyle": "normal"}]}, "the-road-that-walked": {"id": "the-road-that-walked", "flatGround": true, "set": {"type": "interior", "style": "room"}, "scenes": [{"n": 1, "dur": 2.4, "light": "night", "cam": {"type": "pushIn", "from": [3.7299999999999995, 2.1, 6.37], "to": [2.8, 1.7, 4.2], "look": [-1, 1.3, 1], "fov": 44}, "actors": [{"outfit": "man", "kind": "front", "pos": [-1.0, 1.0], "expr": "calm", "seed": 3}], "fx": [{"kind": "glow", "pos": [3.2, 1.3, -3.2], "size": 2.6, "at": [0, 1], "cycle": true, "alpha": 0.7}], "caption": "In the hills of northern India, there is a valley cut off from the road by a river that swells every monsoon. No bridge. No jeep path.", "capStyle": "hook"}, {"n": 2, "dur": 2.4, "light": "night", "cam": {"type": "pan", "pos": [4.04, 1.7, 4.2], "lookFrom": [-0.008000000000000007, 1.3, 1], "lookTo": [-1.992, 1.3, -0.24], "fov": 46}, "actors": [{"outfit": "man", "kind": "front", "pos": [-1.0, 1.0], "expr": "calm", "seed": 3, "mode": "stand"}], "fx": [{"kind": "glow", "pos": [3.2, 1.3, -3.2], "size": 2.6, "at": [0, 1], "cycle": true, "alpha": 0.7}], "caption": "For twenty-three years, a doctor walked those eighteen kilometers twice a day. Morning rounds. Evening visits. Rain or shine. His sandals wore through. His feet learned every stone.", "capStyle": "normal"}, {"n": 3, "dur": 2.4, "light": "night", "cam": {"type": "orbit", "center": [-1, 0, 1], "r": 3.41, "h": 1.9, "a0": -9, "a1": 50, "look": [-1, 1.3, 1], "fov": 44}, "actors": [{"outfit": "man", "kind": "front", "pos": [-1.0, 1.0], "expr": "calm", "seed": 3}], "fx": [{"kind": "glow", "pos": [3.2, 1.3, -3.2], "size": 2.6, "at": [0, 1], "cycle": true, "alpha": 0.7}], "caption": "Once, during a flood, the river swallowed the only ford. He waded in up to his chest, a newborn strapped to his back, and did not stop until his legs gave out on the far bank.", "capStyle": "normal"}, {"n": 4, "dur": 2.4, "light": "night", "cam": {"type": "static", "pos": [2.8, 1.7, 4.2], "look": [-1, 1.3, 1], "fov": 45, "jitter": true}, "actors": [{"outfit": "man", "kind": "front", "pos": [-1.0, 1.0], "expr": "calm", "seed": 3}], "fx": [{"kind": "glow", "pos": [3.2, 1.3, -3.2], "size": 2.6, "at": [0, 1], "cycle": true, "alpha": 0.7}], "caption": "The village wanted to build a bridge. They raised money. Sent petitions. Nothing moved. Government said it was too expensive for too few people.", "capStyle": "normal"}, {"n": 5, "dur": 2.4, "light": "night", "cam": {"type": "pullOut", "from": [2.304, 1.7, 3.4560000000000004], "to": [3.916, 2.3, 6.99], "look": [-1, 1.3, 1], "fov": 42}, "actors": [{"outfit": "man", "kind": "front", "pos": [-1.0, 1.0], "expr": "calm", "seed": 3, "mode": "stand"}], "fx": [{"kind": "glow", "pos": [3.2, 1.3, -3.2], "size": 2.6, "at": [0, 1], "cycle": true, "alpha": 0.7}], "caption": "He kept walking. Day nineteen thousand four hundred and eighty-five, he collapsed on the path. Not from exhaustion. From a heart that had simply forgotten how to stop.", "capStyle": "normal"}, {"n": 6, "dur": 2.4, "light": "night", "cam": {"type": "track", "from": [2.8, 1.7, 5.75], "to": [2.8, 1.7, 3.2700000000000005], "look": [-1, 1.3, 1], "fov": 40}, "actors": [{"outfit": "man", "kind": "front", "pos": [-1.0, 1.0], "expr": "calm", "seed": 3}], "fx": [{"kind": "glow", "pos": [3.2, 1.3, -3.2], "size": 2.6, "at": [0, 1], "cycle": true, "alpha": 0.7}], "caption": "They carried him to the hospital. In his pocket, a notebook. Every birth he had delivered, listed by date and time. One thousand two hundred and seven names.", "capStyle": "normal"}, {"n": 7, "dur": 2.4, "light": "night", "cam": {"type": "rise", "from": [2.8, 1.2, 4.2], "to": [2.8, 3.808, 5.13], "lookFrom": [-1, 1.3, 1], "lookTo": [-1, 2.5, 0], "fov": 44}, "actors": [{"outfit": "man", "kind": "front", "pos": [-1.0, 1.0], "expr": "calm", "seed": 3}], "fx": [{"kind": "glow", "pos": [3.2, 1.3, -3.2], "size": 2.6, "at": [0, 1], "cycle": true, "alpha": 0.7}], "caption": "Three days later, he asked to leave. His wife refused. The village built a tiny clinic at the river crossing. He returned that afternoon. Walking.", "capStyle": "normal"}, {"n": 8, "dur": 2.4, "light": "night", "cam": {"type": "pan", "pos": [4.04, 1.7, 4.2], "lookFrom": [-0.008000000000000007, 1.3, 1], "lookTo": [-1.992, 1.3, -0.24], "fov": 46}, "actors": [{"outfit": "man", "kind": "front", "pos": [-1.0, 1.0], "expr": "calm", "seed": 3}], "fx": [{"kind": "glow", "pos": [3.2, 1.3, -3.2], "size": 2.6, "at": [0, 1], "cycle": true, "alpha": 0.7}], "caption": "Last year, a satellite image showed something remarkable. Along his entire route, grass had grown greener than anywhere else. His footsteps had scattered seeds for twenty-three years.", "capStyle": "normal"}, {"n": 9, "dur": 2.4, "light": "night", "cam": {"type": "static", "pos": [2.8, 1.7, 4.2], "look": [-1, 1.3, 1], "fov": 45, "jitter": true}, "actors": [{"outfit": "man", "kind": "front", "pos": [-1.0, 1.0], "expr": "calm", "seed": 3}], "fx": [{"kind": "glow", "pos": [3.2, 1.3, -3.2], "size": 2.6, "at": [0, 1], "cycle": true, "alpha": 0.7}], "caption": "The bridge was completed this month. They named it after him. Would you have walked alone every day for two decades? Comment ROAD if you believe in ordinary courage.", "capStyle": "normal"}]}, "the-clockmaker-daughter": {"id": "the-clockmaker-daughter", "flatGround": true, "set": {"type": "outdoor", "style": "tower"}, "scenes": [{"n": 1, "dur": 2.4, "light": "night", "cam": {"type": "pushIn", "from": [9.5, 2.4, 12.5], "to": [8, 2, 9], "look": [1, 4, 2], "fov": 44}, "actors": [{"outfit": "man", "kind": "front", "pos": [3.0, 5.0], "expr": "calm", "seed": 3}], "fx": [], "caption": "In old Istanbul, a clockmaker raised his daughter in a workshop full of ticking. Gears, springs, pendulums \u2014 every surface alive with rhythm.", "capStyle": "hook"}, {"n": 2, "dur": 2.4, "light": "night", "cam": {"type": "pan", "pos": [10.0, 2, 9], "lookFrom": [2.6, 4, 2], "lookTo": [-0.6000000000000001, 4, 0.0], "fov": 46}, "actors": [{"outfit": "man", "kind": "front", "pos": [3.0, 5.0], "expr": "calm", "seed": 3, "mode": "stand"}], "fx": [], "caption": "She went blind at age four. The doctors said she would never navigate the city. Her father said something different. He taught her to listen.", "capStyle": "normal"}, {"n": 3, "dur": 2.4, "light": "night", "cam": {"type": "orbit", "center": [1, 0, 2], "r": 5.5, "h": 1.9, "a0": -9, "a1": 50, "look": [1, 4, 2], "fov": 44}, "actors": [{"outfit": "man", "kind": "front", "pos": [3.0, 5.0], "expr": "calm", "seed": 3}], "fx": [], "caption": "Each clock ticked a different pitch. Each chime marked a different hour. By eleven, she could tell time by ear better than anyone with sight in the province.", "capStyle": "normal"}, {"n": 4, "dur": 2.4, "light": "night", "cam": {"type": "static", "pos": [8, 2, 9], "look": [1, 4, 2], "fov": 45, "jitter": true}, "actors": [{"outfit": "man", "kind": "front", "pos": [3.0, 5.0], "expr": "calm", "seed": 3}], "fx": [], "caption": "She learned to fix clocks too. Not by looking, but by feeling the resistance of a spring, hearing whether a gear caught clean or ground dirty.", "capStyle": "normal"}, {"n": 5, "dur": 2.4, "light": "night", "cam": {"type": "pullOut", "from": [7.2, 2, 7.8], "to": [9.8, 2.6, 13.5], "look": [1, 4, 2], "fov": 42}, "actors": [{"outfit": "man", "kind": "front", "pos": [3.0, 5.0], "expr": "calm", "seed": 3, "mode": "stand"}], "fx": [], "caption": "At twenty-two, a terrible storm knocked out power across the city. Every electric clock stopped. Trains halted. Hospitals lost their timers. Panic spread faster than the darkness.", "capStyle": "normal"}, {"n": 6, "dur": 2.4, "light": "night", "cam": {"type": "track", "from": [8, 2, 11.5], "to": [8, 2, 7.5], "look": [1, 4, 2], "fov": 40}, "actors": [{"outfit": "man", "kind": "front", "pos": [3.0, 5.0], "expr": "calm", "seed": 3}], "fx": [], "caption": "People flocked to her fathers shop. He was too old to help them all. She stepped forward, placed her hands on a dozen broken clocks, and began to tune them by ear.", "capStyle": "normal"}, {"n": 7, "dur": 2.4, "light": "night", "cam": {"type": "rise", "from": [8, 1.5, 9], "to": [8, 5.4, 10.5], "lookFrom": [1, 4, 2], "lookTo": [1, 5.2, 1], "fov": 44}, "actors": [{"outfit": "man", "kind": "front", "pos": [3.0, 5.0], "expr": "calm", "seed": 3}], "fx": [], "caption": "By midnight, she had restored order to seventeen clocks. Each one chiming the correct hour. Strangers wept. They had forgotten that time still existed.", "capStyle": "normal"}, {"n": 8, "dur": 2.4, "light": "night", "cam": {"type": "pan", "pos": [10.0, 2, 9], "lookFrom": [2.6, 4, 2], "lookTo": [-0.6000000000000001, 4, 0.0], "fov": 46}, "actors": [{"outfit": "man", "kind": "front", "pos": [3.0, 5.0], "expr": "calm", "seed": 3}], "fx": [], "caption": "The government awarded her a medal. She donated it to the workshop museum. Asked only for one thing: a bell tower clock that would chime for everyone, not just those who could pay.", "capStyle": "normal"}, {"n": 9, "dur": 2.4, "light": "night", "cam": {"type": "static", "pos": [8, 2, 9], "look": [1, 4, 2], "fov": 45, "jitter": true}, "actors": [{"outfit": "man", "kind": "front", "pos": [3.0, 5.0], "expr": "calm", "seed": 3}], "fx": [], "caption": "It hangs above the bazaar still. You do not need eyes to hear it. Would you have learned to live without sight? Comment CLOCK if time matters more than you thought.", "capStyle": "normal"}]}, "the-last-tree-keeper": {"id": "the-last-tree-keeper", "flatGround": true, "set": {"type": "outdoor", "style": "forest"}, "scenes": [{"n": 1, "dur": 2.4, "light": "night", "cam": {"type": "pushIn", "from": [6.0, 2.2, 18.5], "to": [4.5, 1.8, 15], "look": [0, 1.6, 10], "fov": 44}, "actors": [{"outfit": "man", "kind": "front", "pos": [0.0, 10.0], "expr": "calm", "seed": 3}], "fx": [], "caption": "In a desert town called Barwani, the soil turned to dust in 1952. The wells ran dry. The birds left. Every tree fell within five years.", "capStyle": "hook"}, {"n": 2, "dur": 2.4, "light": "night", "cam": {"type": "pan", "pos": [6.5, 1.8, 15], "lookFrom": [1.6, 1.6, 10], "lookTo": [-1.6, 1.6, 8.0], "fov": 46}, "actors": [{"outfit": "man", "kind": "front", "pos": [0.0, 10.0], "expr": "calm", "seed": 3, "mode": "stand"}], "fx": [], "caption": "An old farmer named Iqbal refused to leave. He carried a single acorn in his pocket every day. Planted it at dusk. Watered it with the last dregs from his bucket.", "capStyle": "normal"}, {"n": 3, "dur": 2.4, "light": "night", "cam": {"type": "orbit", "center": [0, 0, 10], "r": 5.5, "h": 1.9, "a0": -9, "a1": 50, "look": [0, 1.6, 10], "fov": 44}, "actors": [{"outfit": "man", "kind": "front", "pos": [0.0, 10.0], "expr": "calm", "seed": 3}], "fx": [], "caption": "Year one: the seedling died. Year two: a goat ate it. Year three: a dry wind took it. He buried another acorn the next evening.", "capStyle": "normal"}, {"n": 4, "dur": 2.4, "light": "night", "cam": {"type": "static", "pos": [4.5, 1.8, 15], "look": [0, 1.6, 10], "fov": 45, "jitter": true}, "actors": [{"outfit": "man", "kind": "front", "pos": [0.0, 10.0], "expr": "calm", "seed": 3}], "fx": [], "caption": "The villagers called him mad. You cannot grow a forest in sand. They were right \u2014 for them. But Iqbal had dug deeper. Six feet down, the earth was cool and damp.", "capStyle": "normal"}, {"n": 5, "dur": 2.4, "light": "night", "cam": {"type": "pullOut", "from": [3.7, 1.8, 13.8], "to": [6.3, 2.4, 19.5], "look": [0, 1.6, 10], "fov": 42}, "actors": [{"outfit": "man", "kind": "front", "pos": [0.0, 10.0], "expr": "calm", "seed": 3, "mode": "stand"}], "fx": [], "caption": "Year twelve: a sapling survived. Year twenty-one: it was tall enough to cast a shadow. Neighbours began to bring cuttings. Not because they believed \u2014 because he never stopped.", "capStyle": "normal"}, {"n": 6, "dur": 2.4, "light": "night", "cam": {"type": "track", "from": [4.5, 1.8, 17.5], "to": [4.5, 1.8, 13.5], "look": [0, 1.6, 10], "fov": 40}, "actors": [{"outfit": "man", "kind": "front", "pos": [0.0, 10.0], "expr": "calm", "seed": 3}], "fx": [], "caption": "Year forty: the grove covered half an acre. Birds returned. Frogs appeared in the small pool at its centre. The temperature dropped two degrees inside the shade.", "capStyle": "normal"}, {"n": 7, "dur": 2.4, "light": "night", "cam": {"type": "rise", "from": [4.5, 1.3, 15], "to": [4.5, 5.2, 16.5], "lookFrom": [0, 1.6, 10], "lookTo": [0, 2.8, 9], "fov": 44}, "actors": [{"outfit": "man", "kind": "front", "pos": [0.0, 10.0], "expr": "calm", "seed": 3}], "fx": [], "caption": "Year fifty-five: the town council tried to buy the land. Iqbal refused. You can buy soil, he said. You cannot buy patience.", "capStyle": "normal"}, {"n": 8, "dur": 2.4, "light": "night", "cam": {"type": "pan", "pos": [6.5, 1.8, 15], "lookFrom": [1.6, 1.6, 10], "lookTo": [-1.6, 1.6, 8.0], "fov": 46}, "actors": [{"outfit": "man", "kind": "front", "pos": [0.0, 10.0], "expr": "calm", "seed": 3}], "fx": [], "caption": "Year seventy-four: the satellite map showed green spreading outward from his plot like a hand reaching for the rest of the desert. A million trees now.", "capStyle": "normal"}, {"n": 9, "dur": 2.4, "light": "night", "cam": {"type": "static", "pos": [4.5, 1.8, 15], "look": [0, 1.6, 10], "fov": 45, "jitter": true}, "actors": [{"outfit": "man", "kind": "front", "pos": [0.0, 10.0], "expr": "calm", "seed": 3}], "fx": [], "caption": "Iqbal died at ninety-one, sitting under the largest oak he had ever planted. The park now bears his name. Would you water a tree you would never sit under? Comment TREE if patience beats speed.", "capStyle": "normal"}]}}
+{
+  "the-unread-letter": {
+    "id": "the-unread-letter",
+    "flatGround": true,
+    "set": {
+      "type": "interior",
+      "style": "room"
+    },
+    "scenes": [
+      {
+        "n": 1,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "pushIn",
+          "from": [
+            3.7299999999999995,
+            2.1,
+            6.37
+          ],
+          "to": [
+            2.8,
+            1.7,
+            4.2
+          ],
+          "look": [
+            -1,
+            1.3,
+            1
+          ],
+          "fov": 44
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              -1.0,
+              1.0
+            ],
+            "expr": "calm",
+            "seed": 3
+          }
+        ],
+        "fx": [
+          {
+            "kind": "glow",
+            "pos": [
+              3.2,
+              1.3,
+              -3.2
+            ],
+            "size": 2.6,
+            "at": [
+              0,
+              1
+            ],
+            "cycle": true,
+            "alpha": 0.7
+          }
+        ],
+        "caption": "She could not read. Could not write. Had spent sixty-eight years in a village where girls were told books were for boys.",
+        "capStyle": "hook"
+      },
+      {
+        "n": 2,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "pan",
+          "pos": [
+            4.04,
+            1.7,
+            4.2
+          ],
+          "lookFrom": [
+            -0.008000000000000007,
+            1.3,
+            1
+          ],
+          "lookTo": [
+            -1.992,
+            1.3,
+            -0.24
+          ],
+          "fov": 46
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              -1.0,
+              1.0
+            ],
+            "expr": "calm",
+            "seed": 3,
+            "mode": "stand"
+          }
+        ],
+        "fx": [
+          {
+            "kind": "glow",
+            "pos": [
+              3.2,
+              1.3,
+              -3.2
+            ],
+            "size": 2.6,
+            "at": [
+              0,
+              1
+            ],
+            "cycle": true,
+            "alpha": 0.7
+          }
+        ],
+        "caption": "When her husband died, she found his old notebooks in a tin box. Dozens of them. Filled with words she could never decipher.",
+        "capStyle": "normal"
+      },
+      {
+        "n": 3,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "orbit",
+          "center": [
+            -1,
+            0,
+            1
+          ],
+          "r": 3.41,
+          "h": 1.9,
+          "a0": -9,
+          "a1": 50,
+          "look": [
+            -1,
+            1.3,
+            1
+          ],
+          "fov": 44
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              -1.0,
+              1.0
+            ],
+            "expr": "calm",
+            "seed": 3
+          }
+        ],
+        "fx": [
+          {
+            "kind": "glow",
+            "pos": [
+              3.2,
+              1.3,
+              -3.2
+            ],
+            "size": 2.6,
+            "at": [
+              0,
+              1
+            ],
+            "cycle": true,
+            "alpha": 0.7
+          }
+        ],
+        "caption": "So she started writing her own letters to him. Every evening. Every single day. Sitting at the kitchen table, scratching words onto paper she saved from ration boxes.",
+        "capStyle": "normal"
+      },
+      {
+        "n": 4,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "static",
+          "pos": [
+            2.8,
+            1.7,
+            4.2
+          ],
+          "look": [
+            -1,
+            1.3,
+            1
+          ],
+          "fov": 45,
+          "jitter": true
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              -1.0,
+              1.0
+            ],
+            "expr": "calm",
+            "seed": 3
+          }
+        ],
+        "fx": [
+          {
+            "kind": "glow",
+            "pos": [
+              3.2,
+              1.3,
+              -3.2
+            ],
+            "size": 2.6,
+            "at": [
+              0,
+              1
+            ],
+            "cycle": true,
+            "alpha": 0.7
+          }
+        ],
+        "caption": "The village headman told her to stop. A widow writing to the dead was bad luck. She kept writing.",
+        "capStyle": "normal"
+      },
+      {
+        "n": 5,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "pullOut",
+          "from": [
+            2.304,
+            1.7,
+            3.4560000000000004
+          ],
+          "to": [
+            3.916,
+            2.3,
+            6.99
+          ],
+          "look": [
+            -1,
+            1.3,
+            1
+          ],
+          "fov": 42
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              -1.0,
+              1.0
+            ],
+            "expr": "calm",
+            "seed": 3,
+            "mode": "stand"
+          }
+        ],
+        "fx": [
+          {
+            "kind": "glow",
+            "pos": [
+              3.2,
+              1.3,
+              -3.2
+            ],
+            "size": 2.6,
+            "at": [
+              0,
+              1
+            ],
+            "cycle": true,
+            "alpha": 0.7
+          }
+        ],
+        "caption": "Years passed. The letters filled three jars. She could still barely form the letters, but she did it anyway. Slowly. Carefully.",
+        "capStyle": "normal"
+      },
+      {
+        "n": 6,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "track",
+          "from": [
+            2.8,
+            1.7,
+            5.75
+          ],
+          "to": [
+            2.8,
+            1.7,
+            3.2700000000000005
+          ],
+          "look": [
+            -1,
+            1.3,
+            1
+          ],
+          "fov": 40
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              -1.0,
+              1.0
+            ],
+            "expr": "calm",
+            "seed": 3
+          }
+        ],
+        "fx": [
+          {
+            "kind": "glow",
+            "pos": [
+              3.2,
+              1.3,
+              -3.2
+            ],
+            "size": 2.6,
+            "at": [
+              0,
+              1
+            ],
+            "cycle": true,
+            "alpha": 0.7
+          }
+        ],
+        "caption": "On her last day, a letter arrived. Postmarked fifty years ago. Delivered wrong. Addressed to her street. Inside it was her husband handwriting.",
+        "capStyle": "normal"
+      },
+      {
+        "n": 7,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "rise",
+          "from": [
+            2.8,
+            1.2,
+            4.2
+          ],
+          "to": [
+            2.8,
+            3.808,
+            5.13
+          ],
+          "lookFrom": [
+            -1,
+            1.3,
+            1
+          ],
+          "lookTo": [
+            -1,
+            2.5,
+            0
+          ],
+          "fov": 44
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              -1.0,
+              1.0
+            ],
+            "expr": "calm",
+            "seed": 3
+          }
+        ],
+        "fx": [
+          {
+            "kind": "glow",
+            "pos": [
+              3.2,
+              1.3,
+              -3.2
+            ],
+            "size": 2.6,
+            "at": [
+              0,
+              1
+            ],
+            "cycle": true,
+            "alpha": 0.7
+          }
+        ],
+        "caption": "I know you cannot read, it said. But I will learn your letters too, one by one, until you can read my reply. And below it, his script matched hers letter for letter.",
+        "capStyle": "normal"
+      },
+      {
+        "n": 8,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "pan",
+          "pos": [
+            4.04,
+            1.7,
+            4.2
+          ],
+          "lookFrom": [
+            -0.008000000000000007,
+            1.3,
+            1
+          ],
+          "lookTo": [
+            -1.992,
+            1.3,
+            -0.24
+          ],
+          "fov": 46
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              -1.0,
+              1.0
+            ],
+            "expr": "calm",
+            "seed": 3
+          }
+        ],
+        "fx": [
+          {
+            "kind": "glow",
+            "pos": [
+              3.2,
+              1.3,
+              -3.2
+            ],
+            "size": 2.6,
+            "at": [
+              0,
+              1
+            ],
+            "cycle": true,
+            "alpha": 0.7
+          }
+        ],
+        "caption": "She had been writing to herself all along. He had been learning, in secret, just so he could answer.",
+        "capStyle": "normal"
+      },
+      {
+        "n": 9,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "static",
+          "pos": [
+            2.8,
+            1.7,
+            4.2
+          ],
+          "look": [
+            -1,
+            1.3,
+            1
+          ],
+          "fov": 45,
+          "jitter": true
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              -1.0,
+              1.0
+            ],
+            "expr": "calm",
+            "seed": 3
+          }
+        ],
+        "fx": [
+          {
+            "kind": "glow",
+            "pos": [
+              3.2,
+              1.3,
+              -3.2
+            ],
+            "size": 2.6,
+            "at": [
+              0,
+              1
+            ],
+            "cycle": true,
+            "alpha": 0.7
+          }
+        ],
+        "caption": "She never married again. She opened a school for girls in that village. Would you have kept writing? Comment LETTER if this made you cry.",
+        "capStyle": "normal"
+      }
+    ]
+  },
+  "the-road-that-walked": {
+    "id": "the-road-that-walked",
+    "flatGround": true,
+    "set": {
+      "type": "interior",
+      "style": "room"
+    },
+    "scenes": [
+      {
+        "n": 1,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "pushIn",
+          "from": [
+            3.7299999999999995,
+            2.1,
+            6.37
+          ],
+          "to": [
+            2.8,
+            1.7,
+            4.2
+          ],
+          "look": [
+            -1,
+            1.3,
+            1
+          ],
+          "fov": 44
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              -1.0,
+              1.0
+            ],
+            "expr": "calm",
+            "seed": 3
+          }
+        ],
+        "fx": [
+          {
+            "kind": "glow",
+            "pos": [
+              3.2,
+              1.3,
+              -3.2
+            ],
+            "size": 2.6,
+            "at": [
+              0,
+              1
+            ],
+            "cycle": true,
+            "alpha": 0.7
+          }
+        ],
+        "caption": "In the hills of northern India, there is a valley cut off from the road by a river that swells every monsoon. No bridge. No jeep path.",
+        "capStyle": "hook"
+      },
+      {
+        "n": 2,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "pan",
+          "pos": [
+            4.04,
+            1.7,
+            4.2
+          ],
+          "lookFrom": [
+            -0.008000000000000007,
+            1.3,
+            1
+          ],
+          "lookTo": [
+            -1.992,
+            1.3,
+            -0.24
+          ],
+          "fov": 46
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              -1.0,
+              1.0
+            ],
+            "expr": "calm",
+            "seed": 3,
+            "mode": "stand"
+          }
+        ],
+        "fx": [
+          {
+            "kind": "glow",
+            "pos": [
+              3.2,
+              1.3,
+              -3.2
+            ],
+            "size": 2.6,
+            "at": [
+              0,
+              1
+            ],
+            "cycle": true,
+            "alpha": 0.7
+          }
+        ],
+        "caption": "For twenty-three years, a doctor walked those eighteen kilometers twice a day. Morning rounds. Evening visits. Rain or shine. His sandals wore through. His feet learned every stone.",
+        "capStyle": "normal"
+      },
+      {
+        "n": 3,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "orbit",
+          "center": [
+            -1,
+            0,
+            1
+          ],
+          "r": 3.41,
+          "h": 1.9,
+          "a0": -9,
+          "a1": 50,
+          "look": [
+            -1,
+            1.3,
+            1
+          ],
+          "fov": 44
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              -1.0,
+              1.0
+            ],
+            "expr": "calm",
+            "seed": 3
+          }
+        ],
+        "fx": [
+          {
+            "kind": "glow",
+            "pos": [
+              3.2,
+              1.3,
+              -3.2
+            ],
+            "size": 2.6,
+            "at": [
+              0,
+              1
+            ],
+            "cycle": true,
+            "alpha": 0.7
+          }
+        ],
+        "caption": "Once, during a flood, the river swallowed the only ford. He waded in up to his chest, a newborn strapped to his back, and did not stop until his legs gave out on the far bank.",
+        "capStyle": "normal"
+      },
+      {
+        "n": 4,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "static",
+          "pos": [
+            2.8,
+            1.7,
+            4.2
+          ],
+          "look": [
+            -1,
+            1.3,
+            1
+          ],
+          "fov": 45,
+          "jitter": true
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              -1.0,
+              1.0
+            ],
+            "expr": "calm",
+            "seed": 3
+          }
+        ],
+        "fx": [
+          {
+            "kind": "glow",
+            "pos": [
+              3.2,
+              1.3,
+              -3.2
+            ],
+            "size": 2.6,
+            "at": [
+              0,
+              1
+            ],
+            "cycle": true,
+            "alpha": 0.7
+          }
+        ],
+        "caption": "The village wanted to build a bridge. They raised money. Sent petitions. Nothing moved. Government said it was too expensive for too few people.",
+        "capStyle": "normal"
+      },
+      {
+        "n": 5,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "pullOut",
+          "from": [
+            2.304,
+            1.7,
+            3.4560000000000004
+          ],
+          "to": [
+            3.916,
+            2.3,
+            6.99
+          ],
+          "look": [
+            -1,
+            1.3,
+            1
+          ],
+          "fov": 42
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              -1.0,
+              1.0
+            ],
+            "expr": "calm",
+            "seed": 3,
+            "mode": "stand"
+          }
+        ],
+        "fx": [
+          {
+            "kind": "glow",
+            "pos": [
+              3.2,
+              1.3,
+              -3.2
+            ],
+            "size": 2.6,
+            "at": [
+              0,
+              1
+            ],
+            "cycle": true,
+            "alpha": 0.7
+          }
+        ],
+        "caption": "He kept walking. Day nineteen thousand four hundred and eighty-five, he collapsed on the path. Not from exhaustion. From a heart that had simply forgotten how to stop.",
+        "capStyle": "normal"
+      },
+      {
+        "n": 6,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "track",
+          "from": [
+            2.8,
+            1.7,
+            5.75
+          ],
+          "to": [
+            2.8,
+            1.7,
+            3.2700000000000005
+          ],
+          "look": [
+            -1,
+            1.3,
+            1
+          ],
+          "fov": 40
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              -1.0,
+              1.0
+            ],
+            "expr": "calm",
+            "seed": 3
+          }
+        ],
+        "fx": [
+          {
+            "kind": "glow",
+            "pos": [
+              3.2,
+              1.3,
+              -3.2
+            ],
+            "size": 2.6,
+            "at": [
+              0,
+              1
+            ],
+            "cycle": true,
+            "alpha": 0.7
+          }
+        ],
+        "caption": "They carried him to the hospital. In his pocket, a notebook. Every birth he had delivered, listed by date and time. One thousand two hundred and seven names.",
+        "capStyle": "normal"
+      },
+      {
+        "n": 7,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "rise",
+          "from": [
+            2.8,
+            1.2,
+            4.2
+          ],
+          "to": [
+            2.8,
+            3.808,
+            5.13
+          ],
+          "lookFrom": [
+            -1,
+            1.3,
+            1
+          ],
+          "lookTo": [
+            -1,
+            2.5,
+            0
+          ],
+          "fov": 44
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              -1.0,
+              1.0
+            ],
+            "expr": "calm",
+            "seed": 3
+          }
+        ],
+        "fx": [
+          {
+            "kind": "glow",
+            "pos": [
+              3.2,
+              1.3,
+              -3.2
+            ],
+            "size": 2.6,
+            "at": [
+              0,
+              1
+            ],
+            "cycle": true,
+            "alpha": 0.7
+          }
+        ],
+        "caption": "Three days later, he asked to leave. His wife refused. The village built a tiny clinic at the river crossing. He returned that afternoon. Walking.",
+        "capStyle": "normal"
+      },
+      {
+        "n": 8,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "pan",
+          "pos": [
+            4.04,
+            1.7,
+            4.2
+          ],
+          "lookFrom": [
+            -0.008000000000000007,
+            1.3,
+            1
+          ],
+          "lookTo": [
+            -1.992,
+            1.3,
+            -0.24
+          ],
+          "fov": 46
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              -1.0,
+              1.0
+            ],
+            "expr": "calm",
+            "seed": 3
+          }
+        ],
+        "fx": [
+          {
+            "kind": "glow",
+            "pos": [
+              3.2,
+              1.3,
+              -3.2
+            ],
+            "size": 2.6,
+            "at": [
+              0,
+              1
+            ],
+            "cycle": true,
+            "alpha": 0.7
+          }
+        ],
+        "caption": "Last year, a satellite image showed something remarkable. Along his entire route, grass had grown greener than anywhere else. His footsteps had scattered seeds for twenty-three years.",
+        "capStyle": "normal"
+      },
+      {
+        "n": 9,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "static",
+          "pos": [
+            2.8,
+            1.7,
+            4.2
+          ],
+          "look": [
+            -1,
+            1.3,
+            1
+          ],
+          "fov": 45,
+          "jitter": true
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              -1.0,
+              1.0
+            ],
+            "expr": "calm",
+            "seed": 3
+          }
+        ],
+        "fx": [
+          {
+            "kind": "glow",
+            "pos": [
+              3.2,
+              1.3,
+              -3.2
+            ],
+            "size": 2.6,
+            "at": [
+              0,
+              1
+            ],
+            "cycle": true,
+            "alpha": 0.7
+          }
+        ],
+        "caption": "The bridge was completed this month. They named it after him. Would you have walked alone every day for two decades? Comment ROAD if you believe in ordinary courage.",
+        "capStyle": "normal"
+      }
+    ]
+  },
+  "the-clockmaker-daughter": {
+    "id": "the-clockmaker-daughter",
+    "flatGround": true,
+    "set": {
+      "type": "outdoor",
+      "style": "tower"
+    },
+    "scenes": [
+      {
+        "n": 1,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "pushIn",
+          "from": [
+            9.5,
+            2.4,
+            12.5
+          ],
+          "to": [
+            8,
+            2,
+            9
+          ],
+          "look": [
+            1,
+            4,
+            2
+          ],
+          "fov": 44
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              3.0,
+              5.0
+            ],
+            "expr": "calm",
+            "seed": 3
+          }
+        ],
+        "fx": [],
+        "caption": "In old Istanbul, a clockmaker raised his daughter in a workshop full of ticking. Gears, springs, pendulums — every surface alive with rhythm.",
+        "capStyle": "hook"
+      },
+      {
+        "n": 2,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "pan",
+          "pos": [
+            10.0,
+            2,
+            9
+          ],
+          "lookFrom": [
+            2.6,
+            4,
+            2
+          ],
+          "lookTo": [
+            -0.6000000000000001,
+            4,
+            0.0
+          ],
+          "fov": 46
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              3.0,
+              5.0
+            ],
+            "expr": "calm",
+            "seed": 3,
+            "mode": "stand"
+          }
+        ],
+        "fx": [],
+        "caption": "She went blind at age four. The doctors said she would never navigate the city. Her father said something different. He taught her to listen.",
+        "capStyle": "normal"
+      },
+      {
+        "n": 3,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "orbit",
+          "center": [
+            1,
+            0,
+            2
+          ],
+          "r": 5.5,
+          "h": 1.9,
+          "a0": -9,
+          "a1": 50,
+          "look": [
+            1,
+            4,
+            2
+          ],
+          "fov": 44
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              3.0,
+              5.0
+            ],
+            "expr": "calm",
+            "seed": 3
+          }
+        ],
+        "fx": [],
+        "caption": "Each clock ticked a different pitch. Each chime marked a different hour. By eleven, she could tell time by ear better than anyone with sight in the province.",
+        "capStyle": "normal"
+      },
+      {
+        "n": 4,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "static",
+          "pos": [
+            8,
+            2,
+            9
+          ],
+          "look": [
+            1,
+            4,
+            2
+          ],
+          "fov": 45,
+          "jitter": true
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              3.0,
+              5.0
+            ],
+            "expr": "calm",
+            "seed": 3
+          }
+        ],
+        "fx": [],
+        "caption": "She learned to fix clocks too. Not by looking, but by feeling the resistance of a spring, hearing whether a gear caught clean or ground dirty.",
+        "capStyle": "normal"
+      },
+      {
+        "n": 5,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "pullOut",
+          "from": [
+            7.2,
+            2,
+            7.8
+          ],
+          "to": [
+            9.8,
+            2.6,
+            13.5
+          ],
+          "look": [
+            1,
+            4,
+            2
+          ],
+          "fov": 42
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              3.0,
+              5.0
+            ],
+            "expr": "calm",
+            "seed": 3,
+            "mode": "stand"
+          }
+        ],
+        "fx": [],
+        "caption": "At twenty-two, a terrible storm knocked out power across the city. Every electric clock stopped. Trains halted. Hospitals lost their timers. Panic spread faster than the darkness.",
+        "capStyle": "normal"
+      },
+      {
+        "n": 6,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "track",
+          "from": [
+            8,
+            2,
+            11.5
+          ],
+          "to": [
+            8,
+            2,
+            7.5
+          ],
+          "look": [
+            1,
+            4,
+            2
+          ],
+          "fov": 40
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              3.0,
+              5.0
+            ],
+            "expr": "calm",
+            "seed": 3
+          }
+        ],
+        "fx": [],
+        "caption": "People flocked to her fathers shop. He was too old to help them all. She stepped forward, placed her hands on a dozen broken clocks, and began to tune them by ear.",
+        "capStyle": "normal"
+      },
+      {
+        "n": 7,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "rise",
+          "from": [
+            8,
+            1.5,
+            9
+          ],
+          "to": [
+            8,
+            5.4,
+            10.5
+          ],
+          "lookFrom": [
+            1,
+            4,
+            2
+          ],
+          "lookTo": [
+            1,
+            5.2,
+            1
+          ],
+          "fov": 44
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              3.0,
+              5.0
+            ],
+            "expr": "calm",
+            "seed": 3
+          }
+        ],
+        "fx": [],
+        "caption": "By midnight, she had restored order to seventeen clocks. Each one chiming the correct hour. Strangers wept. They had forgotten that time still existed.",
+        "capStyle": "normal"
+      },
+      {
+        "n": 8,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "pan",
+          "pos": [
+            10.0,
+            2,
+            9
+          ],
+          "lookFrom": [
+            2.6,
+            4,
+            2
+          ],
+          "lookTo": [
+            -0.6000000000000001,
+            4,
+            0.0
+          ],
+          "fov": 46
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              3.0,
+              5.0
+            ],
+            "expr": "calm",
+            "seed": 3
+          }
+        ],
+        "fx": [],
+        "caption": "The government awarded her a medal. She donated it to the workshop museum. Asked only for one thing: a bell tower clock that would chime for everyone, not just those who could pay.",
+        "capStyle": "normal"
+      },
+      {
+        "n": 9,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "static",
+          "pos": [
+            8,
+            2,
+            9
+          ],
+          "look": [
+            1,
+            4,
+            2
+          ],
+          "fov": 45,
+          "jitter": true
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              3.0,
+              5.0
+            ],
+            "expr": "calm",
+            "seed": 3
+          }
+        ],
+        "fx": [],
+        "caption": "It hangs above the bazaar still. You do not need eyes to hear it. Would you have learned to live without sight? Comment CLOCK if time matters more than you thought.",
+        "capStyle": "normal"
+      }
+    ]
+  },
+  "the-last-tree-keeper": {
+    "id": "the-last-tree-keeper",
+    "flatGround": true,
+    "set": {
+      "type": "outdoor",
+      "style": "forest"
+    },
+    "scenes": [
+      {
+        "n": 1,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "pushIn",
+          "from": [
+            6.0,
+            2.2,
+            18.5
+          ],
+          "to": [
+            4.5,
+            1.8,
+            15
+          ],
+          "look": [
+            0,
+            1.6,
+            10
+          ],
+          "fov": 44
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              0.0,
+              10.0
+            ],
+            "expr": "calm",
+            "seed": 3
+          }
+        ],
+        "fx": [],
+        "caption": "In a desert town called Barwani, the soil turned to dust in 1952. The wells ran dry. The birds left. Every tree fell within five years.",
+        "capStyle": "hook"
+      },
+      {
+        "n": 2,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "pan",
+          "pos": [
+            6.5,
+            1.8,
+            15
+          ],
+          "lookFrom": [
+            1.6,
+            1.6,
+            10
+          ],
+          "lookTo": [
+            -1.6,
+            1.6,
+            8.0
+          ],
+          "fov": 46
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              0.0,
+              10.0
+            ],
+            "expr": "calm",
+            "seed": 3,
+            "mode": "stand"
+          }
+        ],
+        "fx": [],
+        "caption": "An old farmer named Iqbal refused to leave. He carried a single acorn in his pocket every day. Planted it at dusk. Watered it with the last dregs from his bucket.",
+        "capStyle": "normal"
+      },
+      {
+        "n": 3,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "orbit",
+          "center": [
+            0,
+            0,
+            10
+          ],
+          "r": 5.5,
+          "h": 1.9,
+          "a0": -9,
+          "a1": 50,
+          "look": [
+            0,
+            1.6,
+            10
+          ],
+          "fov": 44
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              0.0,
+              10.0
+            ],
+            "expr": "calm",
+            "seed": 3
+          }
+        ],
+        "fx": [],
+        "caption": "Year one: the seedling died. Year two: a goat ate it. Year three: a dry wind took it. He buried another acorn the next evening.",
+        "capStyle": "normal"
+      },
+      {
+        "n": 4,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "static",
+          "pos": [
+            4.5,
+            1.8,
+            15
+          ],
+          "look": [
+            0,
+            1.6,
+            10
+          ],
+          "fov": 45,
+          "jitter": true
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              0.0,
+              10.0
+            ],
+            "expr": "calm",
+            "seed": 3
+          }
+        ],
+        "fx": [],
+        "caption": "The villagers called him mad. You cannot grow a forest in sand. They were right — for them. But Iqbal had dug deeper. Six feet down, the earth was cool and damp.",
+        "capStyle": "normal"
+      },
+      {
+        "n": 5,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "pullOut",
+          "from": [
+            3.7,
+            1.8,
+            13.8
+          ],
+          "to": [
+            6.3,
+            2.4,
+            19.5
+          ],
+          "look": [
+            0,
+            1.6,
+            10
+          ],
+          "fov": 42
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              0.0,
+              10.0
+            ],
+            "expr": "calm",
+            "seed": 3,
+            "mode": "stand"
+          }
+        ],
+        "fx": [],
+        "caption": "Year twelve: a sapling survived. Year twenty-one: it was tall enough to cast a shadow. Neighbours began to bring cuttings. Not because they believed — because he never stopped.",
+        "capStyle": "normal"
+      },
+      {
+        "n": 6,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "track",
+          "from": [
+            4.5,
+            1.8,
+            17.5
+          ],
+          "to": [
+            4.5,
+            1.8,
+            13.5
+          ],
+          "look": [
+            0,
+            1.6,
+            10
+          ],
+          "fov": 40
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              0.0,
+              10.0
+            ],
+            "expr": "calm",
+            "seed": 3
+          }
+        ],
+        "fx": [],
+        "caption": "Year forty: the grove covered half an acre. Birds returned. Frogs appeared in the small pool at its centre. The temperature dropped two degrees inside the shade.",
+        "capStyle": "normal"
+      },
+      {
+        "n": 7,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "rise",
+          "from": [
+            4.5,
+            1.3,
+            15
+          ],
+          "to": [
+            4.5,
+            5.2,
+            16.5
+          ],
+          "lookFrom": [
+            0,
+            1.6,
+            10
+          ],
+          "lookTo": [
+            0,
+            2.8,
+            9
+          ],
+          "fov": 44
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              0.0,
+              10.0
+            ],
+            "expr": "calm",
+            "seed": 3
+          }
+        ],
+        "fx": [],
+        "caption": "Year fifty-five: the town council tried to buy the land. Iqbal refused. You can buy soil, he said. You cannot buy patience.",
+        "capStyle": "normal"
+      },
+      {
+        "n": 8,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "pan",
+          "pos": [
+            6.5,
+            1.8,
+            15
+          ],
+          "lookFrom": [
+            1.6,
+            1.6,
+            10
+          ],
+          "lookTo": [
+            -1.6,
+            1.6,
+            8.0
+          ],
+          "fov": 46
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              0.0,
+              10.0
+            ],
+            "expr": "calm",
+            "seed": 3
+          }
+        ],
+        "fx": [],
+        "caption": "Year seventy-four: the satellite map showed green spreading outward from his plot like a hand reaching for the rest of the desert. A million trees now.",
+        "capStyle": "normal"
+      },
+      {
+        "n": 9,
+        "dur": 2.4,
+        "light": "night",
+        "cam": {
+          "type": "static",
+          "pos": [
+            4.5,
+            1.8,
+            15
+          ],
+          "look": [
+            0,
+            1.6,
+            10
+          ],
+          "fov": 45,
+          "jitter": true
+        },
+        "actors": [
+          {
+            "outfit": "man",
+            "kind": "front",
+            "pos": [
+              0.0,
+              10.0
+            ],
+            "expr": "calm",
+            "seed": 3
+          }
+        ],
+        "fx": [],
+        "caption": "Iqbal died at ninety-one, sitting under the largest oak he had ever planted. The park now bears his name. Would you water a tree you would never sit under? Comment TREE if patience beats speed.",
+        "capStyle": "normal"
+      }
+    ]
+  },
+  "the-mountain-man": {
+    "id": "the-mountain-man",
+    "flatGround": true,
+    "set": {
+      "type": "outdoor",
+      "style": "forest",
+      "trees": 110,
+      "cabin": true
+    },
+    "props": [],
+    "scenes": [
+      {
+        "n": 1,
+        "dur": 10.25,
+        "light": "day",
+        "cam": {
+          "type": "pushIn",
+          "from": [
+            6.0,
+            2.2,
+            18.5
+          ],
+          "to": [
+            4.5,
+            1.8,
+            15
+          ],
+          "look": [
+            0,
+            1.6,
+            10
+          ],
+          "fov": 44
+        },
+        "actors": [
+          {
+            "outfit": "hiker",
+            "kind": "front",
+            "pos": [
+              0.0,
+              10.0
+            ],
+            "expr": "calm",
+            "seed": 3
+          },
+          {
+            "outfit": "old",
+            "kind": "side",
+            "pos": [
+              1.9,
+              8.9
+            ],
+            "expr": "calm",
+            "seed": 10
+          }
+        ],
+        "fx": [
+          {
+            "kind": "bird",
+            "pos": [
+              12,
+              14,
+              6
+            ],
+            "size": 1.4,
+            "at": [
+              0.05,
+              0.6
+            ],
+            "cycle": true
+          }
+        ],
+        "caption": "Hikers in the Rockies call him the Mountain Man. He has lived alone up there for forty years. No one knows his real name.",
+        "capStyle": "hook"
+      }
+    ],
+    "_total_sec": 10.25
+  }
+}

@@ -1,174 +1,42 @@
 [
   {
+    "id": "the-mountain-man",
+    "title": "The Man Who Moved a Mountain",
+    "logline": "In 1960, a poor labourer in Bihar named Dashrath Manjhi decided to move a mountain with just a hammer and chisel, working alone for 22 years.",
+    "scenes": [
+      { "n": 1, "narration": "A man in India beat a mountain with a hammer." },
+      { "n": 2, "narration": "In nineteen sixty, a poor labourer in Bihar named Dashrath Manjhi picked a fight." },
+      { "n": 3, "narration": "Every single day, he climbed the hill and hit it." },
+      { "n": 4, "narration": "The village laughed. They called him a madman." },
+      { "n": 5, "narration": "One year became five. Five became twenty." },
+      { "n": 6, "narration": "The mountain didn't fight back. It was too busy losing." },
+      { "n": 7, "narration": "You see, it started when his wife fell on that hill." },
+      { "n": 8, "narration": "The nearest doctor was fifty-five kilometres around it. She didn't make it." },
+      { "n": 9, "narration": "After twenty-two years, he broke through. Fifty-five kilometres became fifteen. He couldn't get her past the mountain. So he moved the mountain." }
+    ]
+  },
+  {
     "id": "the-unread-letter",
     "title": "The Unread Letter",
     "logline": "A 72-year-old illiterate widow wrote a letter to her late husband every day. On the last page, he wrote back.",
-    "scenes": [
-      {
-        "n": 1,
-        "narration": "She could not read. Could not write. Had spent sixty-eight years in a village where girls were told books were for boys."
-      },
-      {
-        "n": 2,
-        "narration": "When her husband died, she found his old notebooks in a tin box. Dozens of them. Filled with words she could never decipher."
-      },
-      {
-        "n": 3,
-        "narration": "So she started writing her own letters to him. Every evening. Every single day. Sitting at the kitchen table, scratching words onto paper she saved from ration boxes."
-      },
-      {
-        "n": 4,
-        "narration": "The village headman told her to stop. A widow writing to the dead was bad luck. She kept writing."
-      },
-      {
-        "n": 5,
-        "narration": "Years passed. The letters filled three jars. She could still barely form the letters, but she did it anyway. Slowly. Carefully."
-      },
-      {
-        "n": 6,
-        "narration": "On her last day, a letter arrived. Postmarked fifty years ago. Delivered wrong. Addressed to her street. Inside it was her husband handwriting."
-      },
-      {
-        "n": 7,
-        "narration": "I know you cannot read, it said. But I will learn your letters too, one by one, until you can read my reply. And below it, his script matched hers letter for letter."
-      },
-      {
-        "n": 8,
-        "narration": "She had been writing to herself all along. He had been learning, in secret, just so he could answer."
-      },
-      {
-        "n": 9,
-        "narration": "She never married again. She opened a school for girls in that village. Would you have kept writing? Comment LETTER if this made you cry."
-      }
-    ]
+    "scenes": []
   },
   {
     "id": "the-road-that-walked",
     "title": "The Road That Walked",
     "logline": "A doctor walked 18 kilometers through a monsoon to deliver a baby. Twice a day. For twenty-three years.",
-    "scenes": [
-      {
-        "n": 1,
-        "narration": "In the hills of northern India, there is a valley cut off from the road by a river that swells every monsoon. No bridge. No jeep path."
-      },
-      {
-        "n": 2,
-        "narration": "For twenty-three years, a doctor walked those eighteen kilometers twice a day. Morning rounds. Evening visits. Rain or shine. His sandals wore through. His feet learned every stone."
-      },
-      {
-        "n": 3,
-        "narration": "Once, during a flood, the river swallowed the only ford. He waded in up to his chest, a newborn strapped to his back, and did not stop until his legs gave out on the far bank."
-      },
-      {
-        "n": 4,
-        "narration": "The village wanted to build a bridge. They raised money. Sent petitions. Nothing moved. Government said it was too expensive for too few people."
-      },
-      {
-        "n": 5,
-        "narration": "He kept walking. Day nineteen thousand four hundred and eighty-five, he collapsed on the path. Not from exhaustion. From a heart that had simply forgotten how to stop."
-      },
-      {
-        "n": 6,
-        "narration": "They carried him to the hospital. In his pocket, a notebook. Every birth he had delivered, listed by date and time. One thousand two hundred and seven names."
-      },
-      {
-        "n": 7,
-        "narration": "Three days later, he asked to leave. His wife refused. The village built a tiny clinic at the river crossing. He returned that afternoon. Walking."
-      },
-      {
-        "n": 8,
-        "narration": "Last year, a satellite image showed something remarkable. Along his entire route, grass had grown greener than anywhere else. His footsteps had scattered seeds for twenty-three years."
-      },
-      {
-        "n": 9,
-        "narration": "The bridge was completed this month. They named it after him. Would you have walked alone every day for two decades? Comment ROAD if you believe in ordinary courage."
-      }
-    ]
+    "scenes": []
   },
   {
     "id": "the-clockmaker-daughter",
     "title": "The Clockmaker Daughter",
     "logline": "Her blind father taught her to hear time. When the great blackout hit the city, she was the only one who knew when dawn would come.",
-    "scenes": [
-      {
-        "n": 1,
-        "narration": "In old Istanbul, a clockmaker raised his daughter in a workshop full of ticking. Gears, springs, pendulums — every surface alive with rhythm."
-      },
-      {
-        "n": 2,
-        "narration": "She went blind at age four. The doctors said she would never navigate the city. Her father said something different. He taught her to listen."
-      },
-      {
-        "n": 3,
-        "narration": "Each clock ticked a different pitch. Each chime marked a different hour. By eleven, she could tell time by ear better than anyone with sight in the province."
-      },
-      {
-        "n": 4,
-        "narration": "She learned to fix clocks too. Not by looking, but by feeling the resistance of a spring, hearing whether a gear caught clean or ground dirty."
-      },
-      {
-        "n": 5,
-        "narration": "At twenty-two, a terrible storm knocked out power across the city. Every electric clock stopped. Trains halted. Hospitals lost their timers. Panic spread faster than the darkness."
-      },
-      {
-        "n": 6,
-        "narration": "People flocked to her fathers shop. He was too old to help them all. She stepped forward, placed her hands on a dozen broken clocks, and began to tune them by ear."
-      },
-      {
-        "n": 7,
-        "narration": "By midnight, she had restored order to seventeen clocks. Each one chiming the correct hour. Strangers wept. They had forgotten that time still existed."
-      },
-      {
-        "n": 8,
-        "narration": "The government awarded her a medal. She donated it to the workshop museum. Asked only for one thing: a bell tower clock that would chime for everyone, not just those who could pay."
-      },
-      {
-        "n": 9,
-        "narration": "It hangs above the bazaar still. You do not need eyes to hear it. Would you have learned to live without sight? Comment CLOCK if time matters more than you thought."
-      }
-    ]
+    "scenes": []
   },
   {
     "id": "the-last-tree-keeper",
     "title": "The Last Tree Keeper",
     "logline": "A farmer planted one seed every year for seventy-four years. Nobody noticed. Until the sky turned green again.",
-    "scenes": [
-      {
-        "n": 1,
-        "narration": "In a desert town called Barwani, the soil turned to dust in 1952. The wells ran dry. The birds left. Every tree fell within five years."
-      },
-      {
-        "n": 2,
-        "narration": "An old farmer named Iqbal refused to leave. He carried a single acorn in his pocket every day. Planted it at dusk. Watered it with the last dregs from his bucket."
-      },
-      {
-        "n": 3,
-        "narration": "Year one: the seedling died. Year two: a goat ate it. Year three: a dry wind took it. He buried another acorn the next evening."
-      },
-      {
-        "n": 4,
-        "narration": "The villagers called him mad. You cannot grow a forest in sand. They were right — for them. But Iqbal had dug deeper. Six feet down, the earth was cool and damp."
-      },
-      {
-        "n": 5,
-        "narration": "Year twelve: a sapling survived. Year twenty-one: it was tall enough to cast a shadow. Neighbours began to bring cuttings. Not because they believed — because he never stopped."
-      },
-      {
-        "n": 6,
-        "narration": "Year forty: the grove covered half an acre. Birds returned. Frogs appeared in the small pool at its centre. The temperature dropped two degrees inside the shade."
-      },
-      {
-        "n": 7,
-        "narration": "Year fifty-five: the town council tried to buy the land. Iqbal refused. You can buy soil, he said. You cannot buy patience."
-      },
-      {
-        "n": 8,
-        "narration": "Year seventy-four: the satellite map showed green spreading outward from his plot like a hand reaching for the rest of the desert. A million trees now."
-      },
-      {
-        "n": 9,
-        "narration": "Iqbal died at ninety-one, sitting under the largest oak he had ever planted. The park now bears his name. Would you water a tree you would never sit under? Comment TREE if patience beats speed."
-      }
-    ]
+    "scenes": []
   }
 ]
