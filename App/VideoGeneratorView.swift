@@ -29,7 +29,7 @@ private struct StoryCard: View {
     }
 
     private var cardBackground: Color {
-        isSelected ? Color.blue.opacity(0.2) : Color.quaternary.opacity(0.3)
+        isSelected ? Color.blue.opacity(0.2) : Color.gray.opacity(0.15)
     }
 }
 
