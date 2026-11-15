@@ -57,11 +57,11 @@ enum AudioMux {
         guard let vtrack = vsrc.tracks(withMediaType: .video).first else {
             throw RenderError.writeFailed
         }
-        let vcomp = try comp.addMutableTrack(withMediaType: .video, preferredTrackID: kCMPersistentTrackID_Invalid)
+        let vcomp = comp.addMutableTrack(withMediaType: .video, preferredTrackID: kCMPersistentTrackID_Invalid)
         guard let vcomp else { throw RenderError.writeFailed }
         try vcomp.insertTimeRange(CMTimeRange(start: .zero, duration: vsrc.duration), of: vtrack, at: .zero)
 
-        let acompTrack = try comp.addMutableTrack(withMediaType: .audio, preferredTrackID: kCMPersistentTrackID_Invalid)
+        let acompTrack = comp.addMutableTrack(withMediaType: .audio, preferredTrackID: kCMPersistentTrackID_Invalid)
         guard let acomp = acompTrack else { throw RenderError.writeFailed }
         for clip in plan.clips {
             let m4a = try await toAAC(clip.url)
@@ -77,16 +77,12 @@ enum AudioMux {
         }
         ex.outputURL = out
         ex.outputFileType = AVFileType.mp4
-        try await withCheckedThrowingContinuation { (cont: CheckedContinuation<Void, Error>) in
-            ex.exportAsynchronously {
-                let s = ex.status
-                let e = ex.error
-                if s == .completed {
-                    cont.resume()
-                } else {
-                    cont.resume(throwing: e ?? RenderError.writeFailed)
-                }
-            }
+        ex.exportAsynchronously {}
+        while ex.status == .waiting || ex.status == .exporting {
+            try await Task.sleep(nanoseconds: 100_000_000)
+        }
+        if ex.status != .completed {
+            throw ex.error ?? RenderError.writeFailed
         }
     }
 
@@ -105,16 +101,12 @@ enum AudioMux {
         }
         ex.outputURL = out
         ex.outputFileType = AVFileType.m4a
-        try await withCheckedThrowingContinuation { (cont: CheckedContinuation<Void, Error>) in
-            ex.exportAsynchronously {
-                let s = ex.status
-                let e = ex.error
-                if s == .completed {
-                    cont.resume()
-                } else {
-                    cont.resume(throwing: e ?? RenderError.writeFailed)
-                }
-            }
+        ex.exportAsynchronously {}
+        while ex.status == .waiting || ex.status == .exporting {
+            try await Task.sleep(nanoseconds: 100_000_000)
+        }
+        if ex.status != .completed {
+            throw ex.error ?? RenderError.writeFailed
         }
         return out
     }

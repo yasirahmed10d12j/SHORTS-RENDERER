@@ -80,11 +80,9 @@ final class Engine: NSObject, WKScriptMessageHandler {
         ucc.add(self, name: "console")
     }
 
-    deinit {
-        Task.detached { @MainActor [controller = web.configuration.userContentController] in
-            controller.removeScriptMessageHandler(forName: "console")
-        }
-    }
+    // Note: no deinit — ucc.add(self) retains the Engine (ucc → Engine → web →
+    // config → ucc), so deinit would never run anyway. The handler lives for
+    // the app's lifetime, which is fine for this singleton-style engine page.
 
     func load() async throws {
         web.loadFileURL(root.appendingPathComponent("engine.html"), allowingReadAccessTo: root)

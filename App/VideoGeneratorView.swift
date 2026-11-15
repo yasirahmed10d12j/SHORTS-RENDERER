@@ -2,6 +2,37 @@ import SwiftUI
 import AVFoundation
 import Photos
 
+/// One card in the horizontal built-in story picker.
+private struct StoryCard: View {
+    let story: BuiltInStory
+    let isSelected: Bool
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text(story.title)
+                .font(.subheadline.bold())
+                .lineLimit(2)
+            if let log = story.logline {
+                Text(log)
+                    .font(.caption2)
+                    .foregroundStyle(.secondary)
+                    .lineLimit(2)
+            }
+        }
+        .frame(width: 160, alignment: .leading)
+        .padding(12)
+        .background(cardBackground, in: RoundedRectangle(cornerRadius: 12))
+        .overlay(
+            RoundedRectangle(cornerRadius: 12)
+                .stroke(isSelected ? Color.blue : Color.clear, lineWidth: 2)
+        )
+    }
+
+    private var cardBackground: Color {
+        isSelected ? Color.blue.opacity(0.2) : Color.quaternary.opacity(0.3)
+    }
+}
+
 /// End-to-end Video Generator: idea -> LLM script -> per-scene ElevenLabs voice ->
 /// render engine syncs to voice timeline -> final MP4 with audio muxed in.
 struct VideoGeneratorView: View {
@@ -149,32 +180,9 @@ struct VideoGeneratorView: View {
                     HStack(spacing: 12) {
                         ForEach(builtInStories) { story in
                             Button {
-                                selectedStory = story
-                                script = story.storyScript
-                                sceneStatus = [:]
-                                players = [:]
-                                allVoicesReady = false
-                                status = "✅ '\(story.title)' selected — ab Voice generate karo."
+                                selectStory(story)
                             } label: {
-                                let isSelected = selectedStory?.id == story.id
-                                VStack(alignment: .leading, spacing: 4) {
-                                    Text(story.title)
-                                        .font(.subheadline.bold())
-                                        .lineLimit(2)
-                                    if let log = story.logline {
-                                        Text(log)
-                                            .font(.caption2)
-                                            .foregroundStyle(.secondary)
-                                            .lineLimit(2)
-                                    }
-                                }
-                                .frame(width: 160, alignment: .leading)
-                                .padding(12)
-                                .background(isSelected ? Color.blue.opacity(0.2) : Color.quaternary.opacity(0.3), in: RoundedRectangle(cornerRadius: 12))
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .stroke(isSelected ? Color.blue : Color.clear, lineWidth: 2)
-                                )
+                                StoryCard(story: story, isSelected: selectedStory?.id == story.id)
                             }
                         }
                     }
@@ -184,7 +192,7 @@ struct VideoGeneratorView: View {
                     VStack(alignment: .leading, spacing: 6) {
                         Text("Selected: \(selected.title)").font(.headline)
                         Text(selected.logline ?? "").font(.caption).foregroundStyle(.secondary)
-                        Text("\(selected.scenes.count) scenes · ~\(Int(selected.totalNarrationDurationEstimate))s voice")
+                        Text("\(selected.scenes.count) scenes · ~\(Int(selected.estimatedDuration))s voice")
                             .font(.caption2).foregroundStyle(.tertiary)
                     }
                     .padding(8)
@@ -194,6 +202,15 @@ struct VideoGeneratorView: View {
             .padding(4)
         }
         .font(.subheadline)
+    }
+
+    private func selectStory(_ story: BuiltInStory) {
+        selectedStory = story
+        script = story.storyScript
+        sceneStatus = [:]
+        players = [:]
+        allVoicesReady = false
+        status = "✅ '\(story.title)' selected — ab Voice generate karo."
     }
 
     // ── script cards ────────────────────────────────────────────────────────
