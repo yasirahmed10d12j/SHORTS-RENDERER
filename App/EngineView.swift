@@ -41,6 +41,7 @@ final class EngineConsole {
 final class Engine: NSObject, WKScriptMessageHandler {
     private let web: WKWebView
     private let root: URL
+    private let pageName: String
 
     /// Note: a default parameter keeps this from matching NSObject's `init()`,
     /// which would require an `override` and can't throw.
@@ -48,6 +49,7 @@ final class Engine: NSObject, WKScriptMessageHandler {
         guard let html = Bundle.main.url(forResource: page, withExtension: "html", subdirectory: "engine") else {
             throw RenderError.engineMissing
         }
+        pageName = page
 
         let cfg = WKWebViewConfiguration()
         let ucc = cfg.userContentController
@@ -85,17 +87,35 @@ final class Engine: NSObject, WKScriptMessageHandler {
     // the app's lifetime, which is fine for this singleton-style engine page.
 
     func load() async throws {
-        web.loadFileURL(root.appendingPathComponent("engine.html"), allowingReadAccessTo: root)
+        web.loadFileURL(root.appendingPathComponent("\(pageName).html"), allowingReadAccessTo: root)
         for i in 0..<600 { // up to ~2.5 min warmup (WebGL compile + warmup frame)
             try await Task.sleep(nanoseconds: 250_000_000)
             if i == 4, try await evalBool("location.protocol === 'file:'") == false {
-                throw RenderError.engineNotReady("engine.html load nahi hua (page navigated nahi).")
+                throw RenderError.engineNotReady("\(pageName).html load nahi hua (page navigated nahi).")
             }
-            if try await evalBool("window.ready === true") { return }
+            // engine1 sets window.ready during warmup; engine2 exposes loadStory
+            // first and only sets ready once a story is loaded (see loadStory).
+            if try await evalBool("window.ready === true || typeof window.loadStory === 'function'") { return }
         }
         let errs = ((try? await eval("JSON.stringify(window.__errors || [])")) as? String) ?? "[]"
         let last = EngineConsole.shared.last
         throw RenderError.engineNotReady(errs == "[]" ? last : errs)
+    }
+
+    /// engine2: inject a data-driven story spec, then wait for the engine to
+    /// report ready (TOTAL comes from the spec — no setVoiceDuration needed).
+    func loadStory(_ specJSON: String) async throws {
+        for _ in 0..<40 { // page must have finished parsing spec.js first
+            if try await evalBool("typeof window.loadStory === 'function'") { break }
+            try await Task.sleep(nanoseconds: 250_000_000)
+        }
+        _ = try await eval("window.loadStory(\(specJSON))")
+        for _ in 0..<40 {
+            if try await evalBool("window.ready === true") { return }
+            try await Task.sleep(nanoseconds: 250_000_000)
+        }
+        let errs = ((try? await eval("JSON.stringify(window.__errors || [])")) as? String) ?? "[]"
+        throw RenderError.engineNotReady(errs == "[]" ? "loadStory ready nahi hua." : errs)
     }
 
     func totalFrames() async throws -> Int {

@@ -1,0 +1,504 @@
+{
+ "id": "the-last-voicemail",
+ "flatGround": true,
+ "set": {
+  "type": "interior",
+  "style": "room",
+  "tv": true
+ },
+ "scenes": [
+  {
+   "n": 1,
+   "dur": 8.32,
+   "light": "night",
+   "cam": {
+    "type": "pushIn",
+    "from": [
+     3.7299999999999995,
+     2.1,
+     6.37
+    ],
+    "to": [
+     2.8,
+     1.7,
+     4.2
+    ],
+    "look": [
+     -1,
+     1.3,
+     1
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "woman",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "A woman kept her dad's final voicemail for six years. Last Tuesday, the message changed.",
+   "capStyle": "hook"
+  },
+  {
+   "n": 2,
+   "dur": 7.53,
+   "light": "night",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     4.04,
+     1.7,
+     4.2
+    ],
+    "lookFrom": [
+     -0.008000000000000007,
+     1.3,
+     1
+    ],
+    "lookTo": [
+     -1.992,
+     1.3,
+     -0.24
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "woman",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "Same date. Same time stamp. Different voice. Deeper. Slower. And it knew things.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 3,
+   "dur": 8.68,
+   "light": "night",
+   "cam": {
+    "type": "orbit",
+    "center": [
+     -1,
+     0,
+     1
+    ],
+    "r": 3.41,
+    "h": 1.9,
+    "a0": -9,
+    "a1": 50,
+    "look": [
+     -1,
+     1.3,
+     1
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "woman",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "It said, you moved the couch. You painted the hallway gray. You stopped watering the plant he gave you.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 4,
+   "dur": 6.3,
+   "light": "night",
+   "cam": {
+    "type": "static",
+    "pos": [
+     2.8,
+     1.7,
+     4.2
+    ],
+    "look": [
+     -1,
+     1.3,
+     1
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "woman",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "All true. All things no voicemail from 2019 could know.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 5,
+   "dur": 9.72,
+   "light": "night",
+   "cam": {
+    "type": "pullOut",
+    "from": [
+     2.304,
+     1.7,
+     3.4560000000000004
+    ],
+    "to": [
+     3.916,
+     2.3,
+     6.99
+    ],
+    "look": [
+     -1,
+     1.3,
+     1
+    ],
+    "fov": 42
+   },
+   "actors": [
+    {
+     "outfit": "woman",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "She played it for her sister. On her sister's phone, it was still the original. Happy birthday, sweetheart. Call me back.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 6,
+   "dur": 9.32,
+   "light": "night",
+   "cam": {
+    "type": "track",
+    "from": [
+     2.8,
+     1.7,
+     5.75
+    ],
+    "to": [
+     2.8,
+     1.7,
+     3.2700000000000005
+    ],
+    "look": [
+     -1,
+     1.3,
+     1
+    ],
+    "fov": 40
+   },
+   "actors": [
+    {
+     "outfit": "woman",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "Only her phone heard the new message. She checked the carrier. The voicemail server had no record of any update.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 7,
+   "dur": 7.65,
+   "light": "night",
+   "cam": {
+    "type": "rise",
+    "from": [
+     2.8,
+     1.2,
+     4.2
+    ],
+    "to": [
+     2.8,
+     3.808,
+     5.13
+    ],
+    "lookFrom": [
+     -1,
+     1.3,
+     1
+    ],
+    "lookTo": [
+     -1,
+     2.5,
+     0
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "woman",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "The message ends the same way every time now, but it adds one more word each week.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 8,
+   "dur": 7.28,
+   "light": "night",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     4.04,
+     1.7,
+     4.2
+    ],
+    "lookFrom": [
+     -0.008000000000000007,
+     1.3,
+     1
+    ],
+    "lookTo": [
+     -1.992,
+     1.3,
+     -0.24
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "woman",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "Last week it ended, call me back, please. This week, call me back, please, Maya.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 9,
+   "dur": 9.23,
+   "light": "night",
+   "cam": {
+    "type": "static",
+    "pos": [
+     2.8,
+     1.7,
+     4.2
+    ],
+    "look": [
+     -1,
+     1.3,
+     1
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "woman",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "She never told anyone her childhood nickname was Maya. Would you call the number back? Like if you got chills.",
+   "capStyle": "normal"
+  }
+ ]
+}

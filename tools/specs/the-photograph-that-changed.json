@@ -1,0 +1,621 @@
+{
+ "id": "the-photograph-that-changed",
+ "flatGround": true,
+ "set": {
+  "type": "outdoor",
+  "style": "town",
+  "houses": 7
+ },
+ "scenes": [
+  {
+   "n": 1,
+   "dur": 10.97,
+   "light": "golden",
+   "cam": {
+    "type": "pushIn",
+    "from": [
+     6.0,
+     2.4,
+     18.5
+    ],
+    "to": [
+     4.5,
+     2,
+     15
+    ],
+    "look": [
+     0,
+     1.6,
+     10
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "old",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "man",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "bird",
+     "pos": [
+      12,
+      14,
+      6
+     ],
+     "size": 1.4,
+     "at": [
+      0.05,
+      0.6
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "A family printed their vacation photos in 1996. In one picture, there is an extra person standing behind them.",
+   "capStyle": "hook"
+  },
+  {
+   "n": 2,
+   "dur": 9.25,
+   "light": "golden",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     6.5,
+     2,
+     15
+    ],
+    "lookFrom": [
+     1.6,
+     1.6,
+     10
+    ],
+    "lookTo": [
+     -1.6,
+     1.6,
+     8.0
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "old",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    },
+    {
+     "outfit": "man",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "bird",
+     "pos": [
+      12,
+      14,
+      6
+     ],
+     "size": 1.4,
+     "at": [
+      0.05,
+      0.6
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "Nobody remembers a stranger. Nobody in the photo is looking at him. But he is in focus. They are not.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 3,
+   "dur": 8.6,
+   "light": "golden",
+   "cam": {
+    "type": "orbit",
+    "center": [
+     0,
+     0,
+     10
+    ],
+    "r": 5.5,
+    "h": 1.9,
+    "a0": -9,
+    "a1": 50,
+    "look": [
+     0,
+     1.6,
+     10
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "old",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "man",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "bird",
+     "pos": [
+      12,
+      14,
+      6
+     ],
+     "size": 1.4,
+     "at": [
+      0.05,
+      0.6
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "The father zoomed in. The man is wearing the same shirt as him. The same watch. The same face.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 4,
+   "dur": 8.22,
+   "light": "golden",
+   "cam": {
+    "type": "static",
+    "pos": [
+     4.5,
+     2,
+     15
+    ],
+    "look": [
+     0,
+     1.6,
+     10
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "old",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "man",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "bird",
+     "pos": [
+      12,
+      14,
+      6
+     ],
+     "size": 1.4,
+     "at": [
+      0.05,
+      0.6
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "It is him. Standing three feet behind himself. In a photo taken by a timer. Alone.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 5,
+   "dur": 9.8,
+   "light": "golden",
+   "cam": {
+    "type": "pullOut",
+    "from": [
+     3.7,
+     2,
+     13.8
+    ],
+    "to": [
+     6.3,
+     2.6,
+     19.5
+    ],
+    "look": [
+     0,
+     1.6,
+     10
+    ],
+    "fov": 42
+   },
+   "actors": [
+    {
+     "outfit": "old",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    },
+    {
+     "outfit": "man",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "bird",
+     "pos": [
+      12,
+      14,
+      6
+     ],
+     "size": 1.4,
+     "at": [
+      0.05,
+      0.6
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "He burned the photo. That night, in every mirror of the house, a figure stood three feet behind whoever was looking.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 6,
+   "dur": 9.65,
+   "light": "golden",
+   "cam": {
+    "type": "track",
+    "from": [
+     4.5,
+     2,
+     17.5
+    ],
+    "to": [
+     4.5,
+     2,
+     13.5
+    ],
+    "look": [
+     0,
+     1.6,
+     10
+    ],
+    "fov": 40
+   },
+   "actors": [
+    {
+     "outfit": "old",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "man",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "bird",
+     "pos": [
+      12,
+      14,
+      6
+     ],
+     "size": 1.4,
+     "at": [
+      0.05,
+      0.6
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "They moved. The photo was gone. But last year, his daughter found the negative in a box marked do not develop.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 7,
+   "dur": 6.97,
+   "light": "golden",
+   "cam": {
+    "type": "rise",
+    "from": [
+     4.5,
+     1.5,
+     15
+    ],
+    "to": [
+     4.5,
+     5.4,
+     16.5
+    ],
+    "lookFrom": [
+     0,
+     1.6,
+     10
+    ],
+    "lookTo": [
+     0,
+     2.8,
+     9
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "old",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "man",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "bird",
+     "pos": [
+      12,
+      14,
+      6
+     ],
+     "size": 1.4,
+     "at": [
+      0.05,
+      0.6
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "She held it up to the light. In the image, the second father is closer now.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 8,
+   "dur": 6.4,
+   "light": "golden",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     6.5,
+     2,
+     15
+    ],
+    "lookFrom": [
+     1.6,
+     1.6,
+     10
+    ],
+    "lookTo": [
+     -1.6,
+     1.6,
+     8.0
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "old",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "man",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "bird",
+     "pos": [
+      12,
+      14,
+      6
+     ],
+     "size": 1.4,
+     "at": [
+      0.05,
+      0.6
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "One foot behind. Still smiling. Still counting down the distance.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 9,
+   "dur": 9.6,
+   "light": "golden",
+   "cam": {
+    "type": "static",
+    "pos": [
+     4.5,
+     2,
+     15
+    ],
+    "look": [
+     0,
+     1.6,
+     10
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "old",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "man",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "bird",
+     "pos": [
+      12,
+      14,
+      6
+     ],
+     "size": 1.4,
+     "at": [
+      0.05,
+      0.6
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "The family swears they will never develop it. But the negative is missing now. Would you have looked? Comment PHOTO.",
+   "capStyle": "normal"
+  }
+ ]
+}

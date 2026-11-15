@@ -1,0 +1,504 @@
+{
+ "id": "the-telegram-1912",
+ "flatGround": true,
+ "set": {
+  "type": "interior",
+  "style": "room",
+  "tv": false
+ },
+ "scenes": [
+  {
+   "n": 1,
+   "dur": 10.05,
+   "light": "lamp",
+   "cam": {
+    "type": "pushIn",
+    "from": [
+     3.7299999999999995,
+     2.1,
+     6.37
+    ],
+    "to": [
+     2.8,
+     1.7,
+     4.2
+    ],
+    "look": [
+     -1,
+     1.3,
+     1
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "old",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "A museum archivist in Belfast was cataloging telegrams from 1912. One of them was addressed to her.",
+   "capStyle": "hook"
+  },
+  {
+   "n": 2,
+   "dur": 6.43,
+   "light": "lamp",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     4.04,
+     1.7,
+     4.2
+    ],
+    "lookFrom": [
+     -0.008000000000000007,
+     1.3,
+     1
+    ],
+    "lookTo": [
+     -1.992,
+     1.3,
+     -0.24
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "old",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "Her full name. On a telegram dated the night the Titanic sank.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 3,
+   "dur": 6.97,
+   "light": "lamp",
+   "cam": {
+    "type": "orbit",
+    "center": [
+     -1,
+     0,
+     1
+    ],
+    "r": 3.41,
+    "h": 1.9,
+    "a0": -9,
+    "a1": 50,
+    "look": [
+     -1,
+     1.3,
+     1
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "old",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "The message read, stop searching the archive. Some messages arrive late.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 4,
+   "dur": 10.7,
+   "light": "lamp",
+   "cam": {
+    "type": "static",
+    "pos": [
+     2.8,
+     1.7,
+     4.2
+    ],
+    "look": [
+     -1,
+     1.3,
+     1
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "old",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "She assumed an elaborate prank, until she found the sender's copy in the same box. In her own handwriting. Dated 1912.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 5,
+   "dur": 12.05,
+   "light": "lamp",
+   "cam": {
+    "type": "pullOut",
+    "from": [
+     2.304,
+     1.7,
+     3.4560000000000004
+    ],
+    "to": [
+     3.916,
+     2.3,
+     6.99
+    ],
+    "look": [
+     -1,
+     1.3,
+     1
+    ],
+    "fov": 42
+   },
+   "actors": [
+    {
+     "outfit": "old",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "The archive temperature log showed the box had been handled at 2:20 AM. By a staff badge that was decommissioned in 1978.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 6,
+   "dur": 9.18,
+   "light": "lamp",
+   "cam": {
+    "type": "track",
+    "from": [
+     2.8,
+     1.7,
+     5.75
+    ],
+    "to": [
+     2.8,
+     1.7,
+     3.2700000000000005
+    ],
+    "look": [
+     -1,
+     1.3,
+     1
+    ],
+    "fov": 40
+   },
+   "actors": [
+    {
+     "outfit": "old",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "She pulled the badge photo. It was her face. Older. Tired. Wearing the museum's own archivist badge.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 7,
+   "dur": 10.08,
+   "light": "lamp",
+   "cam": {
+    "type": "rise",
+    "from": [
+     2.8,
+     1.2,
+     4.2
+    ],
+    "to": [
+     2.8,
+     3.808,
+     5.13
+    ],
+    "lookFrom": [
+     -1,
+     1.3,
+     1
+    ],
+    "lookTo": [
+     -1,
+     2.5,
+     0
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "old",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "She applied for the night archive shift the next week. Her manager said the position had been filled. Since 1912.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 8,
+   "dur": 7.43,
+   "light": "lamp",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     4.04,
+     1.7,
+     4.2
+    ],
+    "lookFrom": [
+     -0.008000000000000007,
+     1.3,
+     1
+    ],
+    "lookTo": [
+     -1.992,
+     1.3,
+     -0.24
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "old",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "On her last day, she found a second telegram. Same date. Two words. See you.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 9,
+   "dur": 15.33,
+   "light": "lamp",
+   "cam": {
+    "type": "static",
+    "pos": [
+     2.8,
+     1.7,
+     4.2
+    ],
+    "look": [
+     -1,
+     1.3,
+     1
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "old",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "She still works days. The night archive door stays locked. But every April 14th at 2:20 AM, the corridor lights flicker once. Would you take the night shift? Comment 1912.",
+   "capStyle": "normal"
+  }
+ ]
+}

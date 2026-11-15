@@ -1,0 +1,488 @@
+{
+ "id": "the-hotel-door-9",
+ "flatGround": true,
+ "set": {
+  "type": "interior",
+  "style": "corridor",
+  "doors": 7,
+  "doorStart": 3,
+  "endLight": true
+ },
+ "scenes": [
+  {
+   "n": 1,
+   "dur": 10.9,
+   "light": "lamp",
+   "cam": {
+    "type": "pushIn",
+    "from": [
+     2.125,
+     2.0,
+     4.925000000000001
+    ],
+    "to": [
+     1.3,
+     1.6,
+     3
+    ],
+    "look": [
+     -0.6,
+     1.3,
+     -4
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "clerk",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      0.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "man",
+     "kind": "side",
+     "pos": [
+      0.9999999999999999,
+      -1.1
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "A travel blogger stayed at a hotel in Prague where the corridor has doors one through eight, then a wall, then doors ten through twenty.",
+   "capStyle": "hook"
+  },
+  {
+   "n": 2,
+   "dur": 9.72,
+   "light": "lamp",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     2.4000000000000004,
+     1.6,
+     3
+    ],
+    "lookFrom": [
+     0.28000000000000014,
+     1.3,
+     -4
+    ],
+    "lookTo": [
+     -1.48,
+     1.3,
+     -5.1
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "clerk",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      0.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    },
+    {
+     "outfit": "man",
+     "kind": "side",
+     "pos": [
+      0.9999999999999999,
+      -1.1
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "No door nine. Not removed. Bricked over, from the corridor side. The outline is still visible under the paint.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 3,
+   "dur": 8.65,
+   "light": "lamp",
+   "cam": {
+    "type": "orbit",
+    "center": [
+     -0.6,
+     0,
+     -4
+    ],
+    "r": 3.0250000000000004,
+    "h": 1.9,
+    "a0": -9,
+    "a1": 50,
+    "look": [
+     -0.6,
+     1.3,
+     -4
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "clerk",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      0.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "man",
+     "kind": "side",
+     "pos": [
+      0.9999999999999999,
+      -1.1
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "On her second night, her key card demagnetized. The front desk gave her a new one. Room 9.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 4,
+   "dur": 11.2,
+   "light": "lamp",
+   "cam": {
+    "type": "static",
+    "pos": [
+     1.3,
+     1.6,
+     3
+    ],
+    "look": [
+     -0.6,
+     1.3,
+     -4
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "clerk",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      0.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "man",
+     "kind": "side",
+     "pos": [
+      0.9999999999999999,
+      -1.1
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "She laughed and said there is no room 9. The clerk went pale, checked the screen, and said, you checked in to 9 yesterday. You're in it now.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 5,
+   "dur": 9.58,
+   "light": "lamp",
+   "cam": {
+    "type": "pullOut",
+    "from": [
+     0.86,
+     1.6,
+     2.34
+    ],
+    "to": [
+     2.29,
+     2.2,
+     5.475
+    ],
+    "look": [
+     -0.6,
+     1.3,
+     -4
+    ],
+    "fov": 42
+   },
+   "actors": [
+    {
+     "outfit": "clerk",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      0.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    },
+    {
+     "outfit": "man",
+     "kind": "side",
+     "pos": [
+      0.9999999999999999,
+      -1.1
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "She walked to her door. It was her own room. Door 9, where door 7 should be. The paint outline was gone.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 6,
+   "dur": 10.6,
+   "light": "lamp",
+   "cam": {
+    "type": "track",
+    "from": [
+     1.3,
+     1.6,
+     4.375
+    ],
+    "to": [
+     1.3,
+     1.6,
+     2.175
+    ],
+    "look": [
+     -0.6,
+     1.3,
+     -4
+    ],
+    "fov": 40
+   },
+   "actors": [
+    {
+     "outfit": "clerk",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      0.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "man",
+     "kind": "side",
+     "pos": [
+      0.9999999999999999,
+      -1.1
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "Inside, everything was hers, the way she had left it. Except her suitcase was unpacked. She never unpacks on the first night.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 7,
+   "dur": 7.5,
+   "light": "lamp",
+   "cam": {
+    "type": "rise",
+    "from": [
+     1.3,
+     1.1,
+     3
+    ],
+    "to": [
+     1.3,
+     3.47,
+     3.825
+    ],
+    "lookFrom": [
+     -0.6,
+     1.3,
+     -4
+    ],
+    "lookTo": [
+     -0.6,
+     2.5,
+     -5
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "clerk",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      0.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "man",
+     "kind": "side",
+     "pos": [
+      0.9999999999999999,
+      -1.1
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "The bathroom mirror had a note written in steam. Welcome back. In her handwriting.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 8,
+   "dur": 11.93,
+   "light": "lamp",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     2.4000000000000004,
+     1.6,
+     3
+    ],
+    "lookFrom": [
+     0.28000000000000014,
+     1.3,
+     -4
+    ],
+    "lookTo": [
+     -1.48,
+     1.3,
+     -5.1
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "clerk",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      0.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "man",
+     "kind": "side",
+     "pos": [
+      0.9999999999999999,
+      -1.1
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "She checked out at 4 AM. The hotel has no record of room 9, and no outline under the paint anymore. Smooth wall. Like it never was.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 9,
+   "dur": 13.03,
+   "light": "lamp",
+   "cam": {
+    "type": "static",
+    "pos": [
+     1.3,
+     1.6,
+     3
+    ],
+    "look": [
+     -0.6,
+     1.3,
+     -4
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "clerk",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      0.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "man",
+     "kind": "side",
+     "pos": [
+      0.9999999999999999,
+      -1.1
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "Her review is still up. Clean rooms, friendly staff. Just don't unpack on the first night. Would you have stayed the night? Comment NINE if you want to know who unpacked.",
+   "capStyle": "normal"
+  }
+ ]
+}

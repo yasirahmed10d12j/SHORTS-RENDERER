@@ -468,12 +468,22 @@ struct VideoGeneratorView: View {
             rendered = 0; total = 0; progress = 0; fps = 0; eta = 0; done = false
             renderStartTime = Date()
             status = "Engine load…"
-            let engine = try Engine()
+            // engine.html me sirf Mountain Man ka baked timeline hai; baaki
+            // built-in stories data-driven engine2 (specs.json) se render hoti hain.
+            let storyId = selectedStory?.id
+            let useEngine2 = storyId != nil && storyId != "the-mountain-man"
+            let engine = try Engine(page: useEngine2 ? "engine2" : "engine")
             try await engine.load()
             let docs = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
             var plan: AudioPlan?
             if let p = AudioMux.detect(docs: docs) { plan = p }
-            if let plan {
+            if useEngine2 {
+                let spec = try storySpecJSON(for: storyId!)
+                status = "Story load (3D spec)…"
+                try await engine.loadStory(spec)
+                status = "✅ Spec loaded — visuals story ke set se banenge."
+                try await Task.sleep(nanoseconds: 800_000_000) // show status briefly
+            } else if let plan {
                 try await engine.setVoiceDuration(plan.totalDuration)
                 status = String(format: "Voice detect — %.1fs ke hisaab se render hogi.", plan.totalDuration)
                 try await Task.sleep(nanoseconds: 1_000_000_000) // show status briefly
@@ -522,6 +532,18 @@ struct VideoGeneratorView: View {
 
     // ── timer helpers ─────────────────────────────────────────────────────────
     // (elapsedSecs shown during render computed directly from start Date below)
+
+    /// Built-in story ka engine2 spec: bundled App/specs.json se, JS-safe raw JSON string.
+    private func storySpecJSON(for storyId: String) throws -> String {
+        guard let url = Bundle.main.url(forResource: "specs", withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let all = (try? JSONSerialization.jsonObject(with: data)) as? [String: Any],
+              let spec = all[storyId] else {
+            throw RenderError.engineNotReady("Spec nahi mila: \(storyId) (specs.json check karo).")
+        }
+        let d = try JSONSerialization.data(withJSONObject: spec, options: [.sortedKeys])
+        return String(decoding: d, as: UTF8.self)
+    }
 
     private func clearOldScriptFiles() {
         let docs = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]

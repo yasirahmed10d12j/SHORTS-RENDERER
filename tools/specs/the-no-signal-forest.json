@@ -1,0 +1,561 @@
+{
+ "id": "the-no-signal-forest",
+ "flatGround": true,
+ "set": {
+  "type": "outdoor",
+  "style": "forest",
+  "trees": 120
+ },
+ "scenes": [
+  {
+   "n": 1,
+   "dur": 11.3,
+   "light": "day",
+   "cam": {
+    "type": "pushIn",
+    "from": [
+     6.0,
+     2.2,
+     18.5
+    ],
+    "to": [
+     4.5,
+     1.8,
+     15
+    ],
+    "look": [
+     0,
+     1.6,
+     10
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "hiker",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "teen",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "bird",
+     "pos": [
+      12,
+      14,
+      6
+     ],
+     "size": 1.4,
+     "at": [
+      0.05,
+      0.6
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "There is a forest in Poland where GPS stops working. Not weak signal. It stops. Like the satellites do not know it exists.",
+   "capStyle": "hook"
+  },
+  {
+   "n": 2,
+   "dur": 7.07,
+   "light": "day",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     6.5,
+     1.8,
+     15
+    ],
+    "lookFrom": [
+     1.6,
+     1.6,
+     10
+    ],
+    "lookTo": [
+     -1.6,
+     1.6,
+     8.0
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "hiker",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    },
+    {
+     "outfit": "teen",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "bird",
+     "pos": [
+      12,
+      14,
+      6
+     ],
+     "size": 1.4,
+     "at": [
+      0.05,
+      0.6
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "Hikers' phones freeze at the tree line and show one screen. No route found.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 3,
+   "dur": 10.03,
+   "light": "day",
+   "cam": {
+    "type": "orbit",
+    "center": [
+     0,
+     0,
+     10
+    ],
+    "r": 5.5,
+    "h": 1.9,
+    "a0": -9,
+    "a1": 50,
+    "look": [
+     0,
+     1.6,
+     10
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "hiker",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "teen",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "bird",
+     "pos": [
+      12,
+      14,
+      6
+     ],
+     "size": 1.4,
+     "at": [
+      0.05,
+      0.6
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "In 2018, a documentary crew drove in with a generator, film gear, and a satellite phone for backup.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 4,
+   "dur": 8.25,
+   "light": "day",
+   "cam": {
+    "type": "static",
+    "pos": [
+     4.5,
+     1.8,
+     15
+    ],
+    "look": [
+     0,
+     1.6,
+     10
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "hiker",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "teen",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "bird",
+     "pos": [
+      12,
+      14,
+      6
+     ],
+     "size": 1.4,
+     "at": [
+      0.05,
+      0.6
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "The satellite phone connected on the first try. It called a number. Not the number they dialed.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 5,
+   "dur": 6.0,
+   "light": "day",
+   "cam": {
+    "type": "pullOut",
+    "from": [
+     3.7,
+     1.8,
+     13.8
+    ],
+    "to": [
+     6.3,
+     2.4,
+     19.5
+    ],
+    "look": [
+     0,
+     1.6,
+     10
+    ],
+    "fov": 42
+   },
+   "actors": [
+    {
+     "outfit": "hiker",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    },
+    {
+     "outfit": "teen",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "bird",
+     "pos": [
+      12,
+      14,
+      6
+     ],
+     "size": 1.4,
+     "at": [
+      0.05,
+      0.6
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "A voice answered in Polish. Please leave. We can hear you.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 6,
+   "dur": 11.43,
+   "light": "night",
+   "cam": {
+    "type": "track",
+    "from": [
+     4.5,
+     1.8,
+     17.5
+    ],
+    "to": [
+     4.5,
+     1.8,
+     13.5
+    ],
+    "look": [
+     0,
+     1.6,
+     10
+    ],
+    "fov": 40
+   },
+   "actors": [
+    {
+     "outfit": "hiker",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "teen",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "They left. On the drive out, their footage showed the forest moving in the background of every shot. The trees getting closer with every take.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 7,
+   "dur": 13.35,
+   "light": "night",
+   "cam": {
+    "type": "rise",
+    "from": [
+     4.5,
+     1.3,
+     15
+    ],
+    "to": [
+     4.5,
+     5.2,
+     16.5
+    ],
+    "lookFrom": [
+     0,
+     1.6,
+     10
+    ],
+    "lookTo": [
+     0,
+     2.8,
+     9
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "hiker",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "teen",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "The crew published everything. The comments found one detail they had missed. In the final shot, standing between the trees, someone wearing their missing camera bag.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 8,
+   "dur": 8.85,
+   "light": "night",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     6.5,
+     1.8,
+     15
+    ],
+    "lookFrom": [
+     1.6,
+     1.6,
+     10
+    ],
+    "lookTo": [
+     -1.6,
+     1.6,
+     8.0
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "hiker",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "teen",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "They never went back for the bag. The forest is on no map. The road to it does not appear in winter.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 9,
+   "dur": 6.68,
+   "light": "night",
+   "cam": {
+    "type": "static",
+    "pos": [
+     4.5,
+     1.8,
+     15
+    ],
+    "look": [
+     0,
+     1.6,
+     10
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "hiker",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "teen",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "Would you drive in to check? Comment FOREST if you would stay on the road.",
+   "capStyle": "normal"
+  }
+ ]
+}

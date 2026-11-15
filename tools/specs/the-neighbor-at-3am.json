@@ -1,0 +1,629 @@
+{
+ "id": "the-neighbor-at-3am",
+ "flatGround": true,
+ "set": {
+  "type": "interior",
+  "style": "room"
+ },
+ "scenes": [
+  {
+   "n": 1,
+   "dur": 9.83,
+   "light": "night",
+   "cam": {
+    "type": "pushIn",
+    "from": [
+     3.7299999999999995,
+     2.1,
+     6.37
+    ],
+    "to": [
+     2.8,
+     1.7,
+     4.2
+    ],
+    "look": [
+     -1,
+     1.3,
+     1
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "man",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "old",
+     "kind": "side",
+     "pos": [
+      0.8999999999999999,
+      -0.10000000000000009
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "My neighbor knocked on my door at 3 AM and said seven words I still cannot forget. Do not let it know you're home.",
+   "capStyle": "hook"
+  },
+  {
+   "n": 2,
+   "dur": 6.78,
+   "light": "night",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     4.04,
+     1.7,
+     4.2
+    ],
+    "lookFrom": [
+     -0.008000000000000007,
+     1.3,
+     1
+    ],
+    "lookTo": [
+     -1.992,
+     1.3,
+     -0.24
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "man",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    },
+    {
+     "outfit": "old",
+     "kind": "side",
+     "pos": [
+      0.8999999999999999,
+      -0.10000000000000009
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "I laughed. He didn't. He was shaking, staring past me into my hallway.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 3,
+   "dur": 9.03,
+   "light": "night",
+   "cam": {
+    "type": "orbit",
+    "center": [
+     -1,
+     0,
+     1
+    ],
+    "r": 3.41,
+    "h": 1.9,
+    "a0": -9,
+    "a1": 50,
+    "look": [
+     -1,
+     1.3,
+     1
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "man",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "old",
+     "kind": "side",
+     "pos": [
+      0.8999999999999999,
+      -0.10000000000000009
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "He said for two weeks, something had been standing in my living room window every night. Watching him watch it.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 4,
+   "dur": 3.8,
+   "light": "night",
+   "cam": {
+    "type": "static",
+    "pos": [
+     2.8,
+     1.7,
+     4.2
+    ],
+    "look": [
+     -1,
+     1.3,
+     1
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "man",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "old",
+     "kind": "side",
+     "pos": [
+      0.8999999999999999,
+      -0.10000000000000009
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "I live on the fourth floor.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 5,
+   "dur": 9.05,
+   "light": "night",
+   "cam": {
+    "type": "pullOut",
+    "from": [
+     2.304,
+     1.7,
+     3.4560000000000004
+    ],
+    "to": [
+     3.916,
+     2.3,
+     6.99
+    ],
+    "look": [
+     -1,
+     1.3,
+     1
+    ],
+    "fov": 42
+   },
+   "actors": [
+    {
+     "outfit": "man",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    },
+    {
+     "outfit": "old",
+     "kind": "side",
+     "pos": [
+      0.8999999999999999,
+      -0.10000000000000009
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "We both stood there in silence. Then his eyes went wide. He looked at my window. The curtains were moving.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 6,
+   "dur": 7.47,
+   "light": "night",
+   "cam": {
+    "type": "track",
+    "from": [
+     2.8,
+     1.7,
+     5.75
+    ],
+    "to": [
+     2.8,
+     1.7,
+     3.2700000000000005
+    ],
+    "look": [
+     -1,
+     1.3,
+     1
+    ],
+    "fov": 40
+   },
+   "actors": [
+    {
+     "outfit": "man",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "old",
+     "kind": "side",
+     "pos": [
+      0.8999999999999999,
+      -0.10000000000000009
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "I closed the door. I don't know why I closed the door. I locked myself in with it.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 7,
+   "dur": 8.18,
+   "light": "night",
+   "cam": {
+    "type": "rise",
+    "from": [
+     2.8,
+     1.2,
+     4.2
+    ],
+    "to": [
+     2.8,
+     3.808,
+     5.13
+    ],
+    "lookFrom": [
+     -1,
+     1.3,
+     1
+    ],
+    "lookTo": [
+     -1,
+     2.5,
+     0
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "man",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "old",
+     "kind": "side",
+     "pos": [
+      0.8999999999999999,
+      -0.10000000000000009
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "The knocking started five minutes later. Slow. Patient. It knew the rhythm of my heartbeat.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 8,
+   "dur": 8.25,
+   "light": "night",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     4.04,
+     1.7,
+     4.2
+    ],
+    "lookFrom": [
+     -0.008000000000000007,
+     1.3,
+     1
+    ],
+    "lookTo": [
+     -1.992,
+     1.3,
+     -0.24
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "man",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "old",
+     "kind": "side",
+     "pos": [
+      0.8999999999999999,
+      -0.10000000000000009
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "By sunrise it stopped. My neighbor's door was open. He was gone. He has never come back.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 9,
+   "dur": 13.12,
+   "light": "night",
+   "cam": {
+    "type": "static",
+    "pos": [
+     2.8,
+     1.7,
+     4.2
+    ],
+    "look": [
+     -1,
+     1.3,
+     1
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "man",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "old",
+     "kind": "side",
+     "pos": [
+      0.8999999999999999,
+      -0.10000000000000009
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "The police found his shoes outside my door, lined up perfectly, toes pointing at me. Have you ever heard knocking at 3 AM? Like this if you would have opened.",
+   "capStyle": "normal"
+  }
+ ]
+}

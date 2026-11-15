@@ -1,0 +1,359 @@
+{
+ "id": "the-radio-tower-recording",
+ "flatGround": true,
+ "set": {
+  "type": "outdoor",
+  "style": "tower"
+ },
+ "scenes": [
+  {
+   "n": 1,
+   "dur": 11.88,
+   "light": "night",
+   "cam": {
+    "type": "pushIn",
+    "from": [
+     9.5,
+     2.4,
+     12.5
+    ],
+    "to": [
+     8,
+     2,
+     9
+    ],
+    "look": [
+     1,
+     4,
+     2
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "worker",
+     "kind": "front",
+     "pos": [
+      3.0,
+      5.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "A radio engineer in Nevada records dead air for quality checks. In 2021, his recorder caught a tower broadcasting back.",
+   "capStyle": "hook"
+  },
+  {
+   "n": 2,
+   "dur": 10.6,
+   "light": "night",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     10.0,
+     2,
+     9
+    ],
+    "lookFrom": [
+     2.6,
+     4,
+     2
+    ],
+    "lookTo": [
+     -0.6000000000000001,
+     4,
+     0.0
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "worker",
+     "kind": "front",
+     "pos": [
+      3.0,
+      5.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    }
+   ],
+   "fx": [],
+   "caption": "Every tower has a carrier hum. His recording had one too, until minute nine. Then the hum spelled letters in Morse.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 3,
+   "dur": 8.8,
+   "light": "night",
+   "cam": {
+    "type": "orbit",
+    "center": [
+     1,
+     0,
+     2
+    ],
+    "r": 5.5,
+    "h": 1.9,
+    "a0": -9,
+    "a1": 50,
+    "look": [
+     1,
+     4,
+     2
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "worker",
+     "kind": "front",
+     "pos": [
+      3.0,
+      5.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "It spelled his name. His full name. Including the middle name nobody has used since his mother died.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 4,
+   "dur": 9.95,
+   "light": "night",
+   "cam": {
+    "type": "static",
+    "pos": [
+     8,
+     2,
+     9
+    ],
+    "look": [
+     1,
+     4,
+     2
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "worker",
+     "kind": "front",
+     "pos": [
+      3.0,
+      5.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "He checked the logs. The transmission came from tower seven. Tower seven was dismantled in 1996.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 5,
+   "dur": 8.28,
+   "light": "night",
+   "cam": {
+    "type": "pullOut",
+    "from": [
+     7.2,
+     2,
+     7.8
+    ],
+    "to": [
+     9.8,
+     2.6,
+     13.5
+    ],
+    "look": [
+     1,
+     4,
+     2
+    ],
+    "fov": 42
+   },
+   "actors": [
+    {
+     "outfit": "worker",
+     "kind": "front",
+     "pos": [
+      3.0,
+      5.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    }
+   ],
+   "fx": [],
+   "caption": "He played it for a colleague. His colleague heard only dead air. The name only plays for him.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 6,
+   "dur": 9.78,
+   "light": "night",
+   "cam": {
+    "type": "track",
+    "from": [
+     8,
+     2,
+     11.5
+    ],
+    "to": [
+     8,
+     2,
+     7.5
+    ],
+    "look": [
+     1,
+     4,
+     2
+    ],
+    "fov": 40
+   },
+   "actors": [
+    {
+     "outfit": "worker",
+     "kind": "front",
+     "pos": [
+      3.0,
+      5.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "Every night at 2:17, the hum returns. Each night, one new letter. He keeps a notepad by his bed.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 7,
+   "dur": 5.95,
+   "light": "night",
+   "cam": {
+    "type": "rise",
+    "from": [
+     8,
+     1.5,
+     9
+    ],
+    "to": [
+     8,
+     5.4,
+     10.5
+    ],
+    "lookFrom": [
+     1,
+     4,
+     2
+    ],
+    "lookTo": [
+     1,
+     5.2,
+     1
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "worker",
+     "kind": "front",
+     "pos": [
+      3.0,
+      5.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "The letters have spelled a sentence so far. We know you read it.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 8,
+   "dur": 11.25,
+   "light": "night",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     10.0,
+     2,
+     9
+    ],
+    "lookFrom": [
+     2.6,
+     4,
+     2
+    ],
+    "lookTo": [
+     -0.6000000000000001,
+     4,
+     0.0
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "worker",
+     "kind": "front",
+     "pos": [
+      3.0,
+      5.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "He does not know what it means. But he has stopped sleeping, because at 2:16, something knocks on the tower door. Politely. Then waits.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 9,
+   "dur": 11.7,
+   "light": "night",
+   "cam": {
+    "type": "static",
+    "pos": [
+     8,
+     2,
+     9
+    ],
+    "look": [
+     1,
+     4,
+     2
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "worker",
+     "kind": "front",
+     "pos": [
+      3.0,
+      5.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "He records everything now and posts the audio. Listen with headphones. Would you open the tower door at 2:17? Comment TOWER.",
+   "capStyle": "normal"
+  }
+ ]
+}

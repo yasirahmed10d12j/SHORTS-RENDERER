@@ -1,0 +1,672 @@
+{
+ "id": "the-search-party",
+ "flatGround": true,
+ "set": {
+  "type": "outdoor",
+  "style": "forest",
+  "trees": 100
+ },
+ "scenes": [
+  {
+   "n": 1,
+   "dur": 8.82,
+   "light": "dawnsea",
+   "cam": {
+    "type": "pushIn",
+    "from": [
+     6.0,
+     2.2,
+     18.5
+    ],
+    "to": [
+     4.5,
+     1.8,
+     15
+    ],
+    "look": [
+     0,
+     1.6,
+     10
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "cop",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "villager2",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    },
+    {
+     "outfit": "villager3",
+     "kind": "side",
+     "pos": [
+      3.8,
+      7.8
+     ],
+     "expr": "calm",
+     "seed": 17,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "bird",
+     "pos": [
+      12,
+      14,
+      6
+     ],
+     "size": 1.4,
+     "at": [
+      0.05,
+      0.6
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "A hiker in Norway got lost for six hours. When rescuers found him, they were not looking for him.",
+   "capStyle": "hook"
+  },
+  {
+   "n": 2,
+   "dur": 9.68,
+   "light": "dawnsea",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     6.5,
+     1.8,
+     15
+    ],
+    "lookFrom": [
+     1.6,
+     1.6,
+     10
+    ],
+    "lookTo": [
+     -1.6,
+     1.6,
+     8.0
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "cop",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    },
+    {
+     "outfit": "villager2",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    },
+    {
+     "outfit": "villager3",
+     "kind": "side",
+     "pos": [
+      3.8,
+      7.8
+     ],
+     "expr": "calm",
+     "seed": 17,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "bird",
+     "pos": [
+      12,
+      14,
+      6
+     ],
+     "size": 1.4,
+     "at": [
+      0.05,
+      0.6
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "They were looking for the hiker who reported him missing. His own emergency call, placed two hours before he made it.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 3,
+   "dur": 8.2,
+   "light": "dawnsea",
+   "cam": {
+    "type": "orbit",
+    "center": [
+     0,
+     0,
+     10
+    ],
+    "r": 5.5,
+    "h": 1.9,
+    "a0": -9,
+    "a1": 50,
+    "look": [
+     0,
+     1.6,
+     10
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "cop",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "villager2",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    },
+    {
+     "outfit": "villager3",
+     "kind": "side",
+     "pos": [
+      3.8,
+      7.8
+     ],
+     "expr": "calm",
+     "seed": 17,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "bird",
+     "pos": [
+      12,
+      14,
+      6
+     ],
+     "size": 1.4,
+     "at": [
+      0.05,
+      0.6
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "The call came from his phone. In his voice. It described his jacket, his route, his blood type.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 4,
+   "dur": 6.47,
+   "light": "dawnsea",
+   "cam": {
+    "type": "static",
+    "pos": [
+     4.5,
+     1.8,
+     15
+    ],
+    "look": [
+     0,
+     1.6,
+     10
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "cop",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "villager2",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    },
+    {
+     "outfit": "villager3",
+     "kind": "side",
+     "pos": [
+      3.8,
+      7.8
+     ],
+     "expr": "calm",
+     "seed": 17,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "bird",
+     "pos": [
+      12,
+      14,
+      6
+     ],
+     "size": 1.4,
+     "at": [
+      0.05,
+      0.6
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "The problem. He was still on the mountain, climbing, when that call went out.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 5,
+   "dur": 9.1,
+   "light": "night",
+   "cam": {
+    "type": "pullOut",
+    "from": [
+     3.7,
+     1.8,
+     13.8
+    ],
+    "to": [
+     6.3,
+     2.4,
+     19.5
+    ],
+    "look": [
+     0,
+     1.6,
+     10
+    ],
+    "fov": 42
+   },
+   "actors": [
+    {
+     "outfit": "cop",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    },
+    {
+     "outfit": "villager2",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    },
+    {
+     "outfit": "villager3",
+     "kind": "side",
+     "pos": [
+      3.8,
+      7.8
+     ],
+     "expr": "calm",
+     "seed": 17,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "The rescuers checked his call history with him. There was no record. Their system, though, had the full recording.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 6,
+   "dur": 9.97,
+   "light": "night",
+   "cam": {
+    "type": "track",
+    "from": [
+     4.5,
+     1.8,
+     17.5
+    ],
+    "to": [
+     4.5,
+     1.8,
+     13.5
+    ],
+    "look": [
+     0,
+     1.6,
+     10
+    ],
+    "fov": 40
+   },
+   "actors": [
+    {
+     "outfit": "cop",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "villager2",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    },
+    {
+     "outfit": "villager3",
+     "kind": "side",
+     "pos": [
+      3.8,
+      7.8
+     ],
+     "expr": "calm",
+     "seed": 17,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "They played it in the rescue truck. His own voice, calm, said, I know you'll find him. But don't follow the footprints down.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 7,
+   "dur": 12.97,
+   "light": "night",
+   "cam": {
+    "type": "rise",
+    "from": [
+     4.5,
+     1.3,
+     15
+    ],
+    "to": [
+     4.5,
+     5.2,
+     16.5
+    ],
+    "lookFrom": [
+     0,
+     1.6,
+     10
+    ],
+    "lookTo": [
+     0,
+     2.8,
+     9
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "cop",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "villager2",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    },
+    {
+     "outfit": "villager3",
+     "kind": "side",
+     "pos": [
+      3.8,
+      7.8
+     ],
+     "expr": "calm",
+     "seed": 17,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "The footprints led down. The team followed protocol and ignored them. Good. Something had pressed those prints deep. Eighty kilos heavier than him, by the depth.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 8,
+   "dur": 11.97,
+   "light": "night",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     6.5,
+     1.8,
+     15
+    ],
+    "lookFrom": [
+     1.6,
+     1.6,
+     10
+    ],
+    "lookTo": [
+     -1.6,
+     1.6,
+     8.0
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "cop",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "villager2",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    },
+    {
+     "outfit": "villager3",
+     "kind": "side",
+     "pos": [
+      3.8,
+      7.8
+     ],
+     "expr": "calm",
+     "seed": 17,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "They brought him down by a different path. In the truck mirror, the ridge was lined with figures standing, watching. The rescue photos show only rocks.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 9,
+   "dur": 8.07,
+   "light": "night",
+   "cam": {
+    "type": "static",
+    "pos": [
+     4.5,
+     1.8,
+     15
+    ],
+    "look": [
+     0,
+     1.6,
+     10
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "cop",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "villager2",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    },
+    {
+     "outfit": "villager3",
+     "kind": "side",
+     "pos": [
+      3.8,
+      7.8
+     ],
+     "expr": "calm",
+     "seed": 17,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "He hikes elsewhere now. Would you have followed the footprints? Like this if you trust protocol.",
+   "capStyle": "normal"
+  }
+ ]
+}

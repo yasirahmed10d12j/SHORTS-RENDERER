@@ -1,0 +1,360 @@
+{
+ "id": "the-morgue-night-shift",
+ "flatGround": true,
+ "set": {
+  "type": "interior",
+  "style": "morgue",
+  "gurney": true
+ },
+ "scenes": [
+  {
+   "n": 1,
+   "dur": 10.65,
+   "light": "fluoro",
+   "cam": {
+    "type": "pushIn",
+    "from": [
+     2.125,
+     2.0,
+     5.925000000000001
+    ],
+    "to": [
+     1.3,
+     1.6,
+     4
+    ],
+    "look": [
+     -0.6,
+     1.2,
+     -3
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "nurse",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "A morgue attendant in Chicago works alone at night. The rules on her first day were written by whoever held the job before her.",
+   "capStyle": "hook"
+  },
+  {
+   "n": 2,
+   "dur": 8.18,
+   "light": "fluoro",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     2.4000000000000004,
+     1.6,
+     4
+    ],
+    "lookFrom": [
+     0.28000000000000014,
+     1.2,
+     -3
+    ],
+    "lookTo": [
+     -1.48,
+     1.2,
+     -4.1
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "nurse",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    }
+   ],
+   "fx": [],
+   "caption": "Rule one. If a drawer is open when you arrive, do not close it. Count the drawers first.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 3,
+   "dur": 5.72,
+   "light": "fluoro",
+   "cam": {
+    "type": "orbit",
+    "center": [
+     -0.6,
+     0,
+     -3
+    ],
+    "r": 3.0250000000000004,
+    "h": 1.9,
+    "a0": -9,
+    "a1": 50,
+    "look": [
+     -0.6,
+     1.2,
+     -3
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "nurse",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "There are forty drawers. Some nights, she counts forty-one.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 4,
+   "dur": 8.68,
+   "light": "fluoro",
+   "cam": {
+    "type": "static",
+    "pos": [
+     1.3,
+     1.6,
+     4
+    ],
+    "look": [
+     -0.6,
+     1.2,
+     -3
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "nurse",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "Rule two. On those nights, log the extra as visitor and go home early. Never look inside.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 5,
+   "dur": 11.38,
+   "light": "fluoro",
+   "cam": {
+    "type": "pullOut",
+    "from": [
+     0.86,
+     1.6,
+     3.34
+    ],
+    "to": [
+     2.29,
+     2.2,
+     6.475
+    ],
+    "look": [
+     -0.6,
+     1.2,
+     -3
+    ],
+    "fov": 42
+   },
+   "actors": [
+    {
+     "outfit": "nurse",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    }
+   ],
+   "fx": [],
+   "caption": "She followed the rules for two years. Then, last October, the extra drawer was already labeled. With her full name. In her handwriting.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 6,
+   "dur": 8.65,
+   "light": "fluoro",
+   "cam": {
+    "type": "track",
+    "from": [
+     1.3,
+     1.6,
+     5.375
+    ],
+    "to": [
+     1.3,
+     1.6,
+     3.175
+    ],
+    "look": [
+     -0.6,
+     1.2,
+     -3
+    ],
+    "fov": 40
+   },
+   "actors": [
+    {
+     "outfit": "nurse",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "She did not look. She went home. At 3 AM, her phone buzzed. The morgue's front desk number.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 7,
+   "dur": 6.3,
+   "light": "fluoro",
+   "cam": {
+    "type": "rise",
+    "from": [
+     1.3,
+     1.1,
+     4
+    ],
+    "to": [
+     1.3,
+     3.47,
+     4.825
+    ],
+    "lookFrom": [
+     -0.6,
+     1.2,
+     -3
+    ],
+    "lookTo": [
+     -0.6,
+     2.4,
+     -4
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "nurse",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "A calm voice said, you did well. That's why it's empty again.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 8,
+   "dur": 11.75,
+   "light": "fluoro",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     2.4000000000000004,
+     1.6,
+     4
+    ],
+    "lookFrom": [
+     0.28000000000000014,
+     1.2,
+     -3
+    ],
+    "lookTo": [
+     -1.48,
+     1.2,
+     -4.1
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "nurse",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "She checked the morning count. Forty. Everything normal. Except the logbook entry she never wrote. Visitor left. Will return. In her handwriting.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 9,
+   "dur": 12.33,
+   "light": "fluoro",
+   "cam": {
+    "type": "static",
+    "pos": [
+     1.3,
+     1.6,
+     4
+    ],
+    "look": [
+     -0.6,
+     1.2,
+     -3
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "nurse",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "She still works nights. She says whoever held the job before her is protecting her. Would you have looked in the drawer? Comment DRAWER if you would have followed the rules.",
+   "capStyle": "normal"
+  }
+ ]
+}

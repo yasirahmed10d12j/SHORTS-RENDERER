@@ -1,0 +1,561 @@
+{
+ "id": "the-baby-monitor-voice",
+ "flatGround": true,
+ "set": {
+  "type": "interior",
+  "style": "room",
+  "bed": true
+ },
+ "scenes": [
+  {
+   "n": 1,
+   "dur": 9.0,
+   "light": "night",
+   "cam": {
+    "type": "pushIn",
+    "from": [
+     3.7299999999999995,
+     2.1,
+     6.37
+    ],
+    "to": [
+     2.8,
+     1.7,
+     4.2
+    ],
+    "look": [
+     -1,
+     1.3,
+     1
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "mother",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "kid",
+     "kind": "side",
+     "pos": [
+      0.8999999999999999,
+      -0.10000000000000009
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "A mother in Ohio heard a voice on her baby monitor at 2 AM. It was not coming from the nursery.",
+   "capStyle": "hook"
+  },
+  {
+   "n": 2,
+   "dur": 6.9,
+   "light": "night",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     4.04,
+     1.7,
+     4.2
+    ],
+    "lookFrom": [
+     -0.008000000000000007,
+     1.3,
+     1
+    ],
+    "lookTo": [
+     -1.992,
+     1.3,
+     -0.24
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "mother",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    },
+    {
+     "outfit": "kid",
+     "kind": "side",
+     "pos": [
+      0.8999999999999999,
+      -0.10000000000000009
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "It was coming from inside the monitor itself. And it was calling her name.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 3,
+   "dur": 7.95,
+   "light": "night",
+   "cam": {
+    "type": "orbit",
+    "center": [
+     -1,
+     0,
+     1
+    ],
+    "r": 3.41,
+    "h": 1.9,
+    "a0": -9,
+    "a1": 50,
+    "look": [
+     -1,
+     1.3,
+     1
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "mother",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "kid",
+     "kind": "side",
+     "pos": [
+      0.8999999999999999,
+      -0.10000000000000009
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "She ran to the nursery. Her daughter was asleep. The monitor on the crib was switched off.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 4,
+   "dur": 5.2,
+   "light": "night",
+   "cam": {
+    "type": "static",
+    "pos": [
+     2.8,
+     1.7,
+     4.2
+    ],
+    "look": [
+     -1,
+     1.3,
+     1
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "mother",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "kid",
+     "kind": "side",
+     "pos": [
+      0.8999999999999999,
+      -0.10000000000000009
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "But it was still transmitting. From the off state.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 5,
+   "dur": 5.95,
+   "light": "night",
+   "cam": {
+    "type": "pullOut",
+    "from": [
+     2.304,
+     1.7,
+     3.4560000000000004
+    ],
+    "to": [
+     3.916,
+     2.3,
+     6.99
+    ],
+    "look": [
+     -1,
+     1.3,
+     1
+    ],
+    "fov": 42
+   },
+   "actors": [
+    {
+     "outfit": "mother",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    },
+    {
+     "outfit": "kid",
+     "kind": "side",
+     "pos": [
+      0.8999999999999999,
+      -0.10000000000000009
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "The voice said, she's fine. You're the one who should check your room.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 6,
+   "dur": 9.28,
+   "light": "night",
+   "cam": {
+    "type": "track",
+    "from": [
+     2.8,
+     1.7,
+     5.75
+    ],
+    "to": [
+     2.8,
+     1.7,
+     3.2700000000000005
+    ],
+    "look": [
+     -1,
+     1.3,
+     1
+    ],
+    "fov": 40
+   },
+   "actors": [
+    {
+     "outfit": "mother",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "kid",
+     "kind": "side",
+     "pos": [
+      0.8999999999999999,
+      -0.10000000000000009
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "She checked. The window was open. This is a third floor apartment. The lock was painted shut last summer.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 7,
+   "dur": 10.85,
+   "light": "night",
+   "cam": {
+    "type": "rise",
+    "from": [
+     2.8,
+     1.2,
+     4.2
+    ],
+    "to": [
+     2.8,
+     3.808,
+     5.13
+    ],
+    "lookFrom": [
+     -1,
+     1.3,
+     1
+    ],
+    "lookTo": [
+     -1,
+     2.5,
+     0
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "mother",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "kid",
+     "kind": "side",
+     "pos": [
+      0.8999999999999999,
+      -0.10000000000000009
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "She grabbed her daughter and slept in the car. In the morning, on the nursery wall, written in dust, it said, next time close the window.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 8,
+   "dur": 11.75,
+   "light": "night",
+   "cam": {
+    "type": "static",
+    "pos": [
+     2.8,
+     1.7,
+     4.2
+    ],
+    "look": [
+     -1,
+     1.3,
+     1
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "mother",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "kid",
+     "kind": "side",
+     "pos": [
+      0.8999999999999999,
+      -0.10000000000000009
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "The building has no record of anyone living above, below, or beside her corner unit. Would you have checked the room? Comment MOM if this got you.",
+   "capStyle": "normal"
+  }
+ ]
+}

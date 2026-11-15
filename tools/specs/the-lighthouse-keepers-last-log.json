@@ -1,0 +1,493 @@
+{
+ "id": "the-lighthouse-keepers-last-log",
+ "flatGround": true,
+ "set": {
+  "type": "sea"
+ },
+ "scenes": [
+  {
+   "n": 1,
+   "dur": 11.05,
+   "light": "night",
+   "cam": {
+    "type": "pushIn",
+    "from": [
+     8.725,
+     2.9,
+     15.024999999999999
+    ],
+    "to": [
+     7,
+     2.5,
+     11
+    ],
+    "look": [
+     1,
+     3,
+     3
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "keeper",
+     "kind": "front",
+     "pos": [
+      2.0,
+      6.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      0,
+      17.2,
+      0
+     ],
+     "size": 6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "In 1972, a lighthouse keeper off the coast of Maine wrote his final log entry. It was not found for fifty years.",
+   "capStyle": "hook"
+  },
+  {
+   "n": 2,
+   "dur": 7.55,
+   "light": "night",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     9.3,
+     2.5,
+     11
+    ],
+    "lookFrom": [
+     2.84,
+     3,
+     3
+    ],
+    "lookTo": [
+     -0.8399999999999999,
+     3,
+     0.7000000000000002
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "keeper",
+     "kind": "front",
+     "pos": [
+      2.0,
+      6.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      0,
+      17.2,
+      0
+     ],
+     "size": 6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "The log was routine at first. Weather. Fuel. The ships that passed in the night.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 3,
+   "dur": 7.43,
+   "light": "night",
+   "cam": {
+    "type": "orbit",
+    "center": [
+     1,
+     0,
+     3
+    ],
+    "r": 6.324999999999999,
+    "h": 1.9,
+    "a0": -9,
+    "a1": 50,
+    "look": [
+     1,
+     3,
+     3
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "keeper",
+     "kind": "front",
+     "pos": [
+      2.0,
+      6.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      0,
+      17.2,
+      0
+     ],
+     "size": 6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "But on October 14th, the handwriting changed. It became shaky. Desperate.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 4,
+   "dur": 7.32,
+   "light": "night",
+   "cam": {
+    "type": "static",
+    "pos": [
+     7,
+     2.5,
+     11
+    ],
+    "look": [
+     1,
+     3,
+     3
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "keeper",
+     "kind": "front",
+     "pos": [
+      2.0,
+      6.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      0,
+      17.2,
+      0
+     ],
+     "size": 6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "There is a second light on the water, he wrote. It does not blink. It only watches.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 5,
+   "dur": 7.47,
+   "light": "night",
+   "cam": {
+    "type": "pullOut",
+    "from": [
+     6.08,
+     2.5,
+     9.620000000000001
+    ],
+    "to": [
+     9.07,
+     3.1,
+     16.175
+    ],
+    "look": [
+     1,
+     3,
+     3
+    ],
+    "fov": 42
+   },
+   "actors": [
+    {
+     "outfit": "keeper",
+     "kind": "front",
+     "pos": [
+      2.0,
+      6.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      0,
+      17.2,
+      0
+     ],
+     "size": 6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "The next entry was one sentence. It came up the stairs. I counted every one.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 6,
+   "dur": 9.68,
+   "light": "night",
+   "cam": {
+    "type": "track",
+    "from": [
+     7,
+     2.5,
+     13.875
+    ],
+    "to": [
+     7,
+     2.5,
+     9.275
+    ],
+    "look": [
+     1,
+     3,
+     3
+    ],
+    "fov": 40
+   },
+   "actors": [
+    {
+     "outfit": "keeper",
+     "kind": "front",
+     "pos": [
+      2.0,
+      6.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      0,
+      17.2,
+      0
+     ],
+     "size": 6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "The final entry was written in a hand that did not look human. If you are reading this, you already know how it ends.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 7,
+   "dur": 8.22,
+   "light": "night",
+   "cam": {
+    "type": "rise",
+    "from": [
+     7,
+     2.0,
+     11
+    ],
+    "to": [
+     7,
+     6.41,
+     12.725
+    ],
+    "lookFrom": [
+     1,
+     3,
+     3
+    ],
+    "lookTo": [
+     1,
+     4.2,
+     2
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "keeper",
+     "kind": "front",
+     "pos": [
+      2.0,
+      6.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      0,
+      17.2,
+      0
+     ],
+     "size": 6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "The Coast Guard found the tower empty. The lamp was still lit. The keeper was never found.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 8,
+   "dur": 9.93,
+   "light": "night",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     9.3,
+     2.5,
+     11
+    ],
+    "lookFrom": [
+     2.84,
+     3,
+     3
+    ],
+    "lookTo": [
+     -0.8399999999999999,
+     3,
+     0.7000000000000002
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "keeper",
+     "kind": "front",
+     "pos": [
+      2.0,
+      6.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      0,
+      17.2,
+      0
+     ],
+     "size": 6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "Last year, a diver found the log in a sealed case on the seabed, three hundred meters from shore. Someone carried it out.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 9,
+   "dur": 11.53,
+   "light": "night",
+   "cam": {
+    "type": "static",
+    "pos": [
+     7,
+     2.5,
+     11
+    ],
+    "look": [
+     1,
+     3,
+     3
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "keeper",
+     "kind": "front",
+     "pos": [
+      2.0,
+      6.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      0,
+      17.2,
+      0
+     ],
+     "size": 6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "And here is the part nobody can explain. The final line is dated tomorrow. Would you have kept reading? Comment LIGHT if this gave you chills.",
+   "capStyle": "normal"
+  }
+ ]
+}

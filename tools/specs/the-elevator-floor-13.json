@@ -1,0 +1,361 @@
+{
+ "id": "the-elevator-floor-13",
+ "flatGround": true,
+ "set": {
+  "type": "interior",
+  "style": "corridor",
+  "doors": 8,
+  "endLight": true
+ },
+ "scenes": [
+  {
+   "n": 1,
+   "dur": 10.75,
+   "light": "fluoro",
+   "cam": {
+    "type": "pushIn",
+    "from": [
+     2.125,
+     2.0,
+     4.925000000000001
+    ],
+    "to": [
+     1.3,
+     1.6,
+     3
+    ],
+    "look": [
+     -0.6,
+     1.3,
+     -4
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "clerk",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      0.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "A hotel in Chicago has an elevator with no button for floor 13. But sometimes, the elevator stops there anyway.",
+   "capStyle": "hook"
+  },
+  {
+   "n": 2,
+   "dur": 11.33,
+   "light": "fluoro",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     2.4000000000000004,
+     1.6,
+     3
+    ],
+    "lookFrom": [
+     0.28000000000000014,
+     1.3,
+     -4
+    ],
+    "lookTo": [
+     -1.48,
+     1.3,
+     -5.1
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "clerk",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      0.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    }
+   ],
+   "fx": [],
+   "caption": "The doors open to a hallway identical to every other floor. Same carpet. Same lights. Except every door is room 13.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 3,
+   "dur": 8.85,
+   "light": "fluoro",
+   "cam": {
+    "type": "orbit",
+    "center": [
+     -0.6,
+     0,
+     -4
+    ],
+    "r": 3.0250000000000004,
+    "h": 1.9,
+    "a0": -9,
+    "a1": 50,
+    "look": [
+     -0.6,
+     1.3,
+     -4
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "clerk",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      0.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "A businessman stepped out in 2011 on a dare from his colleagues. His room was 1313.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 4,
+   "dur": 7.6,
+   "light": "fluoro",
+   "cam": {
+    "type": "static",
+    "pos": [
+     1.3,
+     1.6,
+     3
+    ],
+    "look": [
+     -0.6,
+     1.3,
+     -4
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "clerk",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      0.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "He said the room was normal. Perfect, even. Fresh towels. A mint on the pillow.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 5,
+   "dur": 10.33,
+   "light": "fluoro",
+   "cam": {
+    "type": "pullOut",
+    "from": [
+     0.86,
+     1.6,
+     2.34
+    ],
+    "to": [
+     2.29,
+     2.2,
+     5.475
+    ],
+    "look": [
+     -0.6,
+     1.3,
+     -4
+    ],
+    "fov": 42
+   },
+   "actors": [
+    {
+     "outfit": "clerk",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      0.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    }
+   ],
+   "fx": [],
+   "caption": "Then he noticed the window. It showed the lobby, thirteen floors down, from the wrong angle. Like he was looking up at himself.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 6,
+   "dur": 7.95,
+   "light": "fluoro",
+   "cam": {
+    "type": "track",
+    "from": [
+     1.3,
+     1.6,
+     4.375
+    ],
+    "to": [
+     1.3,
+     1.6,
+     2.175
+    ],
+    "look": [
+     -0.6,
+     1.3,
+     -4
+    ],
+    "fov": 40
+   },
+   "actors": [
+    {
+     "outfit": "clerk",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      0.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "He went back to the elevator and pressed 7. The doors opened to a wall of solid brick.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 7,
+   "dur": 9.93,
+   "light": "fluoro",
+   "cam": {
+    "type": "rise",
+    "from": [
+     1.3,
+     1.1,
+     3
+    ],
+    "to": [
+     1.3,
+     3.47,
+     3.825
+    ],
+    "lookFrom": [
+     -0.6,
+     1.3,
+     -4
+    ],
+    "lookTo": [
+     -0.6,
+     2.5,
+     -5
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "clerk",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      0.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "He says the brick was warm. And that something on the other side was knocking politely, in the same rhythm as his own heart.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 8,
+   "dur": 16.47,
+   "light": "fluoro",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     2.4000000000000004,
+     1.6,
+     3
+    ],
+    "lookFrom": [
+     0.28000000000000014,
+     1.3,
+     -4
+    ],
+    "lookTo": [
+     -1.48,
+     1.3,
+     -5.1
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "clerk",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      0.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "Hotel staff found him at 5 AM, asleep in the elevator, holding a key card for room 1313. The hotel has no floor 13. No room 1313 exists. The key is real.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 9,
+   "dur": 9.23,
+   "light": "fluoro",
+   "cam": {
+    "type": "static",
+    "pos": [
+     1.3,
+     1.6,
+     3
+    ],
+    "look": [
+     -0.6,
+     1.3,
+     -4
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "clerk",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      0.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "He still has it. It works on his front door at home. Would you have stepped out? Comment 13 if you felt that.",
+   "capStyle": "normal"
+  }
+ ]
+}

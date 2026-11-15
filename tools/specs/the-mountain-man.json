@@ -1,0 +1,576 @@
+{
+ "id": "the-mountain-man",
+ "flatGround": true,
+ "set": {
+  "type": "outdoor",
+  "style": "forest",
+  "trees": 110
+ },
+ "scenes": [
+  {
+   "n": 1,
+   "dur": 10.25,
+   "light": "day",
+   "cam": {
+    "type": "pushIn",
+    "from": [
+     6.0,
+     2.2,
+     18.5
+    ],
+    "to": [
+     4.5,
+     1.8,
+     15
+    ],
+    "look": [
+     0,
+     1.6,
+     10
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "hiker",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "old",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "bird",
+     "pos": [
+      12,
+      14,
+      6
+     ],
+     "size": 1.4,
+     "at": [
+      0.05,
+      0.6
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "Hikers in the Rockies call him the Mountain Man. He has lived alone up there for forty years. No one knows his real name.",
+   "capStyle": "hook"
+  },
+  {
+   "n": 2,
+   "dur": 7.12,
+   "light": "day",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     6.5,
+     1.8,
+     15
+    ],
+    "lookFrom": [
+     1.6,
+     1.6,
+     10
+    ],
+    "lookTo": [
+     -1.6,
+     1.6,
+     8.0
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "hiker",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    },
+    {
+     "outfit": "old",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "bird",
+     "pos": [
+      12,
+      14,
+      6
+     ],
+     "size": 1.4,
+     "at": [
+      0.05,
+      0.6
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "Rangers tried to count how many cabins he has. They stopped counting at seven.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 3,
+   "dur": 8.65,
+   "light": "day",
+   "cam": {
+    "type": "orbit",
+    "center": [
+     0,
+     0,
+     10
+    ],
+    "r": 5.5,
+    "h": 1.9,
+    "a0": -9,
+    "a1": 50,
+    "look": [
+     0,
+     1.6,
+     10
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "hiker",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "old",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "bird",
+     "pos": [
+      12,
+      14,
+      6
+     ],
+     "size": 1.4,
+     "at": [
+      0.05,
+      0.6
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "He leaves no tracks in winter. None. Fresh snow, and the path to his cabin stays untouched.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 4,
+   "dur": 10.05,
+   "light": "day",
+   "cam": {
+    "type": "static",
+    "pos": [
+     4.5,
+     1.8,
+     15
+    ],
+    "look": [
+     0,
+     1.6,
+     10
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "hiker",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "old",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "bird",
+     "pos": [
+      12,
+      14,
+      6
+     ],
+     "size": 1.4,
+     "at": [
+      0.05,
+      0.6
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "A college student hiked up to interview him in 2019. His footage was found three days later, still recording.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 5,
+   "dur": 8.05,
+   "light": "golden",
+   "cam": {
+    "type": "pullOut",
+    "from": [
+     3.7,
+     1.8,
+     13.8
+    ],
+    "to": [
+     6.3,
+     2.4,
+     19.5
+    ],
+    "look": [
+     0,
+     1.6,
+     10
+    ],
+    "fov": 42
+   },
+   "actors": [
+    {
+     "outfit": "hiker",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    },
+    {
+     "outfit": "old",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "bird",
+     "pos": [
+      12,
+      14,
+      6
+     ],
+     "size": 1.4,
+     "at": [
+      0.05,
+      0.6
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "In the video, the Mountain Man seems normal. Kind, even. He offers the student tea.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 6,
+   "dur": 10.33,
+   "light": "golden",
+   "cam": {
+    "type": "track",
+    "from": [
+     4.5,
+     1.8,
+     17.5
+    ],
+    "to": [
+     4.5,
+     1.8,
+     13.5
+    ],
+    "look": [
+     0,
+     1.6,
+     10
+    ],
+    "fov": 40
+   },
+   "actors": [
+    {
+     "outfit": "hiker",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "old",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "bird",
+     "pos": [
+      12,
+      14,
+      6
+     ],
+     "size": 1.4,
+     "at": [
+      0.05,
+      0.6
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "Then, off camera, a voice asks a question. Not the student's voice. The student laughs and says, who else is up here with you?",
+   "capStyle": "normal"
+  },
+  {
+   "n": 7,
+   "dur": 5.93,
+   "light": "night",
+   "cam": {
+    "type": "rise",
+    "from": [
+     4.5,
+     1.3,
+     15
+    ],
+    "to": [
+     4.5,
+     5.2,
+     16.5
+    ],
+    "lookFrom": [
+     0,
+     1.6,
+     10
+    ],
+    "lookTo": [
+     0,
+     2.8,
+     9
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "hiker",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "old",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "The Mountain Man smiles and says, you should not have heard that.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 8,
+   "dur": 9.47,
+   "light": "night",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     6.5,
+     1.8,
+     15
+    ],
+    "lookFrom": [
+     1.6,
+     1.6,
+     10
+    ],
+    "lookTo": [
+     -1.6,
+     1.6,
+     8.0
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "hiker",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "old",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "The camera keeps running for six more hours. It only catches footsteps coming down the mountain. Never going up.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 9,
+   "dur": 12.25,
+   "light": "night",
+   "cam": {
+    "type": "static",
+    "pos": [
+     4.5,
+     1.8,
+     15
+    ],
+    "look": [
+     0,
+     1.6,
+     10
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "hiker",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "old",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "The student's family still posts about him every year. The Mountain Man has never been charged with anything. There is no body. Would you have drunk the tea?",
+   "capStyle": "normal"
+  }
+ ]
+}

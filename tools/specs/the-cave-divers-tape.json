@@ -1,0 +1,504 @@
+{
+ "id": "the-cave-divers-tape",
+ "flatGround": true,
+ "set": {
+  "type": "cave",
+  "gear": true,
+  "rope": true
+ },
+ "scenes": [
+  {
+   "n": 1,
+   "dur": 12.5,
+   "light": "cave",
+   "cam": {
+    "type": "pushIn",
+    "from": [
+     4.2,
+     2.2,
+     7.800000000000001
+    ],
+    "to": [
+     3,
+     1.8,
+     5
+    ],
+    "look": [
+     -1,
+     1.2,
+     -2
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "diver",
+     "kind": "front",
+     "pos": [
+      -2.0,
+      2.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      1.5,
+      1.4,
+      -4
+     ],
+     "size": 3.5,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.8
+    }
+   ],
+   "caption": "A cave diver in Florida mounted a camera on his helmet for a routine dive. The tape was recovered two hundred meters past the point of no return.",
+   "capStyle": "hook"
+  },
+  {
+   "n": 2,
+   "dur": 6.97,
+   "light": "cave",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     4.6,
+     1.8,
+     5
+    ],
+    "lookFrom": [
+     0.28000000000000025,
+     1.2,
+     -2
+    ],
+    "lookTo": [
+     -2.2800000000000002,
+     1.2,
+     -3.6
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "diver",
+     "kind": "front",
+     "pos": [
+      -2.0,
+      2.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      1.5,
+      1.4,
+      -4
+     ],
+     "size": 3.5,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.8
+    }
+   ],
+   "caption": "He was experienced. The passage was mapped. He had done it eleven times.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 3,
+   "dur": 8.45,
+   "light": "cave",
+   "cam": {
+    "type": "orbit",
+    "center": [
+     -1,
+     0,
+     -2
+    ],
+    "r": 4.4,
+    "h": 1.9,
+    "a0": -9,
+    "a1": 50,
+    "look": [
+     -1,
+     1.2,
+     -2
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "diver",
+     "kind": "front",
+     "pos": [
+      -2.0,
+      2.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      1.5,
+      1.4,
+      -4
+     ],
+     "size": 3.5,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.8
+    }
+   ],
+   "caption": "At minute six, his light caught a wall that is not on any map. Smooth. Carved. With handholds.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 4,
+   "dur": 7.47,
+   "light": "cave",
+   "cam": {
+    "type": "static",
+    "pos": [
+     3,
+     1.8,
+     5
+    ],
+    "look": [
+     -1,
+     1.2,
+     -2
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "diver",
+     "kind": "front",
+     "pos": [
+      -2.0,
+      2.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      1.5,
+      1.4,
+      -4
+     ],
+     "size": 3.5,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.8
+    }
+   ],
+   "caption": "Handholds placed at diving depth, leading down. Someone made them. For divers.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 5,
+   "dur": 10.58,
+   "light": "cave",
+   "cam": {
+    "type": "pullOut",
+    "from": [
+     2.36,
+     1.8,
+     4.04
+    ],
+    "to": [
+     4.44,
+     2.4,
+     8.6
+    ],
+    "look": [
+     -1,
+     1.2,
+     -2
+    ],
+    "fov": 42
+   },
+   "actors": [
+    {
+     "outfit": "diver",
+     "kind": "front",
+     "pos": [
+      -2.0,
+      2.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      1.5,
+      1.4,
+      -4
+     ],
+     "size": 3.5,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.8
+    }
+   ],
+   "caption": "His air was fine. He had a reason to turn back at minute eight. Instead, the camera shows him following the handholds down.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 6,
+   "dur": 10.62,
+   "light": "cave",
+   "cam": {
+    "type": "track",
+    "from": [
+     3,
+     1.8,
+     7.0
+    ],
+    "to": [
+     3,
+     1.8,
+     3.8
+    ],
+    "look": [
+     -1,
+     1.2,
+     -2
+    ],
+    "fov": 40
+   },
+   "actors": [
+    {
+     "outfit": "diver",
+     "kind": "front",
+     "pos": [
+      -2.0,
+      2.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      1.5,
+      1.4,
+      -4
+     ],
+     "size": 3.5,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.8
+    }
+   ],
+   "caption": "The last clear frame shows an opening. A dry cave, air above the water. And a wooden shelf with eleven helmets on it.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 7,
+   "dur": 11.63,
+   "light": "cave",
+   "cam": {
+    "type": "rise",
+    "from": [
+     3,
+     1.3,
+     5
+    ],
+    "to": [
+     3,
+     4.5200000000000005,
+     6.2
+    ],
+    "lookFrom": [
+     -1,
+     1.2,
+     -2
+    ],
+    "lookTo": [
+     -1,
+     2.4,
+     -3
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "diver",
+     "kind": "front",
+     "pos": [
+      -2.0,
+      2.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      1.5,
+      1.4,
+      -4
+     ],
+     "size": 3.5,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.8
+    }
+   ],
+   "caption": "Eleven. Like his eleven previous dives. All accounted for. His garage has ten helmets. He could never find the one from his first dive.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 8,
+   "dur": 9.07,
+   "light": "cave",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     4.6,
+     1.8,
+     5
+    ],
+    "lookFrom": [
+     0.28000000000000025,
+     1.2,
+     -2
+    ],
+    "lookTo": [
+     -2.2800000000000002,
+     1.2,
+     -3.6
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "diver",
+     "kind": "front",
+     "pos": [
+      -2.0,
+      2.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      1.5,
+      1.4,
+      -4
+     ],
+     "size": 3.5,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.8
+    }
+   ],
+   "caption": "The tape runs thirty more minutes in darkness. The audio is breathing. Two sets. One of them is his.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 9,
+   "dur": 10.25,
+   "light": "cave",
+   "cam": {
+    "type": "static",
+    "pos": [
+     3,
+     1.8,
+     5
+    ],
+    "look": [
+     -1,
+     1.2,
+     -2
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "diver",
+     "kind": "front",
+     "pos": [
+      -2.0,
+      2.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      1.5,
+      1.4,
+      -4
+     ],
+     "size": 3.5,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.8
+    }
+   ],
+   "caption": "The dive community sealed that passage. Would you have followed the handholds? Comment DIVE if you would have turned back at minute eight.",
+   "capStyle": "normal"
+  }
+ ]
+}

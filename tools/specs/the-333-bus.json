@@ -1,0 +1,485 @@
+{
+ "id": "the-333-bus",
+ "flatGround": true,
+ "set": {
+  "type": "interior",
+  "style": "bus"
+ },
+ "scenes": [
+  {
+   "n": 1,
+   "dur": 11.1,
+   "light": "street",
+   "cam": {
+    "type": "pushIn",
+    "from": [
+     -0.07499999999999996,
+     2.0,
+     5.125
+    ],
+    "to": [
+     -0.9,
+     1.6,
+     3.2
+    ],
+    "look": [
+     0.4,
+     1.2,
+     -1
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "nurse",
+     "kind": "front",
+     "pos": [
+      0.8,
+      0.5
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "man",
+     "kind": "side",
+     "pos": [
+      2.7,
+      -0.6000000000000001
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "Every city has buses you can see on a schedule. This one is not on any schedule. It only stops at 3:33 AM.",
+   "capStyle": "hook"
+  },
+  {
+   "n": 2,
+   "dur": 6.8,
+   "light": "street",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     0.20000000000000007,
+     1.6,
+     3.2
+    ],
+    "lookFrom": [
+     1.2800000000000002,
+     1.2,
+     -1
+    ],
+    "lookTo": [
+     -0.4800000000000001,
+     1.2,
+     -2.1
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "nurse",
+     "kind": "front",
+     "pos": [
+      0.8,
+      0.5
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    },
+    {
+     "outfit": "man",
+     "kind": "side",
+     "pos": [
+      2.7,
+      -0.6000000000000001
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "The first passenger who spoke about it was a nurse coming off a night shift.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 3,
+   "dur": 9.62,
+   "light": "street",
+   "cam": {
+    "type": "orbit",
+    "center": [
+     0.4,
+     0,
+     -1
+    ],
+    "r": 3.0250000000000004,
+    "h": 1.9,
+    "a0": -9,
+    "a1": 50,
+    "look": [
+     0.4,
+     1.2,
+     -1
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "nurse",
+     "kind": "front",
+     "pos": [
+      0.8,
+      0.5
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "man",
+     "kind": "side",
+     "pos": [
+      2.7,
+      -0.6000000000000001
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "She said the bus was warm inside, and every window was black, like the glass was painted from the outside.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 4,
+   "dur": 7.85,
+   "light": "street",
+   "cam": {
+    "type": "static",
+    "pos": [
+     -0.9,
+     1.6,
+     3.2
+    ],
+    "look": [
+     0.4,
+     1.2,
+     -1
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "nurse",
+     "kind": "front",
+     "pos": [
+      0.8,
+      0.5
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "man",
+     "kind": "side",
+     "pos": [
+      2.7,
+      -0.6000000000000001
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "The driver never looked up. But when she tapped her card, he said, you're early. She wasn't.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 5,
+   "dur": 7.6,
+   "light": "street",
+   "cam": {
+    "type": "pullOut",
+    "from": [
+     -1.34,
+     1.6,
+     2.54
+    ],
+    "to": [
+     0.09000000000000008,
+     2.2,
+     5.675000000000001
+    ],
+    "look": [
+     0.4,
+     1.2,
+     -1
+    ],
+    "fov": 42
+   },
+   "actors": [
+    {
+     "outfit": "nurse",
+     "kind": "front",
+     "pos": [
+      0.8,
+      0.5
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    },
+    {
+     "outfit": "man",
+     "kind": "side",
+     "pos": [
+      2.7,
+      -0.6000000000000001
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "She got off two stops early and walked home. That is why she is alive to tell this.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 6,
+   "dur": 10.05,
+   "light": "street",
+   "cam": {
+    "type": "track",
+    "from": [
+     -0.9,
+     1.6,
+     4.575
+    ],
+    "to": [
+     -0.9,
+     1.6,
+     2.375
+    ],
+    "look": [
+     0.4,
+     1.2,
+     -1
+    ],
+    "fov": 40
+   },
+   "actors": [
+    {
+     "outfit": "nurse",
+     "kind": "front",
+     "pos": [
+      0.8,
+      0.5
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "man",
+     "kind": "side",
+     "pos": [
+      2.7,
+      -0.6000000000000001
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "The next morning, three passengers from that same bus were reported missing. All of them stayed on until the last stop.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 7,
+   "dur": 11.33,
+   "light": "street",
+   "cam": {
+    "type": "rise",
+    "from": [
+     -0.9,
+     1.1,
+     3.2
+    ],
+    "to": [
+     -0.9,
+     3.47,
+     4.025
+    ],
+    "lookFrom": [
+     0.4,
+     1.2,
+     -1
+    ],
+    "lookTo": [
+     0.4,
+     2.4,
+     -2
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "nurse",
+     "kind": "front",
+     "pos": [
+      0.8,
+      0.5
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "man",
+     "kind": "side",
+     "pos": [
+      2.7,
+      -0.6000000000000001
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "City records show route 33 was decommissioned in 1987. The bus that runs it now has no license plate.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 8,
+   "dur": 8.0,
+   "light": "street",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     0.20000000000000007,
+     1.6,
+     3.2
+    ],
+    "lookFrom": [
+     1.2800000000000002,
+     1.2,
+     -1
+    ],
+    "lookTo": [
+     -0.4800000000000001,
+     1.2,
+     -2.1
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "nurse",
+     "kind": "front",
+     "pos": [
+      0.8,
+      0.5
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "man",
+     "kind": "side",
+     "pos": [
+      2.7,
+      -0.6000000000000001
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "The nurse still rides it sometimes. She says someone has to find out where the last stop is.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 9,
+   "dur": 10.7,
+   "light": "street",
+   "cam": {
+    "type": "static",
+    "pos": [
+     -0.9,
+     1.6,
+     3.2
+    ],
+    "look": [
+     0.4,
+     1.2,
+     -1
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "nurse",
+     "kind": "front",
+     "pos": [
+      0.8,
+      0.5
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "man",
+     "kind": "side",
+     "pos": [
+      2.7,
+      -0.6000000000000001
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "She has never made it past stop nine. Something always makes her pull the cord. Would you ride it? Comment 333.",
+   "capStyle": "normal"
+  }
+ ]
+}

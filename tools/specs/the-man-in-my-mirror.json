@@ -1,0 +1,504 @@
+{
+ "id": "the-man-in-my-mirror",
+ "flatGround": true,
+ "set": {
+  "type": "interior",
+  "style": "room",
+  "bed": false
+ },
+ "scenes": [
+  {
+   "n": 1,
+   "dur": 8.5,
+   "light": "lamp",
+   "cam": {
+    "type": "pushIn",
+    "from": [
+     3.7299999999999995,
+     2.1,
+     6.37
+    ],
+    "to": [
+     2.8,
+     1.7,
+     4.2
+    ],
+    "look": [
+     -1,
+     1.3,
+     1
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "man",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "I noticed it on a Tuesday. The man in my bathroom mirror blinked half a second after I did.",
+   "capStyle": "hook"
+  },
+  {
+   "n": 2,
+   "dur": 10.05,
+   "light": "lamp",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     4.04,
+     1.7,
+     4.2
+    ],
+    "lookFrom": [
+     -0.008000000000000007,
+     1.3,
+     1
+    ],
+    "lookTo": [
+     -1.992,
+     1.3,
+     -0.24
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "man",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "I tested it for a week. Toothbrush up, he lagged. Hair down, he lagged. Every single time, half a second behind.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 3,
+   "dur": 7.78,
+   "light": "lamp",
+   "cam": {
+    "type": "orbit",
+    "center": [
+     -1,
+     0,
+     1
+    ],
+    "r": 3.41,
+    "h": 1.9,
+    "a0": -9,
+    "a1": 50,
+    "look": [
+     -1,
+     1.3,
+     1
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "man",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "I told myself it was tired eyes, until the night he raised his hand when I had not.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 4,
+   "dur": 7.07,
+   "light": "lamp",
+   "cam": {
+    "type": "static",
+    "pos": [
+     2.8,
+     1.7,
+     4.2
+    ],
+    "look": [
+     -1,
+     1.3,
+     1
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "man",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "Just a small wave. Almost polite. Like he was saying, finally, you noticed.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 5,
+   "dur": 9.53,
+   "light": "lamp",
+   "cam": {
+    "type": "pullOut",
+    "from": [
+     2.304,
+     1.7,
+     3.4560000000000004
+    ],
+    "to": [
+     3.916,
+     2.3,
+     6.99
+    ],
+    "look": [
+     -1,
+     1.3,
+     1
+    ],
+    "fov": 42
+   },
+   "actors": [
+    {
+     "outfit": "man",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "I covered the mirror with a towel. From behind the fabric, I heard breathing that matched mine, half a second late.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 6,
+   "dur": 10.33,
+   "light": "lamp",
+   "cam": {
+    "type": "track",
+    "from": [
+     2.8,
+     1.7,
+     5.75
+    ],
+    "to": [
+     2.8,
+     1.7,
+     3.2700000000000005
+    ],
+    "look": [
+     -1,
+     1.3,
+     1
+    ],
+    "fov": 40
+   },
+   "actors": [
+    {
+     "outfit": "man",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "My roommate took the towel off as a joke. The mirror showed the bathroom. Empty. Behind him, a second man. Smiling.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 7,
+   "dur": 7.93,
+   "light": "lamp",
+   "cam": {
+    "type": "rise",
+    "from": [
+     2.8,
+     1.2,
+     4.2
+    ],
+    "to": [
+     2.8,
+     3.808,
+     5.13
+    ],
+    "lookFrom": [
+     -1,
+     1.3,
+     1
+    ],
+    "lookTo": [
+     -1,
+     2.5,
+     0
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "man",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "We moved out that week. The new tenants posted online about a weird echo in the bathroom.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 8,
+   "dur": 7.1,
+   "light": "lamp",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     4.04,
+     1.7,
+     4.2
+    ],
+    "lookFrom": [
+     -0.008000000000000007,
+     1.3,
+     1
+    ],
+    "lookTo": [
+     -1.992,
+     1.3,
+     -0.24
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "man",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "They said it feels like someone is always half a second away from copying you.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 9,
+   "dur": 9.85,
+   "light": "lamp",
+   "cam": {
+    "type": "static",
+    "pos": [
+     2.8,
+     1.7,
+     4.2
+    ],
+    "look": [
+     -1,
+     1.3,
+     1
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "man",
+     "kind": "front",
+     "pos": [
+      -1.0,
+      1.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "glow",
+     "pos": [
+      3.2,
+      1.3,
+      -3.2
+     ],
+     "size": 2.6,
+     "at": [
+      0,
+      1
+     ],
+     "cycle": true,
+     "alpha": 0.7
+    }
+   ],
+   "caption": "I still get tagged in their posts. I never reply. Would you have taken the towel off? Comment MIRROR if this one got you.",
+   "capStyle": "normal"
+  }
+ ]
+}

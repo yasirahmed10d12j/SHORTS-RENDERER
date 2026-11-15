@@ -1,0 +1,359 @@
+{
+ "id": "the-lake-that-never-freezes",
+ "flatGround": true,
+ "set": {
+  "type": "lake",
+  "boat": true
+ },
+ "scenes": [
+  {
+   "n": 1,
+   "dur": 11.15,
+   "light": "golden",
+   "cam": {
+    "type": "pushIn",
+    "from": [
+     6.5,
+     2.4,
+     15.5
+    ],
+    "to": [
+     5,
+     2,
+     12
+    ],
+    "look": [
+     0,
+     1.2,
+     4
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "hiker",
+     "kind": "front",
+     "pos": [
+      0.0,
+      7.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "There is a lake in Finland that stays liquid at minus forty. The locals don't skate on it. They don't fish. They don't look at it for long.",
+   "capStyle": "hook"
+  },
+  {
+   "n": 2,
+   "dur": 13.3,
+   "light": "golden",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     7.0,
+     2,
+     12
+    ],
+    "lookFrom": [
+     1.6,
+     1.2,
+     4
+    ],
+    "lookTo": [
+     -1.6,
+     1.2,
+     2.0
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "hiker",
+     "kind": "front",
+     "pos": [
+      0.0,
+      7.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    }
+   ],
+   "fx": [],
+   "caption": "In 1979, a scientist measured its temperature. Constant. Every depth. Every season. Exactly four degrees. Like it is being kept that way.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 3,
+   "dur": 10.88,
+   "light": "moonlit",
+   "cam": {
+    "type": "orbit",
+    "center": [
+     0,
+     0,
+     4
+    ],
+    "r": 5.5,
+    "h": 1.9,
+    "a0": -9,
+    "a1": 50,
+    "look": [
+     0,
+     1.2,
+     4
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "hiker",
+     "kind": "front",
+     "pos": [
+      0.0,
+      7.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "He dropped a weighted camera down on a cable. At ninety meters, the water was not water anymore. The camera showed a ceiling.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 4,
+   "dur": 7.93,
+   "light": "moonlit",
+   "cam": {
+    "type": "static",
+    "pos": [
+     5,
+     2,
+     12
+    ],
+    "look": [
+     0,
+     1.2,
+     4
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "hiker",
+     "kind": "front",
+     "pos": [
+      0.0,
+      7.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "A smooth ceiling, and below it, a room. With a table. And two chairs facing each other.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 5,
+   "dur": 10.12,
+   "light": "moonlit",
+   "cam": {
+    "type": "pullOut",
+    "from": [
+     4.2,
+     2,
+     10.8
+    ],
+    "to": [
+     6.8,
+     2.6,
+     16.5
+    ],
+    "look": [
+     0,
+     1.2,
+     4
+    ],
+    "fov": 42
+   },
+   "actors": [
+    {
+     "outfit": "hiker",
+     "kind": "front",
+     "pos": [
+      0.0,
+      7.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    }
+   ],
+   "fx": [],
+   "caption": "The cable kept feeding out. The reading said three hundred meters down. The lake bed map says the lake is twelve meters deep.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 6,
+   "dur": 8.9,
+   "light": "moonlit",
+   "cam": {
+    "type": "track",
+    "from": [
+     5,
+     2,
+     14.5
+    ],
+    "to": [
+     5,
+     2,
+     10.5
+    ],
+    "look": [
+     0,
+     1.2,
+     4
+    ],
+    "fov": 40
+   },
+   "actors": [
+    {
+     "outfit": "hiker",
+     "kind": "front",
+     "pos": [
+      0.0,
+      7.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "The camera's last frame. The two chairs. One of them had just been pushed back. Like someone stood up.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 7,
+   "dur": 9.38,
+   "light": "moonlit",
+   "cam": {
+    "type": "rise",
+    "from": [
+     5,
+     1.5,
+     12
+    ],
+    "to": [
+     5,
+     5.4,
+     13.5
+    ],
+    "lookFrom": [
+     0,
+     1.2,
+     4
+    ],
+    "lookTo": [
+     0,
+     2.4,
+     3
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "hiker",
+     "kind": "front",
+     "pos": [
+      0.0,
+      7.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "The cable snapped. Not cut. Snapped, from the bottom, upward. The lake has not given anything back since.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 8,
+   "dur": 11.7,
+   "light": "moonlit",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     7.0,
+     2,
+     12
+    ],
+    "lookFrom": [
+     1.6,
+     1.2,
+     4
+    ],
+    "lookTo": [
+     -1.6,
+     1.2,
+     2.0
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "hiker",
+     "kind": "front",
+     "pos": [
+      0.0,
+      7.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "The scientist published his data and left the country. He said one thing in his final interview. The lake is not deep. It is above something deep.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 9,
+   "dur": 9.47,
+   "light": "moonlit",
+   "cam": {
+    "type": "static",
+    "pos": [
+     5,
+     2,
+     12
+    ],
+    "look": [
+     0,
+     1.2,
+     4
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "hiker",
+     "kind": "front",
+     "pos": [
+      0.0,
+      7.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "The lake is fenced now. The fence has no gate. Would you have looked through the ice? Comment LAKE if this one stuck with you.",
+   "capStyle": "normal"
+  }
+ ]
+}

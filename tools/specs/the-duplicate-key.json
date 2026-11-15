@@ -1,0 +1,361 @@
+{
+ "id": "the-duplicate-key",
+ "flatGround": true,
+ "set": {
+  "type": "interior",
+  "style": "corridor",
+  "doors": 5,
+  "doorStart": 2
+ },
+ "scenes": [
+  {
+   "n": 1,
+   "dur": 9.18,
+   "light": "lamp",
+   "cam": {
+    "type": "pushIn",
+    "from": [
+     2.125,
+     2.0,
+     4.925000000000001
+    ],
+    "to": [
+     1.3,
+     1.6,
+     3
+    ],
+    "look": [
+     -0.6,
+     1.3,
+     -4
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "clerk",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      0.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "A locksmith in Berlin received an order for one duplicate key. The order form was his own address.",
+   "capStyle": "hook"
+  },
+  {
+   "n": 2,
+   "dur": 7.72,
+   "light": "lamp",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     2.4000000000000004,
+     1.6,
+     3
+    ],
+    "lookFrom": [
+     0.28000000000000014,
+     1.3,
+     -4
+    ],
+    "lookTo": [
+     -1.48,
+     1.3,
+     -5.1
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "clerk",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      0.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    }
+   ],
+   "fx": [],
+   "caption": "His address. His door. His name, written in his own handwriting. He had not written it.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 3,
+   "dur": 11.4,
+   "light": "lamp",
+   "cam": {
+    "type": "orbit",
+    "center": [
+     -0.6,
+     0,
+     -4
+    ],
+    "r": 3.0250000000000004,
+    "h": 1.9,
+    "a0": -9,
+    "a1": 50,
+    "look": [
+     -0.6,
+     1.3,
+     -4
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "clerk",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      0.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "He assumed it was a prank, until he found a second key inside his own lock that evening. Brand new. Exactly the one he would have made.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 4,
+   "dur": 8.55,
+   "light": "lamp",
+   "cam": {
+    "type": "static",
+    "pos": [
+     1.3,
+     1.6,
+     3
+    ],
+    "look": [
+     -0.6,
+     1.3,
+     -4
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "clerk",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      0.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "He changed the locks that night. At 3 AM, someone tried the old key anyway. Then stopped.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 5,
+   "dur": 7.3,
+   "light": "lamp",
+   "cam": {
+    "type": "pullOut",
+    "from": [
+     0.86,
+     1.6,
+     2.34
+    ],
+    "to": [
+     2.29,
+     2.2,
+     5.475
+    ],
+    "look": [
+     -0.6,
+     1.3,
+     -4
+    ],
+    "fov": 42
+   },
+   "actors": [
+    {
+     "outfit": "clerk",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      0.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    }
+   ],
+   "fx": [],
+   "caption": "Then a voice from the hallway said, calm and polite, it's okay. I have the new one.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 6,
+   "dur": 9.0,
+   "light": "lamp",
+   "cam": {
+    "type": "track",
+    "from": [
+     1.3,
+     1.6,
+     4.375
+    ],
+    "to": [
+     1.3,
+     1.6,
+     2.175
+    ],
+    "look": [
+     -0.6,
+     1.3,
+     -4
+    ],
+    "fov": 40
+   },
+   "actors": [
+    {
+     "outfit": "clerk",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      0.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "He called the police. They arrived in four minutes. The hallway was empty. The doormat was still warm.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 7,
+   "dur": 8.75,
+   "light": "lamp",
+   "cam": {
+    "type": "rise",
+    "from": [
+     1.3,
+     1.1,
+     3
+    ],
+    "to": [
+     1.3,
+     3.47,
+     3.825
+    ],
+    "lookFrom": [
+     -0.6,
+     1.3,
+     -4
+    ],
+    "lookTo": [
+     -0.6,
+     2.5,
+     -5
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "clerk",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      0.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "Weeks later, his doorbell camera caught one frame of a man holding a key up to the lens. Smiling.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 8,
+   "dur": 11.78,
+   "light": "lamp",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     2.4000000000000004,
+     1.6,
+     3
+    ],
+    "lookFrom": [
+     0.28000000000000014,
+     1.3,
+     -4
+    ],
+    "lookTo": [
+     -1.48,
+     1.3,
+     -5.1
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "clerk",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      0.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "The locksmith moved cities. Last month, he received another order form. One duplicate key. His new address, in his handwriting again.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 9,
+   "dur": 11.35,
+   "light": "lamp",
+   "cam": {
+    "type": "static",
+    "pos": [
+     1.3,
+     1.6,
+     3
+    ],
+    "look": [
+     -0.6,
+     1.3,
+     -4
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "clerk",
+     "kind": "front",
+     "pos": [
+      -0.9,
+      0.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    }
+   ],
+   "fx": [],
+   "caption": "He is moving again tonight. If you were him, would you make the key? Or would that be exactly what it wants? Like this if you would burn the order.",
+   "capStyle": "normal"
+  }
+ ]
+}

@@ -1,0 +1,577 @@
+{
+ "id": "the-town-that-vanished",
+ "flatGround": true,
+ "set": {
+  "type": "outdoor",
+  "style": "town",
+  "houses": 10,
+  "lamps": 6
+ },
+ "scenes": [
+  {
+   "n": 1,
+   "dur": 15.1,
+   "light": "day",
+   "cam": {
+    "type": "pushIn",
+    "from": [
+     6.0,
+     2.4,
+     18.5
+    ],
+    "to": [
+     4.5,
+     2,
+     15
+    ],
+    "look": [
+     0,
+     1.6,
+     10
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "old",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "villager1",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "bird",
+     "pos": [
+      12,
+      14,
+      6
+     ],
+     "size": 1.4,
+     "at": [
+      0.05,
+      0.6
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "In 1954, the fishing town of Bellhaven in Scotland had 611 residents. Today, every official record lists it as zero. No one remembers it emptying.",
+   "capStyle": "hook"
+  },
+  {
+   "n": 2,
+   "dur": 12.23,
+   "light": "day",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     6.5,
+     2,
+     15
+    ],
+    "lookFrom": [
+     1.6,
+     1.6,
+     10
+    ],
+    "lookTo": [
+     -1.6,
+     1.6,
+     8.0
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "old",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    },
+    {
+     "outfit": "villager1",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "bird",
+     "pos": [
+      12,
+      14,
+      6
+     ],
+     "size": 1.4,
+     "at": [
+      0.05,
+      0.6
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "The houses still stand. Doors unlocked. Meals set on tables. A kettle in every kitchen, still warm, according to the last survey team.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 3,
+   "dur": 10.08,
+   "light": "day",
+   "cam": {
+    "type": "orbit",
+    "center": [
+     0,
+     0,
+     10
+    ],
+    "r": 5.5,
+    "h": 1.9,
+    "a0": -9,
+    "a1": 50,
+    "look": [
+     0,
+     1.6,
+     10
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "old",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "villager1",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "bird",
+     "pos": [
+      12,
+      14,
+      6
+     ],
+     "size": 1.4,
+     "at": [
+      0.05,
+      0.6
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "The team of four went in 1988. The survey paperwork lists them checking in at the harbor at 9 AM.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 4,
+   "dur": 8.32,
+   "light": "day",
+   "cam": {
+    "type": "static",
+    "pos": [
+     4.5,
+     2,
+     15
+    ],
+    "look": [
+     0,
+     1.6,
+     10
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "old",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "villager1",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "bird",
+     "pos": [
+      12,
+      14,
+      6
+     ],
+     "size": 1.4,
+     "at": [
+      0.05,
+      0.6
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "It lists them checking out at 9 AM. Same timestamp. Same morning. Their own writing.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 5,
+   "dur": 10.7,
+   "light": "golden",
+   "cam": {
+    "type": "pullOut",
+    "from": [
+     3.7,
+     2,
+     13.8
+    ],
+    "to": [
+     6.3,
+     2.6,
+     19.5
+    ],
+    "look": [
+     0,
+     1.6,
+     10
+    ],
+    "fov": 42
+   },
+   "actors": [
+    {
+     "outfit": "old",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3,
+     "mode": "stand"
+    },
+    {
+     "outfit": "villager1",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "bird",
+     "pos": [
+      12,
+      14,
+      6
+     ],
+     "size": 1.4,
+     "at": [
+      0.05,
+      0.6
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "None of them remember the years between. One woke up in a hospital three hundred miles away, with rope burns on both wrists.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 6,
+   "dur": 10.9,
+   "light": "golden",
+   "cam": {
+    "type": "track",
+    "from": [
+     4.5,
+     2,
+     17.5
+    ],
+    "to": [
+     4.5,
+     2,
+     13.5
+    ],
+    "look": [
+     0,
+     1.6,
+     10
+    ],
+    "fov": 40
+   },
+   "actors": [
+    {
+     "outfit": "old",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "villager1",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "bird",
+     "pos": [
+      12,
+      14,
+      6
+     ],
+     "size": 1.4,
+     "at": [
+      0.05,
+      0.6
+     ],
+     "cycle": true
+    }
+   ],
+   "caption": "He kept one thing from Bellhaven. A brass door key, warm to the touch. It is always warm. His doctor has no explanation.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 7,
+   "dur": 12.4,
+   "light": "night",
+   "cam": {
+    "type": "rise",
+    "from": [
+     4.5,
+     1.5,
+     15
+    ],
+    "to": [
+     4.5,
+     5.4,
+     16.5
+    ],
+    "lookFrom": [
+     0,
+     1.6,
+     10
+    ],
+    "lookTo": [
+     0,
+     2.8,
+     9
+    ],
+    "fov": 44
+   },
+   "actors": [
+    {
+     "outfit": "old",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "villager1",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "In 2020, a drone flew over Bellhaven. On the thermal camera, every house radiated heat. Every single one. The chimneys were cold.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 8,
+   "dur": 11.35,
+   "light": "night",
+   "cam": {
+    "type": "pan",
+    "pos": [
+     6.5,
+     2,
+     15
+    ],
+    "lookFrom": [
+     1.6,
+     1.6,
+     10
+    ],
+    "lookTo": [
+     -1.6,
+     1.6,
+     8.0
+    ],
+    "fov": 46
+   },
+   "actors": [
+    {
+     "outfit": "old",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "villager1",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "The drone's last frame shows 611 people standing in the streets, looking straight up at the camera. Perfectly still. Smiling.",
+   "capStyle": "normal"
+  },
+  {
+   "n": 9,
+   "dur": 10.58,
+   "light": "night",
+   "cam": {
+    "type": "static",
+    "pos": [
+     4.5,
+     2,
+     15
+    ],
+    "look": [
+     0,
+     1.6,
+     10
+    ],
+    "fov": 45,
+    "jitter": true
+   },
+   "actors": [
+    {
+     "outfit": "old",
+     "kind": "front",
+     "pos": [
+      0.0,
+      10.0
+     ],
+     "expr": "calm",
+     "seed": 3
+    },
+    {
+     "outfit": "villager1",
+     "kind": "side",
+     "pos": [
+      1.9,
+      8.9
+     ],
+     "expr": "calm",
+     "seed": 10,
+     "dir": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "fx": [],
+   "caption": "The footage is real. The analysis is public. Would you walk those streets? Comment BELLHAVEN if you want part two.",
+   "capStyle": "normal"
+  }
+ ]
+}
