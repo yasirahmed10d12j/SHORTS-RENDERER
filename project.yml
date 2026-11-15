@@ -18,7 +18,11 @@ targets:
         excludes:
           - "engine/app.js"
           - "engine/engine.html"
+          - "voices"
       - path: App/engine
+        type: folder
+        buildPhase: resources
+      - path: App/voices
         type: folder
         buildPhase: resources
     info:

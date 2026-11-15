@@ -20,10 +20,10 @@ struct BuiltInStory: Codable, Identifiable, Comparable, Equatable {
         lhs.title < rhs.title
     }
     
-    /// Rough estimate of total voice duration (~4 chars/sec average speech rate).
+    /// Rough estimate of total voice duration (~12.5 chars/sec at speed 0.95).
     var estimatedDuration: Double {
         let totalChars = scenes.map(\.narration).joined().count
-        return Double(totalChars) / 4.0
+        return Double(totalChars) / 12.5
     }
     
     /// Converts to StoryScript for compatibility with existing render pipeline.

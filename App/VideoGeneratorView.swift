@@ -47,7 +47,6 @@ struct VideoGeneratorView: View {
     // --- built-in stories ---
     @State private var builtInStories: [BuiltInStory] = []
     @State private var selectedStory: BuiltInStory?
-    @State private var useBuiltIn = false
 
     @State private var script: StoryScript?
     @State private var scriptBusy = false
@@ -173,7 +172,7 @@ struct VideoGeneratorView: View {
     private var storyPickerSection: some View {
         GroupBox("📚 Built-In Stories — select one to render instantly") {
             VStack(alignment: .leading, spacing: 10) {
-                Text("Choose from \(builtInStories.count) ready-made stories with iOS voiceover:")
+                Text("Choose from \(builtInStories.count) ready-made stories — bundled voiceover, ek click render:")
                     .font(.caption).foregroundStyle(.secondary)
                 
                 ScrollView(.horizontal, showsIndicators: false) {
@@ -210,7 +209,8 @@ struct VideoGeneratorView: View {
         sceneStatus = [:]
         players = [:]
         allVoicesReady = false
-        status = "✅ '\(story.title)' selected — ab Voice generate karo."
+        clearOldScriptFiles()  // remove stale voice from previous script
+        Task { await loadBundledVoices(for: story) }
     }
 
     // ── script cards ────────────────────────────────────────────────────────
@@ -252,18 +252,32 @@ struct VideoGeneratorView: View {
     // ── voice controls ──────────────────────────────────────────────────────
 
     private var voiceControls: some View {
-        GroupBox("Step 3 — voice generation") {
+        GroupBox("Step 3 — voice") {
             VStack(spacing: 10) {
-                Picker("Voice", selection: $voiceID) {
-                    if voices.isEmpty { Text("Key save karo →").tag("") }
-                    ForEach(voices) { v in Text(v.name).tag(v.voiceId) }
-                }
-                Button { Task { await genAllVoices() } } label: {
-                    Label(allVoicesReady ? "🔄 Voice dobara" : "✅ Voice generate", systemImage: "waveform")
+                if selectedStory != nil {
+                    // built-in story: voiceover is bundled in the app, nothing to generate
+                    Label("Voice bundled — ab seedha Render dabao", systemImage: "checkmark.seal.fill")
+                        .font(.subheadline.bold())
+                        .foregroundStyle(.green)
                         .frame(maxWidth: .infinity)
+                    if !allVoicesReady {
+                        HStack(spacing: 8) {
+                            ProgressView()
+                            Text("Bundled voice load ho rahi hai…").font(.caption).foregroundStyle(.secondary)
+                        }
+                    }
+                } else {
+                    Picker("Voice", selection: $voiceID) {
+                        if voices.isEmpty { Text("Key save karo →").tag("") }
+                        ForEach(voices) { v in Text(v.name).tag(v.voiceId) }
+                    }
+                    Button { Task { await genAllVoices() } } label: {
+                        Label(allVoicesReady ? "🔄 Voice dobara" : "✅ Voice generate", systemImage: "waveform")
+                            .frame(maxWidth: .infinity)
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .disabled(voiceBusy || voiceID.isEmpty)
                 }
-                .buttonStyle(.borderedProminent)
-                .disabled(voiceBusy || voiceID.isEmpty)
                 if !status.isEmpty { Text(status).font(.caption).foregroundStyle(.secondary) }
             }
             .padding(4)
@@ -326,6 +340,7 @@ struct VideoGeneratorView: View {
     private func makeScript() async {
         scriptBusy = true
         status = "Script ban rahi hai…"
+        selectedStory = nil
         clearOldScriptFiles()  // remove stale voice from previous story
         do {
             guard let key = Keychain.get("llm_key") else { throw LLMError.empty }
@@ -340,6 +355,7 @@ struct VideoGeneratorView: View {
     }
 
     private func parsePasted() {
+        selectedStory = nil
         clearOldScriptFiles()  // remove stale voice from previous story
         let s = LLM.parseScriptText(pasteText)
         script = s
@@ -367,14 +383,8 @@ struct VideoGeneratorView: View {
 
     private func genAllVoices() async {
         guard let s = script else { return }
-        
-        // Check if this is a built-in story
-        if let _ = selectedStory {
-            await genBuiltInStoryVoices(script: s)
-            return
-        }
-        
-        // Use ElevenLabs for custom scripts
+
+        // Custom scripts only — built-in stories use loadBundledVoices() automatically.
         guard let key = Keychain.get("elevenlabs_key") else {
             status = "Pehle ElevenLabs key save karo."; return
         }
@@ -406,37 +416,49 @@ struct VideoGeneratorView: View {
         voiceBusy = false
     }
 
-    /// Generate voices for built-in stories using iOS TTS (no API key needed).
-    private func genBuiltInStoryVoices(script: StoryScript) async {
+    /// Built-in story: voiceover MP3s ship inside the app bundle (voices/<story-id>/scene-XX.mp3,
+    /// generated on the laptop with Kokoro). Copy them into Documents/script/ so AudioMux
+    /// picks them up — no on-device synthesis, no API key.
+    private func loadBundledVoices(for story: BuiltInStory) async {
         voiceBusy = true; allVoicesReady = false
+        status = "Bundled voice load ho rahi hai…"
         let docs = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let folder = docs.appendingPathComponent("script", isDirectory: true)
         try? FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
-        var metas: [[String: Any]] = []; var ok = true
-        
-        for sc in script.scenes {
-            sceneStatus[sc.n] = "synthesizing..."
+        var metas: [[String: Any]] = []
+        var totalDur = 0.0
+
+        for sc in story.scenes {
+            let name = String(format: "scene-%02d", sc.n)
+            // folder reference in bundle keeps per-story subfolders: voices/<id>/scene-XX.mp3
+            guard let bundled = Bundle.main.url(forResource: name, withExtension: "mp3",
+                                                subdirectory: "voices/\(story.id)") else {
+                status = "❌ Bundled voice missing: \(story.id)/\(name).mp3"
+                voiceBusy = false
+                return
+            }
+            let file = folder.appendingPathComponent(name + ".mp3")
             do {
-                let audioData = try await AppleTTS.synthesize(text: sc.narration)
-                let file = folder.appendingPathComponent("scene-\(String(format: "%02d", sc.n)).wav")
-                try audioData.write(to: file)
-                let duration = Double(audioData.count) / 88200.0 // rough WAV estimate
-                metas.append(["n": sc.n, "audio": file.lastPathComponent, "duration": duration])
-                sceneStatus[sc.n] = "✅ \(String(format: "%.1f", duration))s"
+                try? FileManager.default.removeItem(at: file)
+                try FileManager.default.copyItem(at: bundled, to: file)
+                let dur = AudioMux.duration(of: file)
+                metas.append(["n": sc.n, "audio": file.lastPathComponent, "duration": dur])
+                totalDur += dur
+                sceneStatus[sc.n] = "✅ \(String(format: "%.1f", dur))s"
                 players[sc.n] = try? AVAudioPlayer(contentsOf: file)
             } catch {
-                sceneStatus[sc.n] = "❌ \(error.localizedDescription)"; ok = false
+                status = "❌ Voice copy fail: \(error.localizedDescription)"
+                voiceBusy = false
+                return
             }
         }
-        
-        if ok, let json = try? JSONSerialization.data(withJSONObject: ["title": script.title, "scenes": metas]) {
+
+        if let json = try? JSONSerialization.data(withJSONObject: ["title": story.title, "scenes": metas]) {
             try? json.write(to: folder.appendingPathComponent("scenes.json"))
-            allVoicesReady = true
-            status = "✅ Built-in story voice ready — ab Render dabao!"
-        } else if !metas.isEmpty {
-            status = "\(metas.count)/\(script.scenes.count) ready"
         }
+        allVoicesReady = true
         voiceBusy = false
+        status = String(format: "✅ Voice ready (%.0fs) — ab Render dabao.", totalDur)
     }
 
     private func runRender() async {
