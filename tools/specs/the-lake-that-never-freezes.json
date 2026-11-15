@@ -3,7 +3,8 @@
  "flatGround": true,
  "set": {
   "type": "lake",
-  "boat": true
+  "boat": true,
+  "cabin": true
  },
  "scenes": [
   {

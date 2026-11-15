@@ -500,5 +500,14 @@
    "caption": "She never told anyone her childhood nickname was Maya. Would you call the number back? Like if you got chills.",
    "capStyle": "normal"
   }
+ ],
+ "props": [
+  {
+   "kind": "desk",
+   "x": 2.7,
+   "z": 2.6,
+   "ry": -1.57,
+   "s": 0.9
+  }
  ]
 }

@@ -557,5 +557,17 @@
    "caption": "Would you drive in to check? Comment FOREST if you would stay on the road.",
    "capStyle": "normal"
   }
+ ],
+ "props": [
+  {
+   "kind": "tent",
+   "x": 4.2,
+   "z": 12.5
+  },
+  {
+   "kind": "sign",
+   "x": -2.6,
+   "z": 17
+  }
  ]
 }

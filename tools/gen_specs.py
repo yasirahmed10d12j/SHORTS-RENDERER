@@ -31,25 +31,25 @@ PAD = 1.4  # seconds of breathing room after each scene's voice line
 # cast: outfit ids (1 = protagonist). lightSeq: {firstSceneN: lightFromHere}
 OVERRIDES = {
     "the-lighthouse-keepers-last-log": {"set": {"type": "sea"}, "light": "night", "cast": ["keeper"]},
-    "the-mountain-man": {"set": {"type": "outdoor", "style": "forest", "trees": 110}, "light": "day", "cast": ["hiker", "old"], "lightSeq": {5: "golden", 7: "night"}},
+    "the-mountain-man": {"set": {"type": "outdoor", "style": "forest", "trees": 110, "cabin": True}, "light": "day", "cast": ["hiker", "old"], "lightSeq": {5: "golden", 7: "night"}, "props": [{"kind": "tent", "x": 5, "z": 14}, {"kind": "campfire", "x": 3, "z": 12.5}, {"kind": "sign", "x": -2.5, "z": 18, "ry": -0.4}]},
     "the-333-bus": {"set": {"type": "interior", "style": "bus"}, "light": "street", "cast": ["nurse", "man"]},
     "the-neighbor-at-3am": {"set": {"type": "interior", "style": "room"}, "light": "night", "cast": ["man", "old"]},
-    "the-baby-monitor-voice": {"set": {"type": "interior", "style": "room", "bed": True}, "light": "night", "cast": ["mother", "kid"]},
-    "the-duplicate-key": {"set": {"type": "interior", "style": "corridor", "doors": 5, "doorStart": 2}, "light": "lamp", "cast": ["clerk"]},
-    "the-photograph-that-changed": {"set": {"type": "outdoor", "style": "town", "houses": 7}, "light": "golden", "cast": ["old", "man"]},
-    "the-elevator-floor-13": {"set": {"type": "interior", "style": "corridor", "doors": 8, "endLight": True}, "light": "fluoro", "cast": ["clerk"]},
-    "the-no-signal-forest": {"set": {"type": "outdoor", "style": "forest", "trees": 120}, "light": "day", "cast": ["hiker", "teen"], "lightSeq": {6: "night"}},
-    "the-last-voicemail": {"set": {"type": "interior", "style": "room", "tv": True}, "light": "night", "cast": ["woman"]},
+    "the-baby-monitor-voice": {"set": {"type": "interior", "style": "room", "bed": True}, "light": "night", "cast": ["mother", "kid"], "props": [{"kind": "crib", "x": 1.8, "z": -1.2, "s": 0.9}]},
+    "the-duplicate-key": {"set": {"type": "interior", "style": "corridor", "doors": 5, "doorStart": 2}, "light": "lamp", "cast": ["clerk"], "props": [{"kind": "desk", "x": 1.15, "z": 1.8, "ry": -1.57, "s": 0.95}]},
+    "the-photograph-that-changed": {"set": {"type": "outdoor", "style": "town", "houses": 7}, "light": "golden", "cast": ["old", "man"], "props": [{"kind": "car", "x": -4.5, "z": 12, "ry": 0.15}]},
+    "the-elevator-floor-13": {"set": {"type": "interior", "style": "corridor", "doors": 8, "endLight": True}, "light": "fluoro", "cast": ["clerk"], "props": [{"kind": "elevDoors", "x": 2.05, "z": -2}]},
+    "the-no-signal-forest": {"set": {"type": "outdoor", "style": "forest", "trees": 120}, "light": "day", "cast": ["hiker", "teen"], "lightSeq": {6: "night"}, "props": [{"kind": "tent", "x": 4.2, "z": 12.5}, {"kind": "sign", "x": -2.6, "z": 17}]},
+    "the-last-voicemail": {"set": {"type": "interior", "style": "room", "tv": True}, "light": "night", "cast": ["woman"], "props": [{"kind": "desk", "x": 2.7, "z": 2.6, "ry": -1.57, "s": 0.9}]},
     "the-man-in-my-mirror": {"set": {"type": "interior", "style": "room", "bed": False}, "light": "lamp", "cast": ["man"]},
-    "the-town-that-vanished": {"set": {"type": "outdoor", "style": "town", "houses": 10, "lamps": 6}, "light": "day", "cast": ["old", "villager1"], "lightSeq": {5: "golden", 7: "night"}},
-    "the-radio-tower-recording": {"set": {"type": "outdoor", "style": "tower"}, "light": "night", "cast": ["worker"]},
-    "the-search-party": {"set": {"type": "outdoor", "style": "forest", "trees": 100}, "light": "dawnsea", "cast": ["cop", "villager2", "villager3"], "lightSeq": {5: "night"}},
+    "the-town-that-vanished": {"set": {"type": "outdoor", "style": "town", "houses": 10, "lamps": 6}, "light": "day", "cast": ["old", "villager1"], "lightSeq": {5: "golden", 7: "night"}, "props": [{"kind": "car", "x": 4.6, "z": 9, "ry": 1.6}, {"kind": "sign", "x": -3, "z": 15.5}]},
+    "the-radio-tower-recording": {"set": {"type": "outdoor", "style": "tower"}, "light": "night", "cast": ["worker"], "props": [{"kind": "car", "x": 7, "z": 3, "ry": -0.9}]},
+    "the-search-party": {"set": {"type": "outdoor", "style": "forest", "trees": 100}, "light": "dawnsea", "cast": ["cop", "villager2", "villager3"], "lightSeq": {5: "night"}, "props": [{"kind": "tent", "x": 5, "z": 13.5}, {"kind": "campfire", "x": 3.2, "z": 12}, {"kind": "sign", "x": -3, "z": 16.5}]},
     "the-morgue-night-shift": {"set": {"type": "interior", "style": "morgue", "gurney": True}, "light": "fluoro", "cast": ["nurse"]},
-    "the-telegram-1912": {"set": {"type": "interior", "style": "room", "tv": False}, "light": "lamp", "cast": ["old"]},
+    "the-telegram-1912": {"set": {"type": "interior", "style": "room", "tv": False}, "light": "lamp", "cast": ["old"], "props": [{"kind": "desk", "x": -3.1, "z": 2.4, "ry": 1.57, "s": 0.95}]},
     "the-cave-divers-tape": {"set": {"type": "cave", "gear": True, "rope": True}, "light": "cave", "cast": ["diver"]},
     "the-dog-and-the-wall": {"set": {"type": "interior", "style": "room", "bed": True}, "light": "lamp", "cast": ["kid", "teen"]},
-    "the-hotel-door-9": {"set": {"type": "interior", "style": "corridor", "doors": 7, "doorStart": 3, "endLight": True}, "light": "lamp", "cast": ["clerk", "man"]},
-    "the-lake-that-never-freezes": {"set": {"type": "lake", "boat": True}, "light": "moonlit", "cast": ["hiker"], "lightSeq": {1: "golden", 3: "moonlit"}},
+    "the-hotel-door-9": {"set": {"type": "interior", "style": "corridor", "doors": 7, "doorStart": 3, "endLight": True}, "light": "lamp", "cast": ["clerk", "man"], "props": [{"kind": "cart", "x": 1.15, "z": 2.2}]},
+    "the-lake-that-never-freezes": {"set": {"type": "lake", "boat": True, "cabin": True}, "light": "moonlit", "cast": ["hiker"], "lightSeq": {1: "golden", 3: "moonlit"}},
 }
 
 # ── stage anchors per set key (actor home, look point, camera base) ──────
@@ -206,6 +206,8 @@ def main():
                 "capStyle": "hook" if sn == 1 else "normal",
             })
         spec = {"id": sid, "flatGround": True, "set": setsp, "scenes": scenes_out}
+        if ov.get("props"):
+            spec["props"] = ov["props"]
         (OUT_DIR / f"{sid}.json").write_text(json.dumps(spec, indent=1), encoding="utf-8")
         bundle[sid] = spec
         total = round(sum(s["dur"] for s in scenes_out), 1)

@@ -484,5 +484,12 @@
    "caption": "Her review is still up. Clean rooms, friendly staff. Just don't unpack on the first night. Would you have stayed the night? Comment NINE if you want to know who unpacked.",
    "capStyle": "normal"
   }
+ ],
+ "props": [
+  {
+   "kind": "cart",
+   "x": 1.15,
+   "z": 2.2
+  }
  ]
 }

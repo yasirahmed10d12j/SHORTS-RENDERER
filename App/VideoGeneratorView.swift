@@ -67,6 +67,7 @@ struct VideoGeneratorView: View {
     @State private var progress: Double = 0
     @State private var running = false
     @State private var done = false
+    @State private var liveEngine: Engine?
 
     @State private var status = ""
 
@@ -303,6 +304,12 @@ struct VideoGeneratorView: View {
                     }
                 }
                 ProgressView(value: progress)
+                if let engine = liveEngine, running {
+                    EnginePreview(engine: engine)
+                        .frame(height: 300)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                        .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color.gray.opacity(0.3)))
+                }
                 Button {
                     running = true
                     Task { await runRender() }
@@ -462,17 +469,25 @@ struct VideoGeneratorView: View {
     }
 
     private func runRender() async {
-        defer { running = false }
+        defer {
+            running = false
+            liveEngine = nil
+            UIApplication.shared.isIdleTimerDisabled = false // screen lock allowed again
+        }
         renderStartTime = nil
         do {
             rendered = 0; total = 0; progress = 0; fps = 0; eta = 0; done = false
             renderStartTime = Date()
+            // keep the screen on + app foreground during render: WKWebView
+            // throttles JS timers when the screen locks, which stalls frames
+            UIApplication.shared.isIdleTimerDisabled = true
             status = "Engine load…"
             // engine.html me sirf Mountain Man ka baked timeline hai; baaki
             // built-in stories data-driven engine2 (specs.json) se render hoti hain.
             let storyId = selectedStory?.id
             let useEngine2 = storyId != nil && storyId != "the-mountain-man"
             let engine = try Engine(page: useEngine2 ? "engine2" : "engine")
+            liveEngine = engine // live preview (foreground) during render
             try await engine.load()
             let docs = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
             var plan: AudioPlan?
@@ -553,4 +568,20 @@ struct VideoGeneratorView: View {
 
 private extension String {
     var trimmed: String { trimmingCharacters(in: .whitespacesAndNewlines) }
+}
+
+// MARK: - Live render preview (foreground, GPU/Metal-backed WKWebView)
+struct EnginePreview: UIViewRepresentable {
+    let engine: Engine
+    func makeUIView(context: Context) -> UIView {
+        let container = UIView()
+        let web = engine.previewView
+        web.frame = container.bounds
+        web.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        container.addSubview(web)
+        return container
+    }
+    func updateUIView(_ uiView: UIView, context: Context) {
+        engine.previewView.frame = uiView.bounds
+    }
 }

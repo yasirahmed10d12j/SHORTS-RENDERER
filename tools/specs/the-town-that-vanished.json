@@ -573,5 +573,18 @@
    "caption": "The footage is real. The analysis is public. Would you walk those streets? Comment BELLHAVEN if you want part two.",
    "capStyle": "normal"
   }
+ ],
+ "props": [
+  {
+   "kind": "car",
+   "x": 4.6,
+   "z": 9,
+   "ry": 1.6
+  },
+  {
+   "kind": "sign",
+   "x": -3,
+   "z": 15.5
+  }
  ]
 }

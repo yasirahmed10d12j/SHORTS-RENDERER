@@ -137,6 +137,13 @@ final class Engine: NSObject, WKScriptMessageHandler {
         return data
     }
 
+    // MARK: - preview
+
+    /// The underlying web view, so the UI can show a live render preview
+    /// (WKWebView offscreen rendering is already GPU/Metal-backed; showing it
+    /// just keeps the app foregrounded and gives visual feedback).
+    var previewView: WKWebView { web }
+
     // MARK: - JS bridge
 
     func userContentController(_ ucc: WKUserContentController, didReceive message: WKScriptMessage) {

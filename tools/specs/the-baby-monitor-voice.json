@@ -557,5 +557,13 @@
    "caption": "The building has no record of anyone living above, below, or beside her corner unit. Would you have checked the room? Comment MOM if this got you.",
    "capStyle": "normal"
   }
+ ],
+ "props": [
+  {
+   "kind": "crib",
+   "x": 1.8,
+   "z": -1.2,
+   "s": 0.9
+  }
  ]
 }

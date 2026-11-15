@@ -38,9 +38,14 @@ def main():
     # A) three.js + libs + toon/paint/terrain/motion (ends before castdefs)
     main_chunks = [
         rng(src, 1, 22755),
-        # renderer, scene, MAT, world/addW, ground plane, ridge terrain,
-        # boulders, blobTree (+scatter), palm, roofGeo, house, haystack
-        rng(src, 23186, 23479),
+        # renderer, scene, MAT, world/addW, ground plane, ridge terrain
+        rng(src, 23186, 23341),
+        # blobTree fn (boulder scatter 23342-23357 and baked tree scatter
+        # 23383-23388 are EXCLUDED: engine2 sets place their own props/trees
+        # on flat ground; keeping them would leave objects floating)
+        rng(src, 23358, 23382),
+        # palm, roofGeo, house, haystack
+        rng(src, 23389, 23479),
         # ribbon fn
         rng(src, 23496, 23517),
         # routeLine fn
@@ -60,6 +65,13 @@ def main():
         rng(src, 23908, 24016),
     ]
     text = "\n".join(main_chunks)
+
+    # capture the big grass ground plane as coreGround so the spec layer can
+    # hide it for sets that bring their own ground (sea/lake/cave/interior)
+    old_ground = "addW(new Mesh(g, MAT.grass), false, true);"
+    new_ground = "var coreGround = new Mesh(g, MAT.grass); addW(coreGround, false, true);"
+    assert old_ground in text, "core ground plane line not found"
+    text = text.replace(old_ground, new_ground)
 
     # edits inside extracted main code:
     # 1) actor ground height respects flat sets via GY (spec.js)
@@ -92,6 +104,7 @@ def main():
     # D) init: caption canvases + loadStory + ready gate
     parts.append("""
   // ── init2.js — story loader ────────────────────────────────────────────────
+  var CORE_HILLS = world.slice(world.length - 16); // distant hills ring (last 16 addW)
   var capCanvas = document.createElement("canvas");
   capCanvas.width = W;
   capCanvas.height = H;

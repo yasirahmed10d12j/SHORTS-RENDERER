@@ -355,5 +355,13 @@
    "caption": "He records everything now and posts the audio. Listen with headphones. Would you open the tower door at 2:17? Comment TOWER.",
    "capStyle": "normal"
   }
+ ],
+ "props": [
+  {
+   "kind": "car",
+   "x": 7,
+   "z": 3,
+   "ry": -0.9
+  }
  ]
 }

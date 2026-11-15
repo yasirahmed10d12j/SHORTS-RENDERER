@@ -22854,7 +22854,7 @@
   {
     const g = new PlaneGeometry(2400, 2400, 1, 1);
     g.rotateX(-Math.PI / 2);
-    addW(new Mesh(g, MAT.grass), false, true);
+    var coreGround = new Mesh(g, MAT.grass); addW(coreGround, false, true);
   }
   var xs = [];
   var zs = [];
@@ -22909,22 +22909,6 @@
   setProgress(0);
   var ridge = addW(new Mesh(ridgeGeo, MAT.rock), true, true);
   var rnd2 = rng(77);
-  {
-    const geo = new DodecahedronGeometry(1, 0);
-    for (let i = 0; i < 260; i++) {
-      const x = -260 + rnd2() * 500, z = (rnd2() - 0.5) * 70;
-      if (Math.abs(x) < 12) continue;
-      const h = ridgeH(x, z) - 0.35;
-      if (h < 0.3) {
-        if (rnd2() < 0.7 || Math.abs(z) > 30) continue;
-      }
-      const m = new Mesh(geo, MAT.boulder), s = 0.6 + rnd2() * rnd2() * 3.2;
-      m.scale.set(s * (0.8 + rnd2() * 0.6), s * (0.5 + rnd2() * 0.4), s * (0.8 + rnd2() * 0.6));
-      m.rotation.set(rnd2() * 3, rnd2() * 3, rnd2() * 3);
-      m.position.set(x, Math.max(0, h) + s * 0.15, z);
-      addW(m);
-    }
-  }
   var blobTree = (x, z, s, mat = MAT.leaf, trunkH = 0) => {
     const y0 = groundAt(x, z, 0);
     const g = new Group();
@@ -22950,12 +22934,6 @@
     scene.add(g);
     return g;
   };
-  for (let i = 0; i < 140; i++) {
-    const x = -300 + rnd2() * 560, z = (rnd2() - 0.5) * 60;
-    if (Math.abs(x) < 10 && Math.abs(z) < 30) continue;
-    if (ridgeH(x, z) < 1.5) continue;
-    blobTree(x, z, 0.6 + rnd2() * 0.9, rnd2() < 0.5 ? MAT.leaf : MAT.leaf2);
-  }
   var palm = (x, z, h = 9) => {
     const y0 = groundAt(x, z, 0), g = new Group();
     const lean = (rnd2() - 0.5) * 0.25;
@@ -23582,6 +23560,10 @@
     if (f >= fi + 1 && f < fi + 22) out.push({ id: id + "p", kind: "puff", pos: [p0[0], p0[1] - 0.55, p0[2]], size: size, t: q((f - fi) / 22, 0.05), alpha: 0.75 });
   };
   var walkPhase = (d) => q(d / 1.25, 1 / 24);
+  // engine2 sets are flat (GY = 0): trees/ribbons/props placed by the core
+  // helpers must land on y=0 too, so groundAt is routed through flatGround.
+  var groundAtFull = (typeof groundAt === "function") ? groundAt : (() => 0);
+  groundAt = (x, z, p) => (window.STORY && window.STORY.flatGround) ? 0 : groundAtFull(x, z, p);
   var GY = (x, z) => (window.STORY && STORY.flatGround) ? 0 : groundAt(x, z, 0);
   var hammerCycle = (f, period, off = 0) => {
     const t = ((f - off) % period + period) % period / period;
@@ -23775,6 +23757,18 @@
       rug.rotation.x = -Math.PI / 2;
       rug.position.set(cx, 0.03, cz + 0.6);
     }
+    // wardrobe on left wall + framed picture on right wall
+    if (s.wardrobe ?? true) {
+      boxS(0.75, 2.1, 1.25, toon({ color: "#5a4634" }), cx - R.w / 2 + 0.45, 1.05, cz + 1.6);
+      boxS(0.04, 1.9, 0.05, toon({ color: "#3a2e20" }), cx - R.w / 2 + 0.85, 1.05, cz + 1.6);
+    }
+    if (s.picture ?? true) {
+      const pic = new Mesh(new PlaneGeometry(0.8, 0.6), toon({ color: "#c8a860" }));
+      pic.position.set(cx + R.w / 2 - 0.17, 1.75, cz - 1.2);
+      pic.rotation.y = -Math.PI / 2;
+      addS(pic, false, false);
+      boxS(0.06, 0.72, 0.92, toon({ color: "#4a3826" }), cx + R.w / 2 - 0.19, 1.75, cz - 1.2);
+    }
   };
 
   // outdoor set: forest | road | town | tower | ridge
@@ -23788,6 +23782,7 @@
         blobTree(x, z, 0.9 + r() * 1.6, r() < 0.5 ? MAT.leaf : MAT.leaf2);
       });
       if (s.path ?? true) ribbon([[0, -50], [0.4, -20], [-0.3, 10], [0.5, 40], [0.2, 70]], 3.2, MAT.dirt);
+      if (s.cabin) house(-9, 14, 5.5, 4.4, 2.9, Math.PI / 2.4, 1);
       scatter(s.rocks ?? 14, rd, (r) => {
         const x = -60 + r() * 120, z = -50 + r() * 100;
         const m = new Mesh(new DodecahedronGeometry(1, 0), MAT.boulder);
@@ -23900,7 +23895,10 @@
     if (s.dock ?? true) {
       boxS(1.8, 0.22, 9, MAT.trunk, 7.5, 0.55, 13);
       for (const [dx, dz] of [[6.8, 10], [8.2, 10], [6.8, 16], [8.2, 16]]) boxS(0.22, 1.6, 0.22, MAT.trunk, dx, -0.2, dz);
+      buildProp({ kind: "crate", x: 7.4, z: 14.5, s: 1 });
+      buildProp({ kind: "barrel", x: 8, z: 11.6, s: 0.9 });
     }
+    buildProp({ kind: "buoy", x: -4.5, z: -3, s: 1 });
     if (s.cottage ?? true) {
       house(9, -9, 4.4, 3.6, 2.6, -Math.PI / 4, 0);
     }
@@ -23941,6 +23939,8 @@
       hull.position.set(-6, 0.15, -6);
       addS(hull, false, true);
     }
+    buildProp({ kind: "lantern", x: 1.5, z: 12.6, s: 0.9 });
+    if (s.cabin) house(-12, 20, 5, 4, 2.8, Math.PI / 5, 1);
   };
 
   // cave set: tunnel walls, pool, gear shelf
@@ -23949,6 +23949,10 @@
     const pool = addS(new Mesh(new PlaneGeometry(60, 60), toon({ color: "#123244" })), false, true);
     pool.rotation.x = -Math.PI / 2;
     pool.position.set(0, 0.02, 0);
+    // large dark rock floor so the cave reads enclosed to the horizon
+    const caveFloor = addS(new Mesh(new PlaneGeometry(240, 240), toon({ color: "#1a2430" })), false, true);
+    caveFloor.rotation.x = -Math.PI / 2;
+    caveFloor.position.set(0, -0.02, 0);
     for (let i = 0; i < 22; i++) {
       const m = new Mesh(new DodecahedronGeometry(1, 0), MAT.rock);
       const sc = 3 + rd() * 8;
@@ -23982,6 +23986,121 @@
         rope.position.set(-4.6, 4.5 - i * 0.42, -2);
         addS(rope, false, false);
       }
+    }
+  };
+
+  // ── story-synced props ───────────────────────────────────────────────────
+  // Small composite props placed per story via spec.props: [{kind, x, z, ry, s}]
+  var buildProp = (p) => {
+    const k = p.kind, x = p.x ?? 4, z = p.z ?? 6, ry = p.ry ?? 0, s = p.s ?? 1;
+    const M = (geo, col, px, py, pz) => {
+      const m = addS(new Mesh(geo, toon({ color: col })));
+      m.position.set(px, py, pz);
+      return m;
+    };
+    switch (k) {
+      case "crate":
+        M(new BoxGeometry(1 * s, 1 * s, 1 * s), "#8a6a42", x, 0.5 * s, z).rotation.y = ry;
+        M(new BoxGeometry(1.06 * s, 0.14 * s, 1.06 * s), "#6d5233", x, 0.92 * s, z).rotation.y = ry + 0.2;
+        break;
+      case "barrel":
+        M(new CylinderGeometry(0.42 * s, 0.42 * s, 1 * s, 10), "#7a5a38", x, 0.5 * s, z);
+        M(new CylinderGeometry(0.45 * s, 0.45 * s, 0.08 * s, 10), "#4a3826", x, 0.75 * s, z);
+        M(new CylinderGeometry(0.45 * s, 0.45 * s, 0.08 * s, 10), "#4a3826", x, 0.28 * s, z);
+        break;
+      case "campfire": {
+        for (let i = 0; i < 6; i++) {
+          const a = i / 6 * Math.PI * 2;
+          const st = M(new DodecahedronGeometry(0.22 * s, 0), "#6a6a66", x + Math.cos(a) * 0.55 * s, 0.12 * s, z + Math.sin(a) * 0.55 * s);
+          st.rotation.set(i, i * 0.7, 0);
+        }
+        for (const [lx, lz, r] of [[0.25, 0, 0.4], [-0.2, 0.2, 1.2], [0, -0.25, 2.2]]) {
+          const log = M(new CylinderGeometry(0.09 * s, 0.09 * s, 0.9 * s, 6), "#5a4028", x + lx * s, 0.12 * s, z + lz * s);
+          log.rotation.z = Math.PI / 2;
+          log.rotation.y = r;
+        }
+        const flame = new Mesh(new ConeGeometry(0.3 * s, 0.7 * s, 8), new MeshBasicMaterial({ color: 16747520 }));
+        flame.position.set(x, 0.45 * s, z);
+        addS(flame, false, false);
+        break;
+      }
+      case "tent":
+        M(new ConeGeometry(1.5 * s, 1.9 * s, 4), "#c8783a", x, 0.95 * s, z).rotation.y = ry + Math.PI / 4;
+        M(new BoxGeometry(0.5 * s, 0.8 * s, 0.06 * s), "#3a2c1e", x + Math.sin(ry) * 1.05 * s, 0.4 * s, z + Math.cos(ry) * 1.05 * s).rotation.y = ry;
+        break;
+      case "bench":
+        M(new BoxGeometry(1.8 * s, 0.1 * s, 0.5 * s), "#7a5a3a", x, 0.45 * s, z).rotation.y = ry;
+        M(new BoxGeometry(1.8 * s, 0.55 * s, 0.09 * s), "#7a5a3a", x - Math.sin(ry) * 0.22 * s, 0.7 * s, z - Math.cos(ry) * 0.22 * s).rotation.y = ry;
+        for (const d of [-0.7, 0.7]) M(new BoxGeometry(0.09 * s, 0.45 * s, 0.45 * s), "#5a4028", x + Math.cos(ry) * d * s, 0.22 * s, z - Math.sin(ry) * d * s).rotation.y = ry;
+        break;
+      case "desk":
+        M(new BoxGeometry(1.7 * s, 0.08 * s, 0.9 * s), "#6d5233", x, 0.75 * s, z).rotation.y = ry;
+        for (const [dx, dz] of [[-0.75, -0.35], [0.75, -0.35], [-0.75, 0.35], [0.75, 0.35]])
+          M(new BoxGeometry(0.09 * s, 0.75 * s, 0.09 * s), "#5a4028", x + Math.cos(ry) * dx * s - Math.sin(ry) * dz * s, 0.37 * s, z + Math.sin(ry) * dx * s + Math.cos(ry) * dz * s);
+        M(new BoxGeometry(0.45 * s, 0.03 * s, 0.32 * s), "#e8e2d2", x + Math.sin(ry) * 0.2 * s, 0.8 * s, z + Math.cos(ry) * 0.2 * s).rotation.y = ry;
+        break;
+      case "crib": {
+        const w = 1.3 * s, d = 0.8 * s, h = 1 * s;
+        for (const [cx2, cz2] of [[-w / 2, -d / 2], [w / 2, -d / 2], [-w / 2, d / 2], [w / 2, d / 2]])
+          M(new BoxGeometry(0.07 * s, h, 0.07 * s), "#e0d8c8", x + cx2, h / 2, z + cz2);
+        for (const sd of [-1, 1]) {
+          M(new BoxGeometry(w, 0.05 * s, 0.05 * s), "#e0d8c8", x, h - 0.1 * s, z + sd * d / 2);
+          M(new BoxGeometry(w, 0.05 * s, 0.05 * s), "#e0d8c8", x, 0.25 * s, z + sd * d / 2);
+          M(new BoxGeometry(0.05 * s, h, d), "#e0d8c8", x + sd * w / 2, h / 2, z);
+        }
+        M(new BoxGeometry(w - 0.1, 0.12 * s, d - 0.1), "#f0e8dc", x, 0.3 * s, z);
+        break;
+      }
+      case "gravestone":
+        M(new BoxGeometry(0.6 * s, 0.9 * s, 0.16 * s), "#9a9a96", x, 0.45 * s, z).rotation.y = ry;
+        M(new CylinderGeometry(0.3 * s, 0.3 * s, 0.16 * s, 10, 1, false, 0, Math.PI), "#9a9a96", x, 0.9 * s, z).rotation.set(Math.PI / 2, ry, 0);
+        break;
+      case "car": {
+        M(new BoxGeometry(3.4 * s, 0.75 * s, 1.6 * s), "#a83a30", x, 0.62 * s, z).rotation.y = ry;
+        M(new BoxGeometry(1.8 * s, 0.62 * s, 1.45 * s), "#b8443a", x - Math.sin(ry) * 0.2 * s, 1.25 * s, z - Math.cos(ry) * 0.2 * s).rotation.y = ry;
+        for (const [wx, wz] of [[-1.15, 0.72], [1.15, 0.72], [-1.15, -0.72], [1.15, -0.72]]) {
+          const wh = M(new CylinderGeometry(0.33 * s, 0.33 * s, 0.2 * s, 10), "#22242a", x + Math.cos(ry) * wx * s - Math.sin(ry) * wz * s, 0.33 * s, z + Math.sin(ry) * wx * s + Math.cos(ry) * wz * s);
+          wh.rotation.z = Math.PI / 2;
+          wh.rotation.y = ry;
+        }
+        break;
+      }
+      case "sign":
+        M(new CylinderGeometry(0.06 * s, 0.08 * s, 2.4 * s, 6), "#7a6a52", x, 1.2 * s, z);
+        M(new BoxGeometry(1.5 * s, 0.6 * s, 0.07 * s), "#c8b28a", x + Math.sin(ry) * 1.15 * s, 2 * s, z + Math.cos(ry) * 1.15 * s).rotation.y = ry;
+        break;
+      case "elevDoors": {
+        // two metal panels on a corridor side wall (x = wall offset, faces -x)
+        const wallX = x;
+        for (const sd of [-1, 1]) {
+          const d2 = M(new BoxGeometry(0.1, 2.2, 0.65 * s), "#8a949c", wallX, 1.1, z + sd * 0.34 * s);
+          d2.rotation.y = 0;
+        }
+        M(new BoxGeometry(0.14, 2.5, 1.5 * s), "#5a646c", wallX, 1.25, z);
+        break;
+      }
+      case "cart":
+        M(new BoxGeometry(1.2 * s, 0.1 * s, 2 * s), "#6a727a", x, 0.45 * s, z).rotation.y = ry;
+        for (const [wx, wz] of [[-0.5, -0.7], [0.5, -0.7], [-0.5, 0.7], [0.5, 0.7]]) {
+          const wh = M(new CylinderGeometry(0.2 * s, 0.2 * s, 0.08 * s, 10), "#3a3e44", x + wx * s, 0.2 * s, z + wz * s);
+          wh.rotation.z = Math.PI / 2;
+        }
+        M(new BoxGeometry(0.55 * s, 0.75 * s, 0.4 * s), "#8a5a48", x - 0.25 * s, 0.85 * s, z - 0.4 * s).rotation.y = ry;
+        M(new BoxGeometry(0.5 * s, 0.55 * s, 0.35 * s), "#4a6a8a", x + 0.2 * s, 0.75 * s, z + 0.3 * s).rotation.y = ry;
+        break;
+      case "lantern":
+        M(new CylinderGeometry(0.05 * s, 0.07 * s, 2.1 * s, 6), "#3a352c", x, 1.05 * s, z);
+        M(new SphereGeometry(0.16 * s, 8, 6), 16774628, x, 2.15 * s, z);
+        break;
+      case "buoy":
+        M(new CylinderGeometry(0.3 * s, 0.4 * s, 0.8 * s, 8), "#c8452e", x, 0.2 * s, z);
+        M(new SphereGeometry(0.14 * s, 8, 6), 16774628, x, 0.7 * s, z);
+        break;
+      case "stump":
+        M(new CylinderGeometry(0.35 * s, 0.45 * s, 0.5 * s, 8), "#6a4a2e", x, 0.25 * s, z);
+        break;
+      default:
+        break;
     }
   };
 
@@ -24179,8 +24298,18 @@
     STORY.flatGround = spec.flatGround !== false;
     STORY.beam = null;
     const set = spec.set || { type: "outdoor", style: "forest" };
+
+    // core ground policy: outdoor sets keep the grass plane + distant hills;
+    // sea/lake/cave/interior bring their own ground, so core terrain (ridge,
+    // boulders, baked trees) and the grass plane are hidden entirely.
+    const outdoor = set.type === "outdoor";
+    if (typeof coreGround !== "undefined" && coreGround) coreGround.visible = outdoor;
+    if (typeof ridge !== "undefined" && ridge) ridge.visible = false;
+    for (const m of (typeof CORE_HILLS !== "undefined" ? CORE_HILLS : [])) if (m) m.visible = outdoor;
+
     const builder = SETS[set.type];
     if (builder) builder(set);
+    for (const p of spec.props || []) buildProp(p);
 
     const scenes = spec.scenes || [];
     let acc = 0;
@@ -24200,6 +24329,7 @@
 
 
   // ── init2.js — story loader ────────────────────────────────────────────────
+  var CORE_HILLS = world.slice(world.length - 16); // distant hills ring (last 16 addW)
   var capCanvas = document.createElement("canvas");
   capCanvas.width = W;
   capCanvas.height = H;

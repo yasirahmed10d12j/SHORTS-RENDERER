@@ -4,7 +4,8 @@
  "set": {
   "type": "outdoor",
   "style": "forest",
-  "trees": 110
+  "trees": 110,
+  "cabin": true
  },
  "scenes": [
   {
@@ -571,6 +572,24 @@
    "fx": [],
    "caption": "The student's family still posts about him every year. The Mountain Man has never been charged with anything. There is no body. Would you have drunk the tea?",
    "capStyle": "normal"
+  }
+ ],
+ "props": [
+  {
+   "kind": "tent",
+   "x": 5,
+   "z": 14
+  },
+  {
+   "kind": "campfire",
+   "x": 3,
+   "z": 12.5
+  },
+  {
+   "kind": "sign",
+   "x": -2.5,
+   "z": 18,
+   "ry": -0.4
   }
  ]
 }

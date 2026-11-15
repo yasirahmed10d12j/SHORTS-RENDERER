@@ -357,5 +357,12 @@
    "caption": "He still has it. It works on his front door at home. Would you have stepped out? Comment 13 if you felt that.",
    "capStyle": "normal"
   }
+ ],
+ "props": [
+  {
+   "kind": "elevDoors",
+   "x": 2.05,
+   "z": -2
+  }
  ]
 }

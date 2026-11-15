@@ -357,5 +357,14 @@
    "caption": "He is moving again tonight. If you were him, would you make the key? Or would that be exactly what it wants? Like this if you would burn the order.",
    "capStyle": "normal"
   }
+ ],
+ "props": [
+  {
+   "kind": "desk",
+   "x": 1.15,
+   "z": 1.8,
+   "ry": -1.57,
+   "s": 0.95
+  }
  ]
 }

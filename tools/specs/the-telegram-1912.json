@@ -500,5 +500,14 @@
    "caption": "She still works days. The night archive door stays locked. But every April 14th at 2:20 AM, the corridor lights flicker once. Would you take the night shift? Comment 1912.",
    "capStyle": "normal"
   }
+ ],
+ "props": [
+  {
+   "kind": "desk",
+   "x": -3.1,
+   "z": 2.4,
+   "ry": 1.57,
+   "s": 0.95
+  }
  ]
 }

@@ -617,5 +617,13 @@
    "caption": "The family swears they will never develop it. But the negative is missing now. Would you have looked? Comment PHOTO.",
    "capStyle": "normal"
   }
+ ],
+ "props": [
+  {
+   "kind": "car",
+   "x": -4.5,
+   "z": 12,
+   "ry": 0.15
+  }
  ]
 }

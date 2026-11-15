@@ -668,5 +668,22 @@
    "caption": "He hikes elsewhere now. Would you have followed the footprints? Like this if you trust protocol.",
    "capStyle": "normal"
   }
+ ],
+ "props": [
+  {
+   "kind": "tent",
+   "x": 5,
+   "z": 13.5
+  },
+  {
+   "kind": "campfire",
+   "x": 3.2,
+   "z": 12
+  },
+  {
+   "kind": "sign",
+   "x": -3,
+   "z": 16.5
+  }
  ]
 }
