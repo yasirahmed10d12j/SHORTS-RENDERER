@@ -55,14 +55,14 @@ enum AudioMux {
 
         let vsrc = AVURLAsset(url: video)
         guard let vtrack = vsrc.tracks(withMediaType: .video).first else {
-            throw RenderError.writeFailed
+            throw fail("video track missing", nil)
         }
         let vcomp = comp.addMutableTrack(withMediaType: .video, preferredTrackID: kCMPersistentTrackID_Invalid)
-        guard let vcomp else { throw RenderError.writeFailed }
+        guard let vcomp else { throw fail("composition video track", nil) }
         try vcomp.insertTimeRange(CMTimeRange(start: .zero, duration: vsrc.duration), of: vtrack, at: .zero)
 
         let acompTrack = comp.addMutableTrack(withMediaType: .audio, preferredTrackID: kCMPersistentTrackID_Invalid)
-        guard let acomp = acompTrack else { throw RenderError.writeFailed }
+        guard let acomp = acompTrack else { throw fail("composition audio track", nil) }
         for clip in plan.clips {
             let m4a = try await toAAC(clip.url)
             let src = AVURLAsset(url: m4a)
@@ -72,8 +72,19 @@ enum AudioMux {
         }
 
         try? FileManager.default.removeItem(at: out)
-        guard let ex = AVAssetExportSession(asset: comp, presetName: AVAssetExportPresetPassthrough) else {
-            throw RenderError.writeFailed
+        // Passthrough is fastest but frequently fails on device for AVMutableComposition
+        // (works in simulator only) — fall back to a re-encode preset.
+        do {
+            try await exportSession(comp, out: out, preset: AVAssetExportPresetPassthrough)
+        } catch {
+            try? FileManager.default.removeItem(at: out)
+            try await exportSession(comp, out: out, preset: AVAssetExportPresetHighestQuality)
+        }
+    }
+
+    private static func exportSession(_ asset: AVAsset, out: URL, preset: String) async throws {
+        guard let ex = AVAssetExportSession(asset: asset, presetName: preset) else {
+            throw fail("export session (\(preset))", nil)
         }
         ex.outputURL = out
         ex.outputFileType = AVFileType.mp4
@@ -82,7 +93,7 @@ enum AudioMux {
             try await Task.sleep(nanoseconds: 100_000_000)
         }
         if ex.status != .completed {
-            throw ex.error ?? RenderError.writeFailed
+            throw fail("export (\(preset))", ex.error)
         }
     }
 
@@ -96,18 +107,50 @@ enum AudioMux {
             if m4aMod >= mp3Mod { return out }
             try? FileManager.default.removeItem(at: out)
         }
-        guard let ex = AVAssetExportSession(asset: AVURLAsset(url: url), presetName: AVAssetExportPresetAppleM4A) else {
-            throw RenderError.writeFailed
-        }
-        ex.outputURL = out
-        ex.outputFileType = AVFileType.m4a
-        ex.exportAsynchronously {}
-        while ex.status == .waiting || ex.status == .exporting {
-            try await Task.sleep(nanoseconds: 100_000_000)
-        }
-        if ex.status != .completed {
-            throw ex.error ?? RenderError.writeFailed
+        do {
+            guard let ex = AVAssetExportSession(asset: AVURLAsset(url: url), presetName: AVAssetExportPresetAppleM4A) else {
+                throw fail("aac session", nil)
+            }
+            ex.outputURL = out
+            ex.outputFileType = AVFileType.m4a
+            ex.exportAsynchronously {}
+            while ex.status == .waiting || ex.status == .exporting {
+                try await Task.sleep(nanoseconds: 100_000_000)
+            }
+            if ex.status != .completed {
+                throw fail("aac export", ex.error)
+            }
+        } catch {
+            // Fallback: decode MP3 with AVAudioFile and write AAC manually
+            // (AVAssetExportSession refuses MP3 sources on some iOS versions).
+            try? FileManager.default.removeItem(at: out)
+            try convertToAACViaAudioFile(url, out: out)
         }
         return out
+    }
+
+    /// MP3 -> AAC .m4a via AVAudioFile (no AVAssetExportSession involved).
+    private static func convertToAACViaAudioFile(_ url: URL, out: URL) throws {
+        let input = try AVAudioFile(forReading: url)
+        let fmt = input.processingFormat
+        let settings: [String: Any] = [
+            AVFormatIDKey: kAudioFormatMPEG4AAC,
+            AVSampleRateKey: fmt.sampleRate,
+            AVNumberOfChannelsKey: fmt.channelCount,
+            AVEncoderBitRateKey: 128_000,
+        ]
+        let output = try AVAudioFile(forWriting: out, settings: settings)
+        let buf = AVAudioPCMBuffer(pcmFormat: fmt, frameCapacity: AVAudioFrameCount(fmt.sampleRate))!
+        while input.framePosition < input.length {
+            try input.read(into: buf)
+            try output.write(from: buf)
+        }
+        if output.length == 0 { throw fail("aac encode empty", nil) }
+    }
+
+    private static func fail(_ step: String, _ error: Error?) -> Error {
+        let desc = error?.localizedDescription ?? "unknown"
+        return NSError(domain: "AudioMux", code: 1,
+                       userInfo: [NSLocalizedDescriptionKey: "\(step): \(desc)"])
     }
 }
