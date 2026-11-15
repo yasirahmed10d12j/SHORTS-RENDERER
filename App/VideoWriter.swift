@@ -54,10 +54,22 @@ final class VideoWriter {
     func finish() async throws {
         input.markAsFinished()
         try await withCheckedThrowingContinuation { (cont: CheckedContinuation<Void, Error>) in
-            writer.finishWriting { [writerStatus = writer.status, writerError = writer.error] in
-                writerStatus == .completed
-                    ? cont.resume()
-                    : cont.resume(throwing: writerError ?? RenderError.writeFailed)
+            // NOTE: do NOT capture writer.status in the closure's capture list —
+            // it is evaluated BEFORE finishWriting runs and is stale (.writing).
+            // Read writer.status inside the callback instead.
+            writer.finishWriting { [weak writer] in
+                guard let writer else {
+                    cont.resume(throwing: RenderError.writeFailed)
+                    return
+                }
+                if writer.status == .completed {
+                    cont.resume()
+                } else {
+                    let msg = "Video write fail: status=\(writer.status.rawValue)"
+                        + (writer.error.map { ", \($0.localizedDescription)" } ?? "")
+                    cont.resume(throwing: NSError(domain: "VideoWriter", code: 1,
+                                                  userInfo: [NSLocalizedDescriptionKey: msg]))
+                }
             }
         }
     }
